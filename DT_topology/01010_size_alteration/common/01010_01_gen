@@ -1,0 +1,266 @@
+
+IOTXP:***_SIZE_ALTERATION_EVENTS,_APT ******************************;
+
+IOTXP:*** OMS ******************************************************;
+
+     SAAII:SAE=000,  NI= 1500;
+
+       ! ROUTES.THE TOTAL NUMBER OF       EXT.MIN:1   BLOS   DISS   !
+       ! ROUTES AND TEST ROUTES  ARE          MAX:-   CHAS   LOAS   !
+       ! INDICATED.FOR EACH IT,OT AND     RED.MIN:1   NEROS  RA     !
+       ! ANS-TYPE ADD 2 AND FOR EACH          MAX:-   RESOC  TRADA  !
+       ! BT-TYPE ADD THE VALUE 4.                     TRAN   FAUS   !
+       !                                              RSSA   TROD   !
+       !                                              ACBOR  DIRS   !
+       !                                              DISSD  DISSR  !
+       !                                              QUAS   ROCOD  !
+       !                                              SEQS1  SEQS2  !
+       !                                              SETS   TRDIP1 !
+       !                                              TROB1  CAS    !
+       !                                              ACA    ACDMO  !
+       !                                              ACDM   GTTC   !
+       !                                              CODA   RURS   !
+       !                                              RDAR   RUDA   !
+       !                                              UPAPIT UPAPOT !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=087,  NI=   96;
+
+       ! THE TOTAL NUMBER OF DIGITAL      EXT.MIN:1     TRAN1 SLCTC !
+       ! PATHS IN THE EXCHANGE.               MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+IOTXP:*** OMS-R ****************************************************;
+
+     SAAII:SAE=048,  NI=   25;
+       ! THE NUMBER OF MEASURING PRO-     EXT.MIN:1   TIMET         !
+       ! GRAMMES A MEASURING PROGRAM          MAX:-                 !
+       ! DEFINES A SET OF RECORDINGS      RED.MIN:1                 !
+       ! EXECUTED BY A USER BLOCK.            MAX:-                 !
+       ! ARE DEPENDENT ON THE NUMBER                                !
+       ! OF USER BLOCK (FUNCTIONS).                                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=051,  NI=  500;
+
+       ! EVERY HARDWARE INDIVIDUAL        EXT.MIN:1   DEPO   DEPO1  !
+       ! ALLOCATED IN THE EXCHANGE.           MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=500,  NI=  100, BLOCK=CPTGS;
+
+       ! NUMBER OF RECORDS IN THE         EXT.MIN:1   CPTGS         !
+       ! DISTURBANCE SUPERVISION FILE.        MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+IOTXP:*** TCS ******************************************************;
+
+     SAAII:SAE=097,  NI=   600;
+
+       ! TOTAL NUMBER OF SEMIPERMANENT    EXT.MIN:1     SECA        !
+       ! CONNECTIONS.                         MAX:-     SECOM       !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=500,  NI=  30000, BLOCK=ERDS;
+
+       ! NO. OF EVENT REPORTS WHICH CAN   EXT.MIN:1                 !
+       ! BE STORED BY BLOCK EVREP.            MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=604,  NI= 10000, BLOCK=CUPOLAN;
+
+       ! NUMBER OF RECORDS IN ANALYSIS      EXT.MIN:1               !
+       ! DATA FILE USED TO STORE THE            MAX:-               !
+       ! POLICING ADDRESSES (NS AND SP)     RED.MIN:1               !
+       ! TIED TO A PROFILE NUMBER.              MAX:-               !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=605,  NI= 10000, BLOCK=CUPOLAN;
+
+       ! NUMBER OF RECORDS IN PROFILES FILE, EXT.MIN:1              !
+       ! USED TO STORE THE PROFILES WITH         MAX:-              !
+       ! ALLOWED INCOMING OPERATIONS AND     RED.MIN:1              !
+       ! THE SUBSYSTEM NUMBER TO WHICH THE       MAX:-              !
+       ! PROFILE IS TIED TO.                                        !
+       !------------------------------------------------------------!
+
+
+IOTXP:***_COMMUNICATION_SUBSYSTEM_(COMS)_***************************;
+
+     SAAII:SAE=451,  NI=  825;
+
+       ! NBR OF DEVICES THAT CAN BE      EXT.MIN: 1      AMCAPT     !
+       ! TRACED PER CALL PATH TRACE.         MAX: -      CAPT       !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX:-                  !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=480,  NI= 1024;
+
+       ! NUMBER OF OBJECT CLASS          EXT.MIN:1      OBMAN1      !
+       ! INDIVIDUALS.                        MAX:-      OBMAN2      !
+       ! INITIAL VALUE=1024.             RED.MIN:1                  !
+       !                                     MAX:-                  !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=500,  NI=  1000, BLOCK=OBMAN1;
+
+       ! NUMBER OF COMMUNICATION         EXT.MIN: 1                 !
+       ! TASK INDIVIDUALS.                   MAX: -                 !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=500,  NI=  512, BLOCK=APC;
+
+       ! SIZE ALTERATION EVENT FOR       EXT.MIN: 1                 !
+       ! THE NUMBER OF SESSIONS              MAX: -                 !
+       ! THE RANGE DEPENDS ON WHAT       RED.MIN: 1                 !
+       ! APZ IS USED.                        MAX: -                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=500,  NI=  200, BLOCK=MB;
+
+       ! SIZE ALTERATION EVENT FOR       EXT.MIN: 1                 !
+       ! THE MAIN FILE.                      MAX: -                 !
+       ! THE RANGE DEPENDS ON WHAT       RED.MIN: 1                 !
+       ! APZ IS USED. INITIAL VALUE=0        MAX: -                 !
+       ! NUMBER OF EVENT SUBSCRIPTION IND.                          !
+       !    - TRAFFIC SENSISTIVE -                                  !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=501,  NI= 2000, BLOCK=MB;
+
+       ! SIZE ALTERATION EVENT FOR       EXT.MIN: 1                 !
+       ! THE MULTIPLE PARAMETER FILE.        MAX: -                 !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       ! NUMBER OF EVENT SUBSCRIPTION IND.                          !
+       !    - TRAFFIC SENSISTIVE -                                  !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=607,  NI=   60, BLOCK=APC;
+
+       ! SIZE ALTERATION EVENT FOR       EXT.MIN: 1                 !
+       ! THE NUMBER OF LINK INDIVIDUALS.     MAX: -                 !
+       !                                 RED.MIN: 1                 !
+       ! INITIAL VALUE=0                     MAX: -                 !
+       !------------------------------------------------------------!
+
+       ! SAAII:SAE=607,  NI=   33, BLOCK=AMCAPT;
+       ! NBR OF CAPTAM INSTANCES PER     EXT.MIN: 1                 !
+       ! CALL PATH TRACE.                    MAX: -                 !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX:-                  !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=607,  NI=  512, BLOCK=OBMAN1;
+
+       ! NUMBER OF EVENT INDIVIDUALS.    EXT.MIN: 1                 !
+       !                                     MAX: -                 !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=608,  NI= 4000, BLOCK=APC;
+
+       ! SIZE ALTERATION EVENT FOR       EXT.MIN: 1                 !
+       ! THE NUMBER OF (EXTENDED) END        MAX: -                 !
+       ! POINT PAIRS.                    RED.MIN: 1                 !
+       ! INITIAL VALUE=0                     MAX: -                 !
+       !------------------------------------------------------------!
+
+       ! SAAII:SAE=608,  NI=    8, BLOCK=AMCAPT;
+
+
+       ! NBR OF C-LAVEL ASSOCIATIONS     EXT.MIN: 1                 !
+       ! TOWARDS OBJECT CLASS CAPTAM.        MAX: 256               !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX:256                !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=608,  NI=  512, BLOCK=OBMAN1;
+
+       ! NUMBER OF EVENT SUBSCRIPTION    EXT.MIN: 1                 !
+       ! INDIVIDUALS.                        MAX: -                 !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+
+       ! SAAII:SAE=609,  NI=  100, BLOCK=AMCAPT;
+
+       ! THE AMOUNT OF MISCELLANEOUS     EXT.MIN: 1                 !
+       ! INFORMATION ALLOWED PER             MAX: 256               !
+       ! CALL PATH TRACE.                RED.MIN: 1                 !
+       !                                     MAX:256                !
+       !------------------------------------------------------------!
+
+IOTXP:***_SIZE_ALTERATION_EVENTS_FOR_SYSOMAM_***********************;
+
+     SAAII:SAE=500,  NI=   66, BLOCK=MFAPCL;
+
+       ! NUMBER OF OBMAN ASSOCIATION     EXT.MIN: 1                 !
+       ! INDIVIDUALS FOR APC LINK            MAX: -                 !
+       ! HANDLING FUNCTION               RED.MIN: 1                 !
+       ! RANGE: 0 - 65535                    MAX: -                 !
+       !------------------------------------------------------------!
+
+IOTXP:***_CALL_PATH_TRACING_FEATURE_********************************;
+
+     SAAII:SAE=520,  NI=   32, BLOCK=MFCAPT;
+     SAAII:SAE=520,  NI=   64, BLOCK=MFCAPT;
+     SAAII:SAE=520,  NI=   96, BLOCK=MFCAPT;
+     SAAII:SAE=520,  NI=  128, BLOCK=MFCAPT;
+     SAAII:SAE=520,  NI=  160, BLOCK=MFCAPT;
+     SAAII:SAE=520,  NI=  165, BLOCK=MFCAPT;
+
+       ! NBR OF CALL PATH TRACING        EXT.MIN: 1                 !
+       ! SUBPRINTOUTS THAT CAN BE            MAX: 32                !
+       ! HANDLED FOR ONE CTRAI COMMAND.  RED.MIN: 1                 !
+       !                                      MAX:32                !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=607,  NI=  128, BLOCK=APCLOB;
+
+       ! NUMBER OF APC LINK OWNER        EXT.MIN: 1                 !
+       ! INDIVIDUALS.                        MAX: 65535             !
+       !                                 RED.MIN: 1                 !
+       !                                     MAX:-                  !
+       !------------------------------------------------------------!
+
+     SAAII:SAE= 1833 , NI=50000;  ! COMMUNICATION BUFFER !
+
+IOTXP:***FOR R13 LSV21***********************;
+
+SAAII:SAE=1106, NI= 200;
+
+       ! The main block for SAE 1106 is MCSE.                       !
+       ! Block MCSE stores data for call handling in SAE 500.       !
+       ! One individual is seized when a mobile-originating or      !
+       ! mobile-terminating call is set up,                         !
+       ! and released at call disconnection.                        !
+       ! SMALL BRANCHING MODULES FOR      EXT.MIN:1      RA         !
+       ! END-OF-SELECTION ANALYSIS.            MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+SAAII:SAE=1132, NI= 1;
+SAAII:SAE=1134, NI= 1;
+SAAII:SAE=1101, NI= 1000;
+
+       ! SAE individuals are used to store and to transfer          !
+       ! connection oriented message data between MSC/VLR Server    !
+       ! and RNC.This SAE is also used for handling RANAP procedure !
+
+IOTXP:***_END_OF_SUBFILE_APTGEN  ************************************;

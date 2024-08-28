@@ -1,0 +1,963 @@
+   
+   !****************************************************************************!
+   !	Categories of HLR exchange property Category                            !
+   !****************************************************************************!
+   !	Category    Description                                                 !
+   !----------------------------------------------------------------------------!
+   !	ADD         Additional MSISDN                                           !
+   !	AUC 		Authentication Center                                       !
+   !	AUT 		Authentication                                              !
+   !	BAR 		Barring                                                     !
+   !	CF 			Call Forwarding                                             !
+   !	IN 			Intelligent Network                                         !
+   !	LOG 		Logging                                                     !
+   !	LOAD 		Load Priority Level                                         !
+   !	MV2 		MAP version 2                                               !
+   !	MV3 		MAP version 3                                               !
+   !	MASS 		Massive Change                                              !
+   !	MCF 		Monitoring Call Forwarding Registration                     !
+   !	NSDM 		Note Subscriber Data Modified                               !
+   !	OCB 		Operator Call Barring                                       !
+   !	RED 		Redundancy                                                  !
+   !	REG 		Regional Services                                           !
+   !	RES 		Reset Inhibition                                            !
+   !	USSD 		Unstructured Supplementary Service Data                     !
+   !----------------------------------------------------------------------------!
+   !	Note:                                                                   !
+   !	In the case that a certain exchange property is associated              !
+   !    to an optional function which is not supported by the system,           !
+   !	the corresponding exchange property designation will not be             !
+   !    recognized by the system.                                               !
+   !----------------------------------------------------------------------------!
+                           
+   !****************************************************************!                                                        
+   ! Additional MSISDN (ADD)                                        !                                                        
+   !****************************************************************!                                                        
+                                                                                                                                  
+   HGEPC:PROP=ADDMAXNUM-10;                                                                                                  
+   !                            Description                         !                                                        
+   !                            Maximum number of AMSISDN           !                                                        
+   !                            allowed per subscription            !                                                        
+   !                                                                !                                                        
+   !                            Property value: 0-15                !                                                        
+   !                            Default value: 10                   !                                                        
+   !                            Type: - Optional                    !                                                        
+   !                            Involved blocks: HASND.             !                                                        
+   !----------------------------------------------------------------!                                                        
+                                                                                                                            
+                                                                                                                           
+                                                                                                                                                                                               
+   !****************************************************************!                                                        
+   ! Authentication Center (AUC)                                    !                                                        
+   !****************************************************************!                                                        
+                                                                                                                             
+   HGEPC:PROP=AUCALARMLOG-1;                                                                                                 
+   !                            Description                         !                                                        
+   !                            Alarm activation                    !                                                        
+   !                            Logging is performed when a         !                                                        
+   !                            request for authentication          !                                                        
+   !                            data,sent from the HLR to           !                                                        
+   !                            the AUC has failed. This            !                                                        
+   !                            parameter specifies, whether        !                                                        
+   !                            an alarm is given or not in         !                                                        
+   !                            this case.                          !                                                        
+   !                                                                !                                                        
+   !                            Property value:                     !                                                        
+   !                            0  Alarm not given                  !                                                        
+   !                            1  Alarm given                      !                                                        
+   !                                                                !                                                        
+   !                            Default value: 1                    !                                                        
+   !                            Type: - Optional                    !                                                        
+   !                            Involved blocks: HAULOGA            !
+   !----------------------------------------------------------------!                                                        
+                                                                                                                           
+   HGEPC:PROP=AUCDEFSUBINT-3;                                                                                                 
+   !                            Default authentication interface    !                                                        
+   !                            assigned to the subscriber at       !                                                        
+   !                            subscription                        !                                                        
+   !                                                                !                                                        
+   !                            Property  For change-   For active  !                                                        
+   !                            Value     over IMSI     IMSI        !                                                        
+   !                            -----     -----------   ----------  !                                                        
+   !                              0          IOS           IOS      !                                                        
+   !                              1          IOS           MAP      !                                                        
+   !                              2          MAP           IOS      !                                                        
+   !                              3          MAP           MAP      !
+   !                                                                !
+   !                            Default value: 0                    !
+   !                            Type: - Optional                    !
+   !                            Involved blocks: HAUCIA             !
+   !----------------------------------------------------------------! 
+
+   HGEPC:PROP=AUCINTERFACE-2;                                                                                                 
+   !                            Active authentication interface     !                                                        
+   !                            Defines the active HLR-AUC          !                                                        
+   !                            interface.                          !                                                        
+   !                                                                !                                                        
+   !                            Authentication Interface.           !                                                        
+   !                                                                !                                                        
+   !                            Property value:                     !                                                        
+   !                            0  IOS - Interface active.          !                                                        
+   !                            1  MAP - Interface active.          !                                                        
+   !                            2  Both Interfaces active.          !                                                        
+   !                                                                !                                                        
+   !                            Default value: 0                    !                                                        
+   !                            Type: - Optional                    !                                                        
+   !                            Involved blocks: HAUCIA             !                                                        
+   !----------------------------------------------------------------!                                                        
+                                                                                                                           
+   HGEPC:PROP=AUCTRANTYPE-1;                                                                                                 
+   !                            Translation type                    !                                                        
+   !                            Used to direct requests for         !                                                        
+   !                            authentication to the               !                                                        
+   !                            appropriate Global Title (GT)       !                                                        
+   !                            translation function in SCCP.       !                                                        
+   !                                                                !                                                        
+   !                            Property value: 0-255               !                                                        
+   !                            Default value: 1                    !                                                        
+   !                            Type: - Optional                    !                                                        
+   !                            Involved blocks: HAUTHAP            !                                                        
+   !----------------------------------------------------------------!
+                                                       
+                                                                                                                                  
+                         
+   !****************************************************************!                                                        
+   ! Authentication (AUT)                                           !                                                        
+   !****************************************************************!                                                        
+                                                                                                                           
+   HGEPC:PROP=AUTCHOVERMAND-0;                                                                                              
+   !                             Authentication of an initiation    !                                                        
+   !                             of IMSI changeover procedure       !                                                        
+   !                             Tells whether IMSI changeover      !                                                        
+   !                             authentication data is mandatory   !                                                        
+   !                             when an initiation of a            !                                                        
+   !                             procedure is performed.            !                                                        
+   !                                                                !                                                        
+   !                             Property value:                    !                                                        
+   !                                0  Mandatory                    !                                                        
+   !                                1  Not mandatory                !                                                        
+   !                                                                !                                                        
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved Blocks: HICA              !
+   !                                                                !
+   ! Note: If IMSI changeover authentication data is                !
+   ! mandatory, then it must be available before the                !
+   ! initiation is accepted. If it is not mandatory,                !
+   ! the HLR cannot control the existence of IMSI                   !
+   ! changeover authentication data. In this case,                  !
+   ! a manual check should be done.                                 !
+   !----------------------------------------------------------------!                                                        
+                                                                                                                             
+   HGEPC:PROP=AUTHDMAND-0;                                                                                              
+   !                            Authentication on a new             !                                                        
+   !                            subscription                        !                                                        
+   !                            Tells whether authentication        !                                                        
+   !                            data is mandatory when a new        !                                                        
+   !                            subscription is initiated.          !                                                        
+   !                                                                !                                                        
+   !                            Property value:                     !                                                        
+   !                             0  Mandatory                       !                                                        
+   !                             1  Not mandatory                   ! 
+   !                                                                !
+   !                            Default value: 0                    !
+   !                            Type: - Optional                    !
+   !                            Involved blocks: HSNA               !
+   !                                                                !
+   ! Note: If authentication data is mandatory then it is           ! 
+   ! required that authentication data is available before          !
+   ! the subscription is accepted. If authentication data           !
+   ! is not mandatory, then HLR cannot control the                  !
+   ! existence of authentication data. In this case                 !
+   ! a manual check should be done.                                 !                                             
+   !----------------------------------------------------------------!  
+
+   HGEPC:PROP=AUTMAXTRIPLETS-4;                                                                                              
+   !                             Maximum number of triplets to be   !                                                        
+   !                             sent to VLR/SGSN in operation      !                                                        
+   !                             Send Parameters                    !                                                        
+   !                             Depends on the number of           !                                                        
+   !                             triplets MSC/VLR/SGSN is able      !                                                        
+   !                             to store.                          !                                                        
+   !                                                                !                                                        
+   !                             Property value: 1-5                !                                                        
+   !                             Default value: 3                   !                                                        
+   !                             Type: - Optional                   !                                                        
+   !                             Involved blocks: HSDH              !  
+   !----------------------------------------------------------------!                                                        
+                                                                                                                             
+   HGEPC:PROP=AUTNUMTRIPLETS-4;                                                                                              
+   !                             Maximum number of                  !                                                        
+   !                             authentication vectors to be       !                                                        
+   !                             sent to VLR/SGSN in operation      !                                                        
+   !                             Send Authentication Info           !                                                        
+   !                                                                !                                                        
+   !                             Property value: 1-4                !                                                        
+   !                             Default value: 3                   !                                                        
+   !                             Type: - Optional                   !                                                        
+   !                             Involved blocks: HSDH2             !                                                        
+   !----------------------------------------------------------------!
+
+   HGEPC:PROP=AUTTIMESUP-5;                                                                                              
+   !                             Time supervision for               !                                                        
+   !                             authentication data                !                                                        
+   !                             If there is no answer from         !                                                        
+   !                             authentication center before       !                                                        
+   !                             this time, a fault code is         !                                                        
+   !                             generated.                         !                                                        
+   !                             Value is set in steps of 1         !                                                        
+   !                             second.                            !                                                        
+   !                                                                !                                                        
+   !                             Property value: 3-10               !                                                        
+   !                             Default value: 5                   !                                                        
+   !                             Type: - Optional                   !
+   !                             Involved blocks:                   !
+   !                             HSNA, HICA, HSDFIA                 !
+   !----------------------------------------------------------------!                                                        
+
+
+
+   !****************************************************************!
+   ! Barring (BAR)                                                  !
+   !****************************************************************!
+
+   HGEPC:PROP=BARMAXREATPWD-3;
+   !                             Number of password mismatches      !
+   !                             Defines the number of consecutive  !
+   !                             password mismatch attempts that    !
+   !                             leads to the blocking of the       !
+   !                             password. The password is used     !
+   !                             for control of barring services    !
+   !                             by the mobile subscriber.          !
+   !                                                                !
+   !                             Property value: 1-5                !
+   !                             Default value: 3                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSSD              !
+   !----------------------------------------------------------------!
+
+
+
+   !****************************************************************!   
+   ! Call Forwarding (CF)                                           !                                
+   !****************************************************************!   
+                                                                        
+   HGEPC:PROP=CFMAXNUMFORWARD-1;                                          
+   !                             Maximum number of forwarding       !   
+   !                             allowed                            !   
+   !                             If the number of current           !   
+   !                             forwarding exceeds the specified   !   
+   !                             maximum number,                    !   
+   !                             the call will not be forwarded.    !   
+   !                                                                !   
+   !                             Property value: 1-5                !   
+   !                             Default value: 3                   !   
+   !                             Type: - Optional                   !   
+   !                             Involved blocks: HRRGAP, HRRGAP2,  !   
+   !                             HRRGAP3.                           !   
+   !----------------------------------------------------------------! 
+
+   HGEPC:PROP=CFNRCVALIDCOND-1;                                       
+   !                             No reachable subscriber VLR        !
+   !                             condition                          !  
+   !                             Defines if location unknown,       !
+   !                             barred, restricted or purged are   !
+   !                             valid conditions for forwarding    !
+   !                             of the call according to the       !
+   !                             service call forwarding on mobile  !
+   !                             subscriber not reachable.          !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  No                              !
+   !                             1  Yes                             !
+   !                                                                !
+   !                             Default value: 1                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HRRGAP, HRRGAP2,  !
+   !                             HRRGAP3                            !
+   !----------------------------------------------------------------!
+
+   HGEPC:PROP=CFNRTIME-15;                                       
+   !                             Default no reply condition time    !
+   !                             value                              !
+   !                             for call forwarding on no reply    !
+   !                             and default call forwarding        !
+   !                             Defines the time interval from the !
+   !                             point when the subscriber is first !
+   !                             alerted until the call is          !
+   !                             redirected.                        !
+   !                             Used when no value has been        !
+   !                             assigned by the operator or by the !
+   !                             mobile subscriber and the service  !
+   !                             was not previously registered at   !
+   !                             registration time.                 !
+   !                             Value is set in steps of 5         !
+   !                             seconds.                           !
+   !                                                                !
+   !                             Property value: 5-30               !
+   !                             Default value: 15                  !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HBSPD, HBSGD      !
+   !----------------------------------------------------------------!
+
+
+
+   !****************************************************************!  
+   ! Intelligent Network (IN)                                       !  
+   !****************************************************************!  
+   
+   HGEPC:PROP=INAPPLIESBS-1;
+   !                             Scope Intelligent Network (IN)     !
+   !                             services                           !
+   !                             Indicates if the Intelligent       !
+   !                             Network services can be applied    !
+   !                             to all basic services or           !
+   !                             or only to telephony and           !
+   !                             auxiliary telephony.               !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Only telephony and auxiliary    !
+   !                                telephony                       !
+   !                             1  All Basic Services              !                                                           
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HRRGAP, HRRGAP2   !
+   !----------------------------------------------------------------!
+                                                                    
+   HGEPC:PROP=INCKAPPLIESBS-0;
+   !                             Scope Intelligent Network          !
+   !                             Category Key services              !
+   !                             Indicates if the Intelligent       !
+   !                             Network Category Key services      !
+   !                             can be applied to all basic        !
+   !                             services or only to telephony      !
+   !                             and auxiliary telephony.           !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Only telephony and auxiliary    !
+   !                                telephony                       !
+   !                             1  All Basic Services              !                                                      
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HRRGAP2, HRRGAP3  !
+   !----------------------------------------------------------------! 
+
+
+
+   !****************************************************************!  
+   ! Load Priority Level (LOAD)                                     !  
+   !****************************************************************!  
+   
+   HGEPC:PROP=LOADPRIOLEVEL-0;
+   !                             Description                        !
+   !                             Load priority level for load       !
+   !                             regulation of incoming             !
+   !                             traffic                            !
+   !                             Defines which one of the           !
+   !                             two existing priority allocation   !
+   !                             tables is used.                    !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Priority levels are             !
+   !                                distributed                     !
+   !                             1  Priority values are joined      !                                                           
+   !                                in high levels                  !
+   !                                                                !
+   !                             Default value: 1                   !
+   !                             Type: - Mandatory                  !
+   !                             Involved blocks:HMAPTC, HINAPTC.   !
+   !----------------------------------------------------------------!  
+
+
+
+   !****************************************************************!   
+   ! Logging (LOG)                                                  !                                
+   !****************************************************************!   
+                                                                        
+   HGEPC:PROP=LOGACAP-1;                                          
+   !                             Logging activation/deactivation    !   
+   !                             Specifies whether each             !   
+   !                             activation or deactivation         !   
+   !                             performed successfully             !   
+   !                             by the subscriber is               !   
+   !                             logged by the system in            !   
+   !                             a backup media.                    !   
+   !                                                                !   
+   !                             Property value:                    !   
+   !                             0  Logging not performed.          !   
+   !                             1  Logging performed.              !   
+   !                                                                !   
+   !                             Default value: 1                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSSACAP, HSACAP2  !
+   !----------------------------------------------------------------! 
+
+   HGEPC:PROP=LOGCHOVER-1;                                       
+   !                             Logging IMSI changeover            !
+   !                             execution                          !  
+   !                             Specifies whether each IMSI        !
+   !                             changeover execution performed     !
+   !                             successfully by the subscriber     !
+   !                             is logged by the system in a       !
+   !                             backup media.                      !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Logging not performed           !
+   !                             1  Logging performed               !
+   !                                                                !
+   !                             Default value: 1                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HICD              !
+   !                                                                !
+   !----------------------------------------------------------------!
+
+   HGEPC:PROP=LOGPWAP-1;                                       
+   !                             Logging password registration      !
+   !                             Specifies whether each password    !
+   !                             registration performed             !
+   !                             successfully by the subscriber     !
+   !                             is logged by the system in a       !
+   !                             backup media.                      !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Logging not performed           !
+   !                             1  Logging performed               !
+   !                                                                !
+   !                             Default value: 1                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSSPWAP, HSPWAP2  !    
+   !----------------------------------------------------------------!
+
+   HGEPC:PROP=LOGREAP-1;                                       
+   !                             Logging registration/erasure       !
+   !                             Specifies whether each             !
+   !                             registration or erasure            !
+   !                             performed successfully             !
+   !                             by the subscriber is logged by     !
+   !                             the system in a backup media.      !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Logging not performed           !
+   !                             1  Logging performed               !
+   !                                                                !
+   !                             Default value: 1                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSSREAP, HSREAP2  !
+   !----------------------------------------------------------------! 
+
+
+
+   !****************************************************************!  
+   ! MAP Version 2 (MV2)                                            !  
+   !****************************************************************!  
+   
+   HGEPC:PROP=MV2ACRESETTIME-90;
+   !                             Time of the periodical reset of    !
+   !                             the Application Context (AC)       !
+   !                             version control table              !
+   !                             When the table is reset, all the   !
+   !                             VLRs are considered able to        !
+   !                             handle Application Context         !
+   !                             version 2.                         !
+   !                             Value is set in steps of 1 day.    !
+   !                                                                !
+   !                             Value 0 means the table is never   !
+   !                             reset, i.e. the system values      !
+   !                             are kept.                          !                                                           
+   !                                                                !
+   !                             Property value: 0-365              !
+   !                             Default value: 90 days             !
+   !                             Type: - Optional                   !
+   !                             Involved blocks:                   !
+   !                                      HISDAP2, HRRVAP2,         !
+   !                                      HDSDAP2, HSUDAP2,         !
+   !                                      HRETAP,  HRESTAP,         !
+   !                                      HSTRAP2, HLUAP2,          !
+   !                                      HREDAP2                   !
+   !----------------------------------------------------------------!
+                                                                    
+   HGEPC:PROP=MV2RESTRICTION-2;
+   !                             Restriction in the use of the      !
+   !                             MAP version 2 protocol             !
+   !                             Defines whether MAP version 2      !
+   !                             protocol can be used by HLR to     !
+   !                             interwork with other GSM nodes.    !
+   !                             This restriction applies to        !
+   !                             incoming and outgoing dialogues.   !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  MAP version 2 not allowed       !
+   !                                to be used                      !
+   !                             1  MAP version 2 not allowed       !                                                      
+   !                                to be used with the VLRs        !
+   !                                not belonging to the areas      !
+   !                                that have got the Roaming       !
+   !                                Area Characteristic 'TRAFFV2'   !
+   !                             2  MAP version 2 allowed to be     !
+   !                                used with any node              !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks:                   !
+   !                                      HDSDAP2, HISDAP2          !
+   !                                      HRRVAP2, HLUAP2,          !
+   !                                      HREDAP2, HRRGAP2,         !
+   !                                      HSBEAP2, HSUDAP2,         !
+   !                                      HMSPAP2, HMSPAP3,         !
+   !                                      HRETAP,  HLUAP3,          !
+   !                                      HREDAP3, HRRGAP3,         !
+   !                                      HASCAP2, HRSMAP2,         !
+   !                                      HSMRAP2, HSTRAP2,         !
+   !                                      HRFSAP2, HRFSAP3,         !
+   !                                      HSDPAP,  HLCAP,           !
+   !                                      HRESTAP, HRSMAP3,         !
+   !                                      HSMRAP3, HSAIAP2,         !
+   !                                      HSAIAP3                   !
+   !----------------------------------------------------------------!
+
+
+
+   !****************************************************************!  
+   ! MAP Version 3 (MV3)                                            !  
+   !****************************************************************!  
+   
+   HGEPC:PROP=MV3ACRESETTIME-90;
+   !                             Time of the periodical reset of    !
+   !                             the Application Context (AC)       !
+   !                             version control table              !
+   !                             When the table is reset, all the   !
+   !                             VLRs are considered able to        !
+   !                             handle Application Context         !
+   !                             version 3.                         !
+   !                                                                !
+   !                             Value is set in steps of 1 day.    !
+   !                             Value 0 means the table is never   !
+   !                             reset, i.e. the system values      !
+   !                             are kept.                          !                                                           
+   !                                                                !
+   !                             Property value: 0-365              !
+   !                             Default value: 90 days             !
+   !                             Type: - Optional                   !
+   !                             Involved blocks:                   !
+   !                                       HISDAP3, HRRVAP3,        !
+   !                                       HDSDAP3, HPSIAP3,        !
+   !                                       HLCAP, HSTRAP3,          !
+   !                                       HLUAP3, HREDAP3          !
+   !----------------------------------------------------------------!
+                                                                    
+   HGEPC:PROP=MV3RESTRICTION-2;
+   !                              Restriction in the use of the     !
+   !                              MAP version 3 protocol            !
+   !                              Defines whether MAP version 3     !
+   !                              protocol can be used by HLR to    !
+   !                              interwork with other GSM and      !
+   !                              WCDMA nodes.                      !
+   !                              This restriction applies to       !
+   !                              incoming and outgoing dialogues.  !
+   !                                                                !
+   !                              Property value:                   !
+   !                              0  MAP version 3 not allowed      !
+   !                                 to be used                     !                                                      
+   !                              1  MAP version 3 not allowed      !
+   !                                 to be used with the VLRs       !
+   !                                 not belonging to the areas     !
+   !                                 that have got the Roaming      !
+   !                                 Area Characteristic 'TRAFFV3'  !
+   !                              2  MAP version 3 allowed to be    !
+   !                                 used with any node             !
+   !                                                                !
+   !                              Default value: 0                  !
+   !                              Type: - Optional                  !
+   !                              Involved blocks:                  !
+   !                                       HDSDAP3, HISDAP3         !
+   !                                       HRRVAP3, HLUAP3,         !
+   !                                       HREDAP3, HRRGAP3         !
+   !                                       HATIAP3, HPSIAP3,        !
+   !                                       HRFSAP3, HLCAP,          !
+   !                                       HMSPAP3, HSTRAP3,        !
+   !                                       HRRMPAP, HRRLAP3,        !
+   !                                       HRSMAP3, HSMRAP3,        !
+   !                                       HSAIAP3, HIALAP3,        !
+   !                                       HICOAP3                  !
+   !----------------------------------------------------------------!
+
+
+
+   !****************************************************************!   
+   ! Call Forwarding (CF)                                           !                                
+   !****************************************************************!   
+                                                                        
+   HGEPC:PROP=MASSRATE-200;                                          
+   !                             Maximum amount of data in Kbits    !   
+   !                             per second that can be sent to     !   
+   !                             the signalling network for         !   
+   !                             updating the VLRs/SGSNs during     !   
+   !                             massive change of subscriber       !   
+   !                             data                               !   
+   !                             Value is set in steps of           !   
+   !                             1 Kbits/sec.                       !   
+   !                                                                !   
+   !                             Property value: 40-300             !   
+   !                             Default value: 100 Kbits/sec       !   
+   !                             Type: - Optional                   ! 
+   !                             Involved blocks: HUPDAT            !
+   !----------------------------------------------------------------!  
+                                                                       
+
+
+   !****************************************************************!  
+   ! Monitoring of Call Forwarding Registration (MCF)               !  
+   !****************************************************************!  
+   
+   HGEPC:PROP=MCFTIMESUP-30;
+   !                             Description                        !
+   !                             Time supervision period in         !
+   !                             minutes for monitoring of call     !
+   !                             forwarding                         !
+   !                             Defines the time interval from     !
+   !                             the point when the monitoring      !
+   !                             period starts until the            !
+   !                             monitoring period is over.         !
+   !                             Value is set in steps of           !
+   !                             15 minutes.                        !
+   !                                                                !
+   !                             Property value: 30-120             !                                                           
+   !                             Default value: 60 minutes          !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HMCFD             !
+   !----------------------------------------------------------------!
+                                                                    
+   HGEPC:PROP=MCFTHRESHOLD-5;
+   !                             Threshold for the number           !
+   !                             of successful forwarded-to         !
+   !                             number registrations in a time     !
+   !                             supervision period                 !
+   !                             before the alarm is                !
+   !                             triggered                          !
+   !                                                                !
+   !                             Property value: 5-20               !
+   !                             Default value: 5                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HMCFD             !                                                    
+   !----------------------------------------------------------------!
+
+   HGEPC:PROP=MCFALARM-1;
+   !                              Alarm activation                  !
+   !                              Logging is performed              !
+   !                              when the monitored subscriber     !
+   !                              has reached the threshold         !
+   !                              This parameter specifies          !
+   !                              whether the alarm is given        !
+   !                              or not in this case.              !
+   !                                                                !
+   !                              Property value: 0-1               !
+   !                              0  Alarm printout is not          !
+   !                                 generated                      !
+   !                              1  Alarm printout is generated    !                                                      
+   !                                                                !
+   !                              Default value: 1                  !
+   !                              Type: - Optional                  !
+   !                              Involved blocks: HMCFD            !
+   !----------------------------------------------------------------!  
+
+                                                                      
+                                                                      
+   !****************************************************************! 
+   ! Note Subscriber Data Modified (NSDM)                           ! 
+   !****************************************************************! 
+                                                                      
+   HGEPC:PROP=NSDMMAXRATE-300;                                        
+   !                             Number of Kbits per second that    ! 
+   !                             can be sent for NSDM operations    ! 
+   !                             to the GSM Service Control         ! 
+   !                             Functions (gsmSCFs) in             ! 
+   !                             steps of 1Kbits/sec.               ! 
+   !                                                                ! 
+   !                             Property value: 10-300             ! 
+   !                             Default value: 10                  ! 
+   !                             Type: - Optional                   ! 
+   !                             Involved blocks: HSDMAP3           ! 
+   !----------------------------------------------------------------! 
+
+
+
+     
+   !****************************************************************! 
+   ! Operator Call Barring (OCB)                                    !
+   !****************************************************************! 
+   
+   HGEPC:PROP=OCBODBOIC-0;
+   !                             Description                        !
+   !                             Subscriber status parameter        !
+   !                             value for MAP version 1 message    !
+   !                             when Operator Determined Barring   !
+   !                             of all Outgoing International      !
+   !                             (BOIC) calls is active             !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !
+   !                             1  All outgoing calls shall be     !
+   !                                barred in the VLR               !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSDH              !
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=OCBODBOIEXH-0;
+   !                             Subscriber status parameter        !
+   !                             value for MAP version 1 message    !
+   !                             when Operator Determined Barring   !
+   !                             of all Outgoing International      !
+   !                             Calls Except those directed to     !
+   !                             the Home PLMN Country (BOIEXH)     !
+   !                             is active                          !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !
+   !                             1  All outgoing calls shall be     !
+   !                                barred in the VLR               !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSDH              !                                                               
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=OCBODBOSB1-0;
+   !                             Subscriber status parameter        !
+   !                             value for MAP version 1 message    !
+   !                             when Operator Specific Barring     !
+   !                             type 1 (OSB1) is active            !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !
+   !                             1  All outgoing calls shall be     !
+   !                                barred in the VLR               !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSDH              !
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=OCBODBOSB2-0;
+   !                             Subscriber status parameter        !
+   !                             value for MAP version 1 message    !
+   !                             when Operator Specific Barring     !
+   !                             type 2 (OSB2) is active            !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !
+   !                             1  All outgoing calls shall be     !
+   !                                barred in the VLR               !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSDH              !
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=OCBODBOSB3-0;
+   !                             Subscriber status parameter        !
+   !                             value for MAP version 1 message    !
+   !                             when Operator Specific Barring     !
+   !                             type 3 (OSB3) is active            !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !                                                          
+   !                             1  All outgoing calls shall be     !                                                          
+   !                                barred in the VLR               !                                                          
+   !                                                                !                                                          
+   !                             Default value: 0                   !                                                          
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSDH              !                     
+   !----------------------------------------------------------------!                                                          
+                                                                                                                             
+   HGEPC:PROP=OCBODBOSB4-0;                                                                                                    
+   !                             Subscriber status parameter        !                                                          
+   !                             value for MAP version 1 message    !                                                          
+   !                             when Operator Specific Barring     !                                                          
+   !                             type 4 (OSB4) is active            !                                                          
+   !                                                                !                                                          
+   !                             Property value:                    !                                                          
+   !                             0  Calls do not have to be         !                                                          
+   !                                barred in the VLR due to this   !                                                          
+   !                                Operator Determined Barring     !                                                          
+   !                             1  All outgoing calls shall be     !                                                          
+   !                                barred in the VLR               !                                                          
+   !                                                                !                                                          
+   !                             Default value: 0                   !                                                          
+   !                             Type: - Optional                   !  
+   !                             Involved blocks: HSDH              !                                                    
+   !----------------------------------------------------------------!                                                          
+                                                                                                                               
+   HGEPC:PROP=OCBODBPREE-0;
+   !                             Subscriber status parameter        !
+   !                             value for MAP Version 1 message    !
+   !                             when Operator Determined Barring   !
+   !                             of Outgoing Premium Rate calls     !
+   !                             (entertainment)(OBOPRE)            !
+   !                             is active                          !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !
+   !                             1  All outgoing calls shall be     !
+   !                                barred in the VLR               !                                                           
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional.                  !                                                              
+   !                             Involved blocks: HSDH              !
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=OCBODBPREI-0;
+   !                             Subscriber status parameter        !
+   !                             value for MAP version 1 message    !
+   !                             when Operator Determined Barring   !
+   !                             of Outgoing Premium Rate calls     !
+   !                             (information)(OBOPRI) is active    !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Calls do not have to be         !
+   !                                barred in the VLR due to this   !
+   !                                Operator Determined Barring     !
+   !                             1  All outgoing calls shall be     !
+   !                                barred in the VLR               !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSDH              !
+   !----------------------------------------------------------------!
+
+
+
+   !****************************************************************! 
+   ! Redundancy (RED)                                               !
+   !----------------------------------------------------------------!
+   ! All these exchanges properties apply both to                   !
+   ! HLR Node Redundancy and Multiple HLR Node Redundancy Functions ! 
+   !****************************************************************! 
+   
+   HGEPC:PROP=REDFAILNORM-10;
+   !                             Percentage of redundant            !
+   !                             subscribers pending to be          !
+   !                             updated to transit                 !
+   !                             from Failure to Normal state       !
+   !                                                                !
+   !                             Property value: 0-100              !
+   !                             Default value: 10                  !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HRNC              !
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=REDINCOMPDATA-1;
+   !                             Threshold to trigger the           !
+   !                             subscribers                        !
+   !                             with incompatible data alarm       !
+   !                             It is set in steps of 10           !
+   !                             subscribers.                       !
+   !                                                                !
+   !                             Property value: 1-65535            !
+   !                             Default value: 10                  !
+   !                             (100 subscribers)                  !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HRSC              !
+
+
+   !----------------------------------------------------------------!
+   
+   HGEPC:PROP=REDRATE-8200;
+   !                             Number of Kbits per second that    !
+   !                             can be sent to the mated HLR in    !
+   !                             steps of 1Kbits/sec                !
+   !                                                                !
+   !                             Property value: 10-8200            !
+   !                             Default value: 10                  !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HRSC              !
+   !----------------------------------------------------------------! 
+     
+     
+   
+   !****************************************************************! 
+   ! Regional Services (REG)                                        !
+   !****************************************************************! 
+   
+   HGEPC:PROP=REGMSCREST-1;
+   !                             Specifies whether the MSC is       !
+   !                             restricted by HLR when, for a      !
+   !                             mobile subscriber, the result of   !
+   !                             Insert Subscriber Data message     !
+   !                             indicates 'Zone Code Conflict'     !
+   !                             or 'Too many Zone Codes'           !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  MSC is not restricted           !
+   !                             1  MSC is restricted               !
+   !                                                                !
+   !                             Default value: 1                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HZONED            !
+   !----------------------------------------------------------------!
+
+
+   
+   !****************************************************************! 
+   ! Reset Inhibition (RES) 		                                !
+   !****************************************************************! 
+   
+   HGEPC:PROP=RESETINHIBITION-0;
+   !                             Specifies whether reset message,   !
+   !                             not initiated by command, is       !
+   !                             inhibited or not.                  !
+   !                                                                !
+   !                             Property value:                    !
+   !                              0  Reset message is not           !
+   !                                 inhibited                      !
+   !                              1  Reset message is               !
+   !                                 inhibited                      !
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Mandatory                  !
+   !                             Involved blocks: HVLRAD,HSTRD      !
+   !----------------------------------------------------------------!
+   
+   
+   
+   !****************************************************************! 
+   ! Unstructured Supplementary Service Data (USSD)                 !
+   !****************************************************************! 
+   
+   HGEPC:PROP=USSDTEXTESCAPE-1;
+   !                             Escape code used when entering     !
+   !                             a text string by command           !
+   !                                                                !
+   !                             Property value:                    !
+   !                             0  Escape code '%'                 !
+   !                             1  Escape code '#'                 !
+   !                             2  Escape code '*'                 !
+   !                             3  Escape code ':'                 !
+   !                             4  Escape code '!                   
+   !                                                                !
+   !                             Default value: 0                   !
+   !                             Type: - Optional                   !
+   !                             Involved blocks: HSSUDA            !
+   !----------------------------------------------------------------!
+     
+                                      
+     
+                 
+   
+
+                         

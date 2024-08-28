@@ -1,0 +1,39 @@
+
+     IOTXP:** CCITT7, SCCP Congestion Control Data, Change *******************; 
+
+    
+     C7CDC:TAMS=900,LCON=16,TDS=1; 
+     C7CDC:PCNT1=1,PCNT2=2,PCNT3=3;
+
+     !                                                                    !
+     ! TAMS=tams  Attack time for MTP restriction level in milliseconds   !  
+     ! Minimum time in milliseconds that MTP restriction level (RLm) and  !  
+     ! MTP restriction sublevel (RSLm)  must be kept in a level           !  
+     ! Numeral 0 - 900                                                    !  
+     !                                                                    !      
+     ! LCON=lcon  Local congestion threshold                              !  
+     ! Indicates the number of local MTP congestion indications to ignore !  
+     ! between those acted on.                                            !  
+     ! Numeral 1 - 16                                                     !  
+     !                                                                    !  
+     ! TDS=tds  Decay time for MTP restriction level                      !  
+     ! Minimum time in seconds that RLm and RSLm must be kept in a level  !  
+     ! before decreasing.                                                 !  
+     ! Numeral 1 - 10                                                     !  
+     !                                                                    !  
+     !--------------------------------------------------------------------!  
+     
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+

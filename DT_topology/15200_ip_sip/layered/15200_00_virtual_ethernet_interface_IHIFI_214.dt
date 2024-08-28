@@ -1,0 +1,20 @@
+
+IOTXP:** IP Transport, Virtual Ethernet Interface, Initiate  ************;
+
+IHIFP;
+IHIFI:NVIF=BC-SIG;
+IHIFP;
+IHIFI:NVIF=BC-LDAP,STACK=TIPXPU;
+IHIFP;
+
+
+IOTXP:** IP Transport, Virtual Ethernet Interface, Change  **************;
+
+IHIFC:ADD ,NVIF=BC-SIG	 ,BASEIP=xx.xx.xx.xx 	,NETMASK=255.255.255.224 ,ARP=YES	; ! BASEIP - sigtran part -1st blade !
+IHIFP;
+IHIFC:ADD ,NVIF=BC-LDAP ,IP	=xx.xx.xx.x		,NETMASK=255.255.255.252 ,ARP=NO	; ! IP: BC VIP !
+IHIFC:ADD ,NVIF=BC-LDAP ,BASEIP=xx.xx.xx.xx 	,NETMASK=255.255.255.224 ,ARP=YES	; ! BASEIP: 1st blade IP - LDAP part  !
+IHIFP;
+
+
+

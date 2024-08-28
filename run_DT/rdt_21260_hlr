@@ -1,0 +1,514 @@
+
+!************!
+! START rdt1 !
+!************!
+
+IOTXP:COLD START HLR-FE;
+
+emu:cont-dtfile -t none -er,errores.log -br,busy.log -lr,all.log
+
+
+IOTXP:******* LOAD BLOCKs FOR  TESTING PURPOSES *************************;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/CP_block;
+LASUL:BLOCK=CORONA;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/Corrections/APZ21260_COR.txt
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/M/CP_block;
+LASUL:BLOCK=M;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/CP_block;
+LASUL:BLOCK=PESRM;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/Corrections/MISSRA_for_LAI21_PESRM.txt
+
+
+IOTXP:******* LOAD RSU for ALGEN & ALGEN2 to use in RPG2/RPG3/GARP ******;
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/AUC/Classic;
+LAEUL:SUNAME=ALL;
+LAEIP:SUNAME=AGENR;
+LAEIP:SUNAME=AGEN2R;
+
+
+IOTXP:******* Licenses support workaround LMCLI *************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/License_correction
+
+
+SYATI:RESTART;
+
+
+IOTXP:00900 ** AXE PARAMETER ADMINISTRATION *****************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/common/00900_dualside212
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/classic/00900_classic
+
+
+SYREI:RANK=LARGE,EXPL=PLAN-"FE CONF";
+
+
+IOTXP:01010 ** SIZE ALTERATIONS EVENTS **********************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_00_apz
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_01_gen
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_02_ccs
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_03_ip
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_04_m3ua
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_05_sctp
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_09_apt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/classic/01010_00_auc
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/classic/01010_01_hlr
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/classic/01010_02_fnr
+
+
+IOTXP:*** Size Alteration of Data Files, Operational Control, Set *******;
+SAOCS:STATE=ACTIVE;
+
+
+IOTXP:*** Sie Alteration Of Data Files, Data Build **********************;
+SADBI;
+
+
+IOTXP:01400 ** HARDWARE LAYOUTS *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_00_rpbus_position_standard_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_00_rpbus_position_optional_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_00_rpbus_position_optional_rpg_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_01_switches_position_standard_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_01_switches_position_optional_egem_21260
+
+
+IOTXP:02000 ** ALLOCATION OF RP *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/classic/02000_00_rpdata_standard_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/classic/02000_00_rpdata_optional_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/classic/02000_00_rpdata_optional_rpg_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/classic/02000_01_rpsw_standard_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/classic/02000_01_rpsw_optional_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/classic/02000_01_rpsw_optional_rpg_21260
+
+
+IOTXP:02020 ** ALLOCATION OF EM *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02020_em_allocation/classic/02020_emdata_standard_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02020_em_allocation/classic/02020_emdata_optional_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02020_em_allocation/classic/02020_emdata_optional_rpg_21260
+
+IOTXP:02510 ** RP and EM DEBLOCK ****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02510_rp_em_deblock/classic/02510_00_rpem_deblock_standard_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02510_rp_em_deblock/classic/02510_00_rpem_deblock_optional_egem_21260
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02510_rp_em_deblock/classic/02510_00_rpem_deblock_optional_rpg_21260
+
+IOTXP:11000 ** THRESHOLD SUPERVISION AND EVENT REPORTING ****************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/classic/11000_event_reporting
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/classic/11000_threshold_supervision
+
+
+IOTXP:12000 ** IO SUBSYSTEM FUNCTION ************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12000_io_subsystem_function/12000_apg4x
+
+
+IOTXP:12010 ** SYSTEM START AND RESTART FUNCTIONS ***********************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12010_start_restart_functions/12010_dualside212
+
+
+IOTXP:13000 ** EXCHANGE PROPERTIES **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/13000_properties/classic/13000_classic
+
+IOTXP:13100 ** LOAD CONTROL *********************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/13100_load_control/classic/13100_load_control_PLCDC.txt
+
+PTSWI;
+
+!***********!
+! END rdt1  !
+!***********!
+
+
+
+!************!
+! START rdt2 !
+!************!
+
+IOTXP:15200 ** CCS7 *****************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15200_ip_sip/classic/15200_04_sctp_layer_parameter_IHSLC.dt
+
+
+IOTXP:15210 ** IP-SIP ****************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_00_own_signalling_point_C7OPI.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_02_destination_signalling_point_C7SPI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_03_sccp_buffer_pool_size_C7BPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_08_sccp_network_configuration_C7NPI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_09_global_title_rc_titan&simu_C7GCI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_10_global_title_series_titan&simu_C7GSI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_11_own_global_title_address_C7OAI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/classic/15210_12_sccp_congestion_control_C7CDC
+
+
+IOTXP:16200 ** HLR BEARER CAPABILITY ************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/16200_bearer_capability/classic/16200_bearer_capability_data_HGBDI
+
+
+IOTXP:75300 ** C7 SUPERVISION DATA **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/75300_c7_supervision/75300_c7_event_reporting
+
+
+IOTXP:75400 ** NODE ADRESSES AND ROAMING AREA CHARACTERISTICS ***********;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_01_own_calling_address_HGCAC_HGRNC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_02_roaming_area_characteristics_HGRCI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_03_ussd_external_node_address_profile_HGXAI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_04_gsm_service_control_function_address_HGGSI_HGGSC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_05_device_configuration_register_address_HGDCC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_06_roaming_distribution_HGRDI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_07_interexchange_carrier_HGIXI_HGPCC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_08_hlr_network_ip_address_HGNII
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_09_personalized_ringbacktone_vlraddress_HGPVI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/classic/75400_12_location_services_address_HGGLI
+
+
+IOTXP:78000 ** FORWARDED-TO NUMBER ANALYSIS *****************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/78000_forwarded_number_analysis/classic/78000_forwarded_number_analisys_HGFSI
+
+
+IOTXP:79000 ** USSD TEXT STRING *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/79000_initiation_ussd_text_string/classic/79000_ussd_text_string_HGUPI_HGUSC
+
+
+IOTXP:80000 ** SUBSCRIBER DATA ******************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_06_roaming_service_profile_HGRPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_07_roaming_service_area_HGRAC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_08_subscriber_profile_HGSPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_09_camel_subscription_profile_data_HGCMI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_10_camel_subscription_profile_extended_data_HGCEC_HGCTI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_11_access_point_name_HGAPI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_12_extended_quality_service_HGEQI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_13_packet_data_control_context_profile_HGPPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/80000_20_auc_key_data_AGKDI
+
+
+IOTXP:81000 ** HLR NUMBER SERIE ANALYSIS ********************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/classic/81000_00_number_series_analysis_HGNSI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/classic/81000_01_area_specific_feature_data_HGSFI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/classic/81000_02_zone_code_set_data_HGZNI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/classic/81000_04_number_series_preanalysis_HGPAI
+
+
+IOTXP:82000 ** FLEXIBLE NUMBERING ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_00_default_route_translation_FGDRC_FGARC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_01_own_network_prefix_FGOPC_FGAPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_02_own_gmsc_series_FGGSI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_03_imsi_mgt_tranlsation_FGIMI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_04_translation_type_relation_FGTTI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_05_network_generic_imsi_FGGII
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_06_service_key_FGSKI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/classic/82000_07_number_transations_FGNTI
+
+IOTXP:83000 ** SMS ROUTER ADDRESS ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/83000_sms_router_address/classic/83000_00_sms_router_address_HGSAI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/83000_sms_router_address/classic/83000_01_origin_node_list_HGOLI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/83000_sms_router_address/classic/83000_02_mt_smsm_screening_profile_HGMPC
+
+
+IOTXP:84000 ** M2M PROFILE **********************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/84000_m2m_profile/classic/84000_m2m_profile_HGM2I
+
+!***********!
+! END rdt2  !
+!***********!
+
+
+
+!************!
+! START rdt3 !
+!************!
+
+IOTXP:80000 ** SUBSCRIBER DATA, AUC SUBSCRIPTIONS ************************;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/11serie/11A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/12serie/12A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/13serie/13A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/14serie/14A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/15serie/15A/AGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/28serie/28A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/AGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/34serie/34A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/38serie/38A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/AGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/40serie/40A/AGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/50serie/50A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/51serie/51A/AGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/58serie/58A/AGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/80serie/80A/AGSUIA00
+
+!***********!
+! END rdt3  !
+!***********!
+
+
+
+!************!
+! START rdt4 !
+!************!
+
+HGEPP:ID  =AUTHDMAND  ;
+HGEPC:PROP=AUTHDMAND-1;
+HGEPP:ID  =AUTHDMAND  ;
+
+
+IOTXP:80000 ** SUBSCRIBER DATA, HLR SUBSCRIPTIONS ************************;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/10serie/10A/HGCTIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/11serie/11A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/11serie/11A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/11serie/11A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/11serie/11A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/11serie/11A/HGCMIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/12serie/12A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/12serie/12A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/12serie/12A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/12serie/12A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/12serie/12A/HGCTIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/13serie/13A/HGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/14serie/14A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/14serie/14A/HGSDCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/15serie/15A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/15serie/15A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/15serie/15A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/15serie/15A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/15serie/15A/HGSDCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGMMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/20serie/20A/HGSNCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGMMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGMAIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGSDCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGCUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/23serie/23A/HGCSCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/24serie/24A/HGCECA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGCTIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/25serie/25A/HGTEIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/26serie/26A/HGPDIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGSDCA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/27serie/27A/HGPSIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/28serie/28A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/28serie/28A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/28serie/28A/HGCMIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGSGIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/29serie/29A/HGTEIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGMMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/30serie/30A/HGMAIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGMMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGMAIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGCUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/31serie/31A/HGCSCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/32serie/32A/HGSDCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGCUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/33serie/33A/HGCSCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/34serie/34A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/34serie/34A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/34serie/34A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/34serie/34A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/34serie/34A/HGPDIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGCUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/35serie/35A/HGCSCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/36serie/36A/HGCECA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGCUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/37serie/37A/HGCSCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/38serie/38A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/38serie/38A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/38serie/38A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/38serie/38A/HGCUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/38serie/38A/HGCSCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/HGCECA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/HGPDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/39serie/39A/HGSDCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/40serie/40A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/40serie/40A/HGSSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/40serie/40A/HGLDIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/40serie/40A/HGCMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/40serie/40A/HGCECA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/50serie/50A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/50serie/50A/HGAMIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/50serie/50A/HGSDCA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/51serie/51A/HGSUIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/58serie/58A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/58serie/58A/HGSDCA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/58serie/58A/HGSSIA00
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/80serie/80A/HGSUIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/80serie/80A/HGSNCA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/80serie/80A/HGSDCA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/80serie/80A/HGSSIA00
+
+
+IOTXP:80000 ** SUBSCRIBER DATA, HLR MULTIPLE SUBSCRIPTIONS ***************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/21serie/21A/HGMSIA00
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/classic/subscriptions/22serie/22A/HGMSIA00
+
+HGEPP:ID  =AUTHDMAND  ;
+HGEPC:PROP=AUTHDMAND-0;
+HGEPP:ID  =AUTHDMAND  ;
+
+SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=GSMHRSS,NAME=STANDBYNODE,VALUE=1;
+DBTRE:COM;
+SYPAC:ACCESS=DISABLED;
+
+IOTXP:Lic_corr_removal  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/Lic_corr_removal
+
+IOTXP:NPH_calling_adress  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/FNR_calling_address
+
+emu:cont-dtfile -t all;
+emu:cont-dtfile -t none;
+
+!***********!
+! END rdt4  !
+!***********!

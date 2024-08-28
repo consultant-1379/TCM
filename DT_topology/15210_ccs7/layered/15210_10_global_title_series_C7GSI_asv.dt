@@ -1,0 +1,23 @@
+
+IOTXP:** CCITT7, Global Title Series, Initiate **************************;
+!---------------------------------------!
+! NP=1 -> E.164 (MSISDN) !
+! NP=6 -> E.212 (IMSI)   !
+! NP=7 -> E.214 (MGT)    !
+!---------------------------------------!
+
+C7GSI:TT=0,NP=1,NA=4,NS=49172401,GTRC=50, STATUS= OLD; !HLR! 
+C7GSI:TT=0,NP=7,NA=4,NS=49172402,GTRC=50; !HLR!
+C7GSI:TT=0,NP=1,NA=4,NS=49172603,GTRC=60; !VLR!
+C7GSI:TT=0,NP=1,NA=4,NS=49172402,GTRC=150; !VLR!
+C7GSI:TT=0,NP=1,NA=7,NS=49172402,GTRC=150; !VLR!
+C7GSI:TT=0,NP=1,NA=4,NS=49172444900,GTRC=61; !SC! 
+C7GSI:TT=0,NP=1,NA=4,NS=49172490,GTRC=151;
+
+
+!--   AUC  -------------------------------!
+C7GSI:NS=2620210,NP=6,NA=4,TT=1,GTRC=51; ! AUC !
+
+C7TAI;
+C7TLI;
+C7TCI;

@@ -1,0 +1,21 @@
+
+
+IOTXP:*** IP ON CP - SUA ********************************************;
+!SUA EP and Associations!
+IHBII:BASELIP="10.3.10.101",EPID=ISUS390,USER=SUA,SCTPCP,MODE=CLIENT,LPN=14002;
+IHADI:SAID=ISUSPX390,EPID=ISUS390,RIP="10.3.10.100",SCTPCP,RPN=14003;
+
+IOTXP:** TCAP BUFFER POOL SIZE ******************************************;
+
+
+
+!Signalling Processes!
+UASPI:SPID=3390,SPTYPE=SGP,PROT=SUA,SAID=ISUSPX390,SGID=SPX390;
+UASPP:SPID=ALL,PROT=SUA;
+!Signalling Processes - Application Server Relation!
+UAPRI:SPID=3390,PROT=SUA,ASID=QAHLRBS,RC=301;
+UASPP:SPID=ALL,PROT=SUA;
+
+!Signalling Processes ACTivation!
+UAPSC:PROT=SUA, STATE=ACT, SPID=3390;
+

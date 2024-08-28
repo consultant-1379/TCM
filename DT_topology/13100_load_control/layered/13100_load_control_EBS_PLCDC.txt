@@ -1,0 +1,4 @@
+
+IOTXP:** Processor Load Control Data, Change  ***************************;
+
+PLCDC:LDLIM=85,LIMCAL=1; ! EBS - 85% !

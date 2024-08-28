@@ -1,0 +1,10 @@
+
+     IOTXP:** CCITT7, Global Title Routing Case, Initiate ********************; 
+                    
+     C7GCI:GTRC=1   ,PSP=0-410  ,PINTER    ,STATUS=OLD ;
+     C7GCI:GTRC=2   ,PSP=0-420  ,PINTER                ;
+     C7GCI:GTRC=16  ,PSP=OWNSP                         ;
+     C7GCI:GTRC=17  ,PSP=OWNSP  ,PSSN=128              ;
+     C7GCI:GTRC=18  ,PSP=OWNSP                         ;
+     C7GCI:GTRC=19  ,PSP=0-411  ,PINTER                ;
+     

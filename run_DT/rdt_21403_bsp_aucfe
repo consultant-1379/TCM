@@ -1,0 +1,139 @@
+
+!*************************!
+! rdt APZ 21403 blade     !
+!*************************!
+
+!************!
+! START rdt  !
+!************!
+
+IOTXP:COLD START HLR-FE 21403 BLADE;
+
+emu:cont-dtfile -t none -er,errores.log -br,busy.log -lr,all.log
+
+
+IOTXP:******* Workaround to avoid the usage of APG Simulation ***********;
+emu: catch-signal REQSESSINFO -exec {;
+emu: catch-import-variables;
+emu: send-signal-cb 0 with $d2 0 100 100 2 3 0 5;
+emu: print-text wb "Session info set to UNRESTRICTED session with expert mode\n";
+emu: };
+
+
+IOTXP:******* LOAD BLOCKs FOR TESTING PURPOSES **************************;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/CP_block;
+LASUL:BLOCK=CORONA;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/Corrections/APZ214XX_COR.txt
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/M/CP_block;
+LASUL:BLOCK=M;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/CP_block;
+LASUL:BLOCK=PESRM;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/Corrections/MISSRA_for_LAI21_PESRM.txt
+
+
+IOTXP:******* LOAD RSU for ALGENX & ALGEN2X to use on XM modules ********;
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/AUC/FE-Blade/
+LAXUL:SUNAME=ALGENX&ALGEN2X;
+LAXIP:SUNAME=ALGENX;
+LAXIP:SUNAME=ALGEN2X;
+
+
+IOTXP:******* Licenses support workaround LMCLI *************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/License_correction
+
+
+IOTXP:********************** CHANGE APT PROFILE *************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/APT_profile/Change_APT_profile.dt
+
+
+SYATI:RESTART;
+
+
+IOTXP:00900 ** AXE PARAMETER ADMINISTRATION *****************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/common/00900_singleside214
+!ponizej nowy!
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/layered/00900_logical_titan214_auc.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/layered/00900_logical_titan214_bsp
+
+
+SYREI:RANK=LARGE,EXPL=PLAN-"FE CONF";
+
+
+IOTXP:01010 ** SIZE ALTERATIONS EVENTS **********************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_00_apz
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_01_gen
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_02_ccs
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_03_ip
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_05_sctp
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_06_sua
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_07_xpu
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_09_apt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_00_aucfe
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_04_sdase214
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_06_msc.dt
+
+
+IOTXP:*** Size Alteration of Data Files, Operational Control, Set *******;
+SAOCS:STATE=ACTIVE;
+
+
+IOTXP:*** Sie Alteration Of Data Files, Data Build **********************;
+SADBI;
+
+
+IOTXP:11000 ** THRESHOLD SUPERVISION AND EVENT REPORTING ****************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/layered/11000_event_reporting
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/layered/11000_threshold_supervision_auc
+
+
+IOTXP:12000 ** IO SUBSYSTEM FUNCTION ************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12000_io_subsystem_function/12000_apg4x
+
+
+IOTXP:12010 ** SYSTEM START AND RESTART FUNCTIONS ***********************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12010_start_restart_functions/12010_singleside214
+
+
+IOTXP:13000 ** EXCHANGE PROPERTIES **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/13000_properties/layered/13000_layered
+
+IOTXP:13100 ** LOAD CONTROL *********************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/13100_load_control/layered/13100_load_control_BSP_PLCDC.txt
+
+IOTXP:15200 ** IP-SIP  **************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15200_ip_sip/layered/15200_05_sctp_on_cp_layer_parameter_IHLPC_214.dt
+
+
+IOTXP:15210 ** CCS7 *****************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_03_sccp_buffer_pool_size_C7BPC.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_04_sua_application_server_UAASI_214_bsp_auc.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_07_sua_network_signalling_point_214_auc
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_09_global_title_rc_titan&simu_auc
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_10_global_title_series_titan&simu_auc
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_12_sccp_congestion_control
+
+
+IOTXP:75300 ** C7 SUPERVISION DATA **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/75300_c7_supervision/75300_c7_event_reporting
+
+
+IOTXP:75400 ** NODE ADRESSES AND ROAMING AREA CHARACTERISTICS ***********;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_01_own_calling_address_auc
+
+IOTXP:final_settings_fe  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/final_settings_fe
+
+IOTXP:Lic_corr_removal  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/Lic_corr_removal
+
+emu:cont-dtfile -t all;
+emu:cont-dtfile -t none;
+
+!***********!
+! END rdt   !
+!***********!

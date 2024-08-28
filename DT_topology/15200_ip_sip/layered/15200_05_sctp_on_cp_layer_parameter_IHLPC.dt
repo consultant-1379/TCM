@@ -1,0 +1,2 @@
+!*****  SCTP LAYER CONFIGURATION PARAMETERS DATA  *****                                                                 ! 
+IHLPC:BUF=2048;

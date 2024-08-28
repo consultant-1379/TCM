@@ -1,0 +1,30 @@
+
+
+	 IOSBC:FUNCTION=ALPHA	,IO=AD-1					;
+
+     IOROL:PRCA=0&&31		,IO=AD-1					;
+	 IOROI:PRCA=0&&31									;
+     
+     IOROL:PRCA=32&&63		,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=32&&63									;
+     
+     IOROL:PRCA=64&&95		,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=64&&95									;
+     
+     IOROL:PRCA=96&&126		,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=96&&126									;
+     
+     IOROL:PRCA=127&&158	,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=127&&158								;
+     
+     IOROL:PRCA=159&&190	,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=159&&190								;
+     
+     IOROL:PRCA=191&&222	,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=191&&222								;
+     
+     IOROL:PRCA=223&&254	,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=223&&254								;
+     
+     IOROL:PRCA=255			,DTYPE=FIRST	,IO=AD-1	;
+	 IOROI:PRCA=255										;

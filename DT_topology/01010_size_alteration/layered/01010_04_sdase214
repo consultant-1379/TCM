@@ -1,0 +1,29 @@
+     
+  
+IOTXP:*** Local Size Alteration Events SUA on XM/CP  ******;
+                                    
+! FOR DMRNI ENTRIES !      
+SAAII:SAE=510 ,BLOCK=SDABS ,NI=50 ;
+                                
+! FOR DMDNI ENTRIES !
+SAAII:SAE=511 ,BLOCK=SDABS ,NI=16383 ;
+
+! FOR DMSDI ENTRIES !
+SAAII:SAE=512 ,BLOCK=SDABS ,NI=40 ;
+
+! XM individuals    !
+SAAII:SAE=600 ,BLOCK=SDABS ,NI=5 ;
+                                
+! QUERY !                  
+SAAII:SAE=604 ,BLOCK=SDABS ,NI=65535 ;
+ 
+
+!***   XPU_DEFINITIONS    **********************************!                                                                                              
+SAAII:SAE=501	,BLOCK=XPULOAD	,NI=4096	; !max memory   !                  
+SAAII:SAE=500	,BLOCK=XPUADM 	,NI=16		; !allow max XMs!                      
+     
+  
+IOTXP:*** End of file   ***********************************;  
+
+
+

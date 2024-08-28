@@ -1,0 +1,426 @@
+          
+     IOTXP:** CCITT7, Global Title Series, Initiate **************************;
+     !REMOVED ALL THE TTSM, AND TRIED TO INCLUDE FOR ALL SIMU BLADES...!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=39172               ,GTRC=  1 ,STATUS=OLD ;
+    ! C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=39172               ,GTRC=  1 ,STATUS=ZERO ;  !IN CASE IF FAILS!
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=46119052030         ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=46119052031         ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=46119052032         ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=46119052040         ,GTRC=254             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=46119052041         ,GTRC=254             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=46119052042         ,GTRC=254             ;
+
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4810                ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4900                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4901                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4902                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4903                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4904                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4905                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4906                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4907                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4908                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4909                ,GTRC=  6             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49101925202         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49101925203         ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49101925204         ,GTRC=254             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491117              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4912,GTRC=         6;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4913,GTRC=         6;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4914,GTRC=         6;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49151111300,GTRC=130;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49151111400,GTRC=140;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49151111500,GTRC=150;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491700              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491701              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491702              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491703              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49170400            ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49170410            ,GTRC=  6             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491705              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491706              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917070             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917071             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49170773109         ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49170777777         ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491708              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917090             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917091             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491710              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491711              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491712              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491719              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491723              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917240             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917241             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917242             ,GTRC=  1             ;
+
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917245             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917246             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917247             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917248             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917249             ,GTRC=  1             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917291             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917293             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917294             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917296             ,GTRC=  6             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491730              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491731              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491732              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491733              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917340             ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917341333          ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491735              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491736              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491737              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491738              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491739              ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49174               ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917500             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4917501             ,GTRC=  4             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491751              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491752              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491753              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491755              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491756              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491757              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491758              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491759              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49180               ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49181               ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49182               ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491830              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491831              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491832              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491833              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4918340             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491835              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491836              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491837              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491838              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491839              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49184               ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4918500             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4918501             ,GTRC=  4             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491851              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491852              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491853              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491854              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491855              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491856              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491857              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491858              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=491859              ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49192300            ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49192900            ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49192901            ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49196               ,GTRC=  4             ;
+
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4926015202          ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4926015203          ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4926015204          ,GTRC=254             ;
+
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555555202         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555555203         ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555555204         ,GTRC=254             ;
+
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555558108         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555558109         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555558110         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555558111         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555558112         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49555558113         ,GTRC=252             ;
+
+ 
+!MNP - Traffic towards HLR !    
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925202,GTRC=1; 
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925203,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925204,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925205,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925206,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925207,GTRC=1; 
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925208,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925209,GTRC=1; 
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925210,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925211,GTRC=1;  
+!     C7GSI:TT=0,NP=1,NA=4,NS=49701925212,GTRC=1;  
+
+!MNP - Traffic towards NPH !
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925202,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925203,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925204,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925205,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925206,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925207,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925208,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925209,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925210,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925211,GTRC=  6; !NPH SCCP!
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49701925212,GTRC=  6; !NPH SCCP!
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4970195202          ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4970195203          ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4970195204          ,GTRC=254             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49801925202         ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49801925203         ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=49801925204         ,GTRC=254             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4981                ,GTRC=  1             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4985202             ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4985203             ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4985204             ,GTRC=254             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4990195203          ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4990195204          ,GTRC=254             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4995202             ,GTRC=252             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4995203             ,GTRC=253             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=4995204             ,GTRC=254             ;
+
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=50151111300,GTRC=130;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=50151111400,GTRC=140;
+     C7GSI:TT=  0 ,NP=1 ,NA=  4 ,NS=50151111500,GTRC=150;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=17091               ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=17191               ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=1723                ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=17291               ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=17293               ,GTRC=  6             ;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=3337250333,GTRC= 252;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=3337250444,GTRC= 252;
+     C7GSI:TT=  0 ,NP=1 ,NA=114 ,NS=9997240999,GTRC= 252;
+     C7GSI:TT=  0 ,NP=4 ,NA=  4 ,NS=49172401111         ,GTRC=  2             ;
+
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4810                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4900                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4901                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4902                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4903                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4904                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4905                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4906                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4907                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4908                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4909                ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4917220             ,GTRC=  1             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4917240             ,GTRC=  2             ;
+     C7GSI:TT=  0 ,NP=7 ,NA=  4 ,NS=4981                ,GTRC=  2             ;
+
+!Removed comments for the following 4 commands due to SAI CPs;
+    C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=260000              ,GTRC=  1             ;
+    C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=2620                ,GTRC=  1             ;
+    C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=2621                ,GTRC=  1             ;
+    C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=2624                ,GTRC=  1             ;
+    !C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=281000              ,GTRC=  1             ;
+    !C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=482000000000        ,GTRC=  1             ;
+    !C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=482000000001        ,GTRC=  1             ;
+    !C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=482400000000        ,GTRC=  1             ;
+    !C7GSI:TT=  1 ,NP=6 ,NA=  4 ,NS=482400000001        ,GTRC=  1             ;
+
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4810                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4900                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4901                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4902                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4903                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4904                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4905                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4906                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4907                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4908                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4909                ,GTRC=  1             ;
+
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=49101925203         ,GTRC=253             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=49101925204         ,GTRC=254             ;
+
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491117              ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917090             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917091             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917092             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917093             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917120             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917191             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491720              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491721              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491722              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491723              ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491724              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491725              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491726              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491727              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491728              ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917291             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917292             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4917293             ,GTRC=  6             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=49180900            ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=49180901            ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491812004           ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=491812014           ,GTRC=  1             ;
+
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=49555558108         ,GTRC=252             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=  4 ,NS=4981                ,GTRC=  1             ;
+     C7GSI:TT= 11 ,NP=1 ,NA=114 ,NS=1723                ,GTRC=  6             ;
+
+     C7GSI:TT= 17 ,NP=1 ,NA=  4 ,NS=49170               ,GTRC=  6             ;
+     C7GSI:TT= 17 ,NP=1 ,NA=  4 ,NS=49171               ,GTRC=  6             ;
+     C7GSI:TT= 17 ,NP=1 ,NA=  4 ,NS=49172               ,GTRC=  6             ;
+     C7GSI:TT= 17 ,NP=1 ,NA=114 ,NS=1723                ,GTRC=  6             ;
+
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4900                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4901                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4902                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4903                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4904                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4905                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4906                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4907                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4908                ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4909                ,GTRC=  2             ;
+
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4917090             ,GTRC=  1             ;
+
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4917120             ,GTRC=  1             ;
+
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4917240             ,GTRC=  1             ;
+
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4917340             ,GTRC=  2             ;
+     C7GSI:TT= 77 ,NP=1 ,NA=  4 ,NS=4918340             ,GTRC=  2             ;
+     C7GSI:TT= 88 ,NP=1 ,NA=  4 ,NS=49172522            ,GTRC=  7             ;
+     C7GSI:TT= 99 ,NP=1 ,NA=  4 ,NS=491709              ,GTRC=  5             ;
+     C7GSI:TT= 99 ,NP=1 ,NA=  4 ,NS=491719              ,GTRC=  5             ;
+     C7GSI:TT= 99 ,NP=1 ,NA=  4 ,NS=49172               ,GTRC=  5             ;
+     C7GSI:TT=128 ,NP=1 ,NA=  4 ,NS=491117              ,GTRC=  6             ;
+
+     C7GSI:TT=128 ,NP=1 ,NA=  4 ,NS=4917191             ,GTRC=  6             ;
+
+     C7GSI:TT=128 ,NP=1 ,NA=  4 ,NS=4917291             ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=1 ,NA=  4 ,NS=4917293             ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=1 ,NA=  4 ,NS=4917296             ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=1 ,NA=114	,NS=17091               ,GTRC=  6			  ;
+     C7GSI:TT=128 ,NP=1 ,NA=114	,NS=17191               ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=1 ,NA=114	,NS=17291               ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=1 ,NA=114	,NS=17293               ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=1 ,NA=114	,NS=949                 ,GTRC=  6             ;
+     C7GSI:TT=128 ,NP=6 ,NA=  4	,NS=491723              ,GTRC=  6             ;
+
+     C7GSI:TT=170 ,NP=1 ,NA=  4 ,NS=49172               ,GTRC=  1			  ;
+
+     C7GSI:TT=187 ,NP=1 ,NA=  4 ,NS=49172               ,GTRC=  1             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4810                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4900                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4901                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4902                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4903                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4904                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4905                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4906                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4907                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4908                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4909                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=49170               ,GTRC=  5             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=49171               ,GTRC=  5             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=49172               ,GTRC=  5             ;
+     C7GSI:TT=247,NA=4,NP=1,NS=4915,GTRC=5;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=491734              ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=491740              ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4917501             ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=491834              ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=491840              ,GTRC=  3             ;
+     
+     c7gsi:tt=247,np=1,na=4,ns=497019252,gtrc=5;     
+     
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=4981                ,GTRC=  3             ;
+     C7GSI:TT=247 ,NP=1 ,NA=  4 ,NS=499                 ,GTRC=  5             ;
+     C7GSI:TT=247 ,NP=1 ,NA=114 ,NS=17                  ,GTRC=  5             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4810                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4900                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4901                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4902                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4903                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4904                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4905                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4906                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4907                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4908                ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4909                ,GTRC=  2             ;
+
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4917340             ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4918340             ,GTRC=  2             ;
+     C7GSI:TT=248 ,NP=1 ,NA=  4 ,NS=4981                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4900                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4901                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4902                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4903                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4904                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4905                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4906                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4907                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4908                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4909                ,GTRC=  2             ;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4910,GTRC=         2;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4911,GTRC=         2;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4912,GTRC=         2;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4913,GTRC=         2;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4914,GTRC=         2;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491700              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491701              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491702              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491703              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491704              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491705              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491706              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4917070             ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4917071             ,GTRC=  1             ;
+
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491708              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4917090             ,GTRC=  1             ;
+
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491710              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491711              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491712              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491723              ,GTRC=  1             ;
+
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491730              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491731              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491732              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491733              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4917340             ,GTRC=  2             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491735              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491736              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491737              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491738              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=491739              ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=49174               ,GTRC=  1             ;
+!     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=4918340             ,GTRC=  2             ;
+
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=49172445555,GTRC=252;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=49701925202,GTRC=252;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=49701925203,GTRC=253;
+     C7GSI:TT=249 ,NP=1 ,NA=  4 ,NS=49701925204,GTRC=254;
+
+     C7GSI:TT=250 ,NP=1 ,NA=  4 ,NS=49111723            ,GTRC=  5             ;
+     C7GSI:TT=250 ,NP=1 ,NA=  4 ,NS=4917                ,GTRC=  5             ;
+     C7GSI:TT=250 ,NP=1 ,NA=  4 ,NS=492                 ,GTRC=  5             ;
+     C7GSI:TT=250 ,NP=1 ,NA=  4 ,NS=493                 ,GTRC=  5             ;
+     C7GSI:TT=250 ,NP=1 ,NA=  4 ,NS=499                 ,GTRC=  5             ;
+     C7GSI:TT=250 ,NP=1 ,NA=114 ,NS=17                  ,GTRC=  5             ;
+
+
+     
+
+
+     C7TAI;
+     C7TLI;
+     C7TCI;
+     

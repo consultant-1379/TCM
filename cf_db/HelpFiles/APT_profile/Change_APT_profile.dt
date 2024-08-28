@@ -1,0 +1,56 @@
+! APT profile concerns only blades                                             !
+! Check current APT profile by execute saosp command:                          !
+
+SAOSP;
+
+! Result:                                                                      !
+! POS  ADDRESS                    VALUE  MEANING                               !
+! 108  H'0000 001800E8             H'64  APZ PROFILE                           !
+! 109  H'0000 001800EA             H'64  APT PROFILE                           !
+
+! Check version of LARI block                                                  !
+
+PCORP:BLOCK=LARI;
+
+TEST SYSTEM;
+SET VAR CQPROT 589=709;
+END TEST;
+
+! Load Z2ATCZZJ-1191_AXE.AXE (CI=Z2ATCZZJ1191) correction                      !
+! Please refer to:                                                             !
+! https://mhweb.ericsson.se/mhweb/servlet/servletCorrView?corrid=Z2ATCZZJ-1191 !
+! in case of any changes in LARI Block                                         !
+IOTXP:CORRECTION Z2ATCZZJ-1191  PRIMARY CORR    FOR ;
+IOTXP:LARI   7PAA/CAAZA 107 4797/M08AC   R1A03  ;
+PCORL:BLOCK=LARI,IS=H'6538-H'653A,SUID="7PAA/CAAZA1074797/M08ACR1A03",CI=Z2ATCZZJ1191;
+END;
+PCORI:BLOCK=LARI,IA=H'6538;
+PCORS:BLOCK=LARI,IA=H'6538;
+
+PCORP:BLOCK=LARI;
+
+! --- Start of PHASE OMPWA_80:                                                 !
+! "1st BC(OMP WA): Send signal to LARI by executing command in test system" ---!
+TEST SYSTEM;
+
+SEND WRTOMPROFILE REF LARI VIA LNK WITH 0,0,0,100,709;
+
+END TEST;
+
+! --- Start of PHASE OMPWA_120:                                                !
+! "1st BC(OMP WA): Remove TC in the block LARI" ---                            !
+
+PCORP:BLOCK=LARI;
+PCORE:BLOCK=LARI,IA=H'6538;
+PCORP:BLOCK=LARI;
+PCORR:BLOCK=LARI,IA=H'6538;
+PCORP:BLOCK=LARI;
+
+! Check APT profile by execute saosp command                                   !
+
+SAOSP;
+
+! Result:                                                                      !
+! POS  ADDRESS                    VALUE  MEANING                               !
+! 108  H'0000 001800E8             H'64  APZ PROFILE                           !
+! 109  H'0000 001800EA            H'2C5  APT PROFILE                           !

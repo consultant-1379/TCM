@@ -1,0 +1,7 @@
+
+     !***   XPU_DEFINITIONS    ****************************!
+SAAII:SAE=500 ,BLOCK=XPULOAD ,NI=256 ;  !number of possible XPU software units!
+SAAII:SAE=500 ,BLOCK=XPUADM ,NI=16 ;    ! allow max XMs  !
+	 
+SAAII:SAE=501 ,BLOCK=XPULOAD ,NI=4096 ; ! max memory     !   
+   

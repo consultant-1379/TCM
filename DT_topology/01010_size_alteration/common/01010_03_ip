@@ -1,0 +1,11 @@
+
+
+     SAAII:SAE=600,BLOCK=IP,NI=25;
+     
+     SAAII:SAE=601,BLOCK=IP,NI=25;
+     
+     SAAII:SAE=602,BLOCK=IP,NI=128;
+     
+     SAAII:SAE=603,BLOCK=IP,NI=128;
+     
+     

@@ -1,0 +1,11 @@
+Official_Delivery_Standard_R14.5_3.tar.gz:
+==========================================
+New delivery to System Test due to recompilation of code with SDK 
+XPU_SDK_R2C04_SLES11. Both dummy and real code are delivered.
+Delivered to evanesa (required from the project's system test) on 18/08/2010.
+Code delivered:
+  ALGENX:        CXC 146 186 R1A03 (source: CAA 204 236 R1A03)
+  ALGENX_DUMMY:  CXC 146 185 R1A03 (source: CAA 204 237 R1A03)
+  ALGEN2X:       CXC 146 190 R1A08 (source: CAA 204 238 R1A08)
+  ALGEN2X_DUMMY: none
+

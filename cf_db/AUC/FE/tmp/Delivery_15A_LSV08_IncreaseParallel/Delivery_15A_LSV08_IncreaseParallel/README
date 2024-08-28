@@ -1,0 +1,37 @@
+2G
+
+RPG3 CXC 146 270            R1A05
+RPG2 CXC 146 271            R1A05 
+GARP CXC 146 269            R1A05 
+
+3G
+
+rpg3  ALGEN2R  CXC 146 267            R1A07
+rpg2  ALGEN2R  CXC 146 268            R1A07
+garp  ALGEN2R  CXC 146 266            R1A07 
+
+
+SB-A    R_60_5CF0_L08P21__D0904   AD-2    TIME 140915 0350  PAGE    1
+ORDERED
+
+<
+SB-A    R_60_5CF0_L08P21__D0904   AD-2    TIME 140915 0351  PAGE    1
+REGIONAL SOFTWARE UNIT OUTPUT
+BLOCK   FCODE SUNAME   SUID                             SUTYPE CNO
+
+ALGEN         ALGENR   CXC 146 270            R1A05     RPD     20
+ALGEN         ALGENR   CXC 146 271            R1A05     RPD     18
+ALGEN         ALGENR   CXC 146 269            R1A05     RPD     19
+ALGEN2        ALGEN2R  CXC 146 267            R1A07     RPD     20
+ALGEN2        ALGEN2R  CXC 146 268            R1A07     RPD     18
+ALGEN2        ALGEN2R  CXC 146 266            R1A07     RPD     19
+END
+
+
+EX-A    R_60_5CF0_L08P21__D0904   AD-2    TIME 140911 0431  PAGE    1
+REGIONAL SOFTWARE UNIT OUTPUT
+BLOCK   FCODE SUNAME   SUID                             SUTYPE CNO
+
+ALGEN         ALGENR   CXC 146 269            R1A05     RPD     19
+ALGEN2        ALGEN2R  CXC 146 266            R1A07     RPD     19
+END

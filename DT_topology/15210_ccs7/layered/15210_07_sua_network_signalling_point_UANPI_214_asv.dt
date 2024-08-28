@@ -1,0 +1,19 @@
+
+IOTXP:** Sigtran User Adaptation Layer, SUA Network Signalling Point, Initiate  ****;
+
+UANPI:SP=2-600,ASSP=2-301;
+UANPI:SP=2-150,ASSP=2-301;
+
+
+
+IOTXP:** Sigtran User Adaptation Layer, SUA Network Signalling Point, Change  ******;
+
+UANPC:SP=2-600,SPIDNT=600;
+UANPC:SP=2-150,SPIDNT=150;
+
+
+
+IOTXP:** Sigtran User Adaptation Layer, SUA Network Subsystem Number, Initiate  ****;
+
+UANSI:SP=2-600,SSN=6&7&8&145&149&224&252;
+UANSI:SP=2-150,SSN=6&7&8&145&149&224&252;

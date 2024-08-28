@@ -1,0 +1,15 @@
+
+     SAAII:BLOCK=NPNAN   ,SAE=500 ,NI=15000 ;   
+     SAAII:BLOCK=NPNAN   ,SAE=605 ,NI=2000 ;
+     SAAII:BLOCK=NPNAN   ,SAE=611 ,NI=2000 ; 
+     SAAII:BLOCK=NPNAN   ,SAE=612 ,NI=2000 ;
+                                           
+     SAAII:BLOCK=NPSRFSC ,SAE=500 ,NI=15000 ;
+                                           
+     SAAII:BLOCK=NPSDCH  ,SAE=500	,NI=15000	;
+     SAAII:BLOCK=NPMAPTC ,SAE=500 ,NI=15000 ;
+     SAAII:BLOCK=NPRGAP  ,SAE=500 ,NI=35000 ;
+     SAAII:BLOCK=NPMAPTC ,SAE=604 ,NI=6000 ;  
+                                           
+     SAAII:BLOCK=NPINATC ,SAE=500 ,NI=5000 ; 
+     

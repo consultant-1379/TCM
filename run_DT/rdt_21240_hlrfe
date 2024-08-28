@@ -1,0 +1,202 @@
+!******************!
+! rdt1 APZ 212 40  !
+!******************!
+
+!************!
+! START rdt1 !
+!************!
+
+IOTXP:COLD START HLR-FE;
+
+emu:cont-dtfile -t none -er,errores.log -br,busy.log -lr,all.log
+
+
+IOTXP:******* LOAD BLOCKs FOR  TESTING PURPOSES *************************;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/CP_block;
+LASUL:BLOCK=CORONA;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/M/CP_block;
+LASUL:BLOCK=M;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/CP_block;
+LASUL:BLOCK=PESRM;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/Corrections/MISSRA_for_LAI21_PESRM.txt
+
+
+IOTXP:******* LOAD RSU for ALGEN & ALGEN2 to use in RPG2/RPG3/GARP ******;
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/AUC/FE;
+LAEUL:SUNAME=ALL;
+LAEIP:SUNAME=ALGENR;
+LAEIP:SUNAME=ALGEN2R;
+
+
+IOTXP:******* Licenses support workaround LMCLI *************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/License_correction
+
+
+SYATI:RESTART;
+
+
+IOTXP:00900 ** AXE PARAMETER ADMINISTRATION *****************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/common/00900_dualside212
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/layered/00900_logical_titan212
+
+
+SYREI:RANK=LARGE,EXPL=PLAN-"FE CONF";
+
+
+IOTXP:01010 ** SIZE ALTERATIONS EVENTS **********************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_00_apz
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_01_gen
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_02_ccs
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_03_ip
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_04_m3ua
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_05_sctp
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_00_aucfe
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_01_hlrfe
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_02_npfe
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/layered/01010_03_sdase
+
+
+IOTXP:*** Size Alteration of Data Files, Operational Control, Set *******;
+SAOCS:STATE=ACTIVE;
+
+
+IOTXP:*** Sie Alteration Of Data Files, Data Build **********************;
+SADBI;
+
+
+IOTXP:01400 ** HARDWARE LAYOUTS *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_00_rpbus_position_standard_egem_21240
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_01_switches_position_standard_egem_21240
+
+
+IOTXP:02000 ** ALLOCATION OF RP *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/layered/02000_00_rpdata_standard_egem_21240
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/layered/02000_01_rpsw_standard_egem_21240
+
+
+IOTXP:02020 ** ALLOCATION OF EM *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02020_em_allocation/layered/02020_emdata_standard_egem_21240
+
+
+IOTXP:02510 ** RP and EM DEBLOCK ****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02510_rp_em_deblock/layered/02510_00_rpem_deblock_standard_egem_21240
+
+
+IOTXP:11000 ** THRESHOLD SUPERVISION AND EVENT REPORTING ****************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/layered/11000_event_reporting
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/layered/11000_threshold_supervision
+
+
+IOTXP:12000 ** IO SUBSYSTEM FUNCTION ************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12000_io_subsystem_function/12000_apg4x
+
+
+IOTXP:12010 ** SYSTEM START AND RESTART FUNCTIONS ***********************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12010_start_restart_functions/12010_dualside212
+
+
+IOTXP:13000 ** EXCHANGE PROPERTIES **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/13000_properties/layered/13000_layered
+
+PTSWI;
+
+!***********!
+! END rdt1  !
+!***********!
+
+
+!************!
+! START rdt2 !
+!************!
+
+IOTXP:15200 ** IP-SIP  **************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15200_ip_sip/layered/15200_04_sctp_layer_parameter_IHSLC.dt
+
+
+IOTXP:15210 ** CCS7 *****************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_00_own_signalling_point_C7OPI.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_02_destination_signalling_point
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_03_sccp_buffer_pool_size_C7BPC.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_08_sccp_network_configuration
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_09_global_title_rc_titan&simu
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_10_global_title_series_titan&simu
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_11_own_global_title_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_12_sccp_congestion_control
+
+
+IOTXP:16200 ** HLR BEARER CAPABILITY ************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/16200_bearer_capability/layered/16200_bearer_capability_data
+
+
+IOTXP:75300 ** C7 SUPERVISION DATA **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/75300_c7_supervision/75300_c7_event_reporting
+
+
+IOTXP:75400 ** NODE ADRESSES AND ROAMING AREA CHARACTERISTICS ***********;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_00_hlrfe_global_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_01_own_calling_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_02_roaming_area_characteristics
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_03_ussd_external_node_address_profile
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_04_gsm_service_control_function_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_05_device_configuration_register_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_06_interexchange_carrier
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_07_location_services_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_08_roaming_distribution
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/75400_node_addressing_roaming_area/layered/75400_09_personalized_ringbacktone_vlraddress
+
+
+IOTXP:78000 ** FORWARDED-TO NUMBER ANALYSIS *****************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/78000_forwarded_number_analysis/layered/78000_logical
+
+
+IOTXP:80000 ** SUBSCRIBER DATA ******************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/layered/80000_06_hlrfe_roaming_service_profile_HERPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/layered/80000_07_hlrfe_roaming_service_area_HERAC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/layered/80000_08_hlrfe_subscriber_profile_HESPC
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/layered/80000_11_hlrfe_access_point_name_HEAPI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/layered/80000_12_hlrfe_extended_quality_service_HEEQI
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/80000_subscriber_data/layered/80000_20_aucfe_key_data_AEKDI
+
+
+IOTXP:81000 ** HLR NUMBER SERIE ANALYSIS ********************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/layered/81000_00_number_series_analysis
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/layered/81000_01_area_specific_feature_data
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/layered/81000_02_zone_code_set_data
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/81000_number_serie_analysis/layered/81000_04_number_series_preanalysis
+
+
+IOTXP:82000 ** FLEXIBLE NUMBERING ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_00_nph_default_route
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_01_nph_translation_type_relation
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_02_nph_own_network_prefix_titan
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_03_nph_number_translation_titan
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_04_nph_own_gmsc_series
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_05_nph_network_generic_imsi_titan
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_06_nph_service_key
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/82000_flexible_numbering/layered/82000_07_nph_own_sms-sc
+
+
+IOTXP:83000 ** SMS ROUTER ADDRESS  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/83000_sms_router_address/layered/83000_00_sms_router_address
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/83000_sms_router_address/layered/83000_01_origin_node_list
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/83000_sms_router_address/layered/83000_02_mt_sms_screening_profile
+
+IOTXP:final_settings_fe  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_Application/final_settings_fe
+
+IOTXP:Lic_corr_removal  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/Lic_corr_removal
+
+IOTXP:NPH_calling_adress  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/NPH_calling_address
+
+emu:cont-dtfile -t all;
+emu:cont-dtfile -t none;
+
+!***********!
+! END rdt2  !
+!***********!

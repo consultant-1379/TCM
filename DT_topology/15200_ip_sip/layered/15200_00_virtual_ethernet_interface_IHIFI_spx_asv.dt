@@ -1,0 +1,14 @@
+
+IOTXP:** IP Transport, Virtual Ethernet Interface, Initiate  ************;
+
+IHIFP;
+IHIFI:VIF=ETHA-2001;
+IHIFI:VIF=ETHA-2008;
+IHIFP;
+
+
+IOTXP:** IP Transport, Virtual Ethernet Interface, Change  **************;
+
+IHIFC:ADD,VIF=ETHA-2001,IP=10.3.10.100,NETMASK=255.255.255.0,ARP=YES;
+IHIFC:ADD,VIF=ETHA-2008,IP=192.168.2.3,NETMASK=255.255.255.0,ARP=YES;
+IHIFP;

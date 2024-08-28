@@ -1,0 +1,19 @@
+ 
+     IOTXP:** CCITT7, SCCP Buffer Pool Size, Change **************************;  
+    
+     C7BPC:BPS=3072,BPS1=3072,BPS2=3072,BPS3=3072;
+    
+     !                                                              !
+     ! BPS  Numeral 0 - 3072 Buffer pool size of 256 octet length   !
+     ! BPS1 Numeral 0 - 3072 Buffer pool size of 512 octet length   !
+     ! BPS2 Numeral 0 - 3072 Buffer pool size of 1024 octet length  !
+     ! BPS3 Numeral 0 - 3072 Buffer pool size of 2048 octet length  !     
+     !--------------------------------------------------------------!
+     ! SAE=345 Number of dynamic buffers with size 32 W16           !
+     ! SAE=346 Number of dynamic buffers with size 64 W16           !
+     ! SAE=347 Number of dynamic buffers with size 128W16           !
+     ! SAE=348 Number of dynamic buffers with size 256W16           !
+     ! SAE=349 Number of dynamic buffers with size 512W16           !
+     ! SAE=350 Number of dynamic buffers with size 1KW16            !
+     ! SAE=351 Number of dynamic buffers with size 2KW16            !
+     !--------------------------------------------------------------!

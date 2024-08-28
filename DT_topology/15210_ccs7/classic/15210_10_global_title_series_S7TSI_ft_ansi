@@ -1,0 +1,22 @@
+	!---------------------------------------!
+	! CCITT7, GLOBAL TITLE SERIES, INITIATE !
+	!---------------------------------------!
+	s7tSI:gts=1-3110,   LSS  = 10; 
+	s7tSI:gts=2-3110,   GTRC = 1; 
+
+	s7tSI:gts=10-12143234444,   LSS  = 6; 
+	s7tSI:gts=10-1214410,   GTRC = 1; 
+	s7tSI:gts=10-1218420,   GTRC = 3; 
+	s7tSI:gts=10-1708420,   GTRC = 2; 
+
+	s7tSI:gts=11-12143234444,   LSS  = 128; 
+	s7tSI:gts=11-1214410,   GTRC = 1; 
+	s7tSI:gts=11-1218420,   GTRC = 3; 
+
+	!------------------------------------------------!
+	! CCITT7, GLOBAL TITLE AREA ACTIVATION, INITIATE !
+	!------------------------------------------------!
+
+	S7TAI;   !NOP -> OP ! 
+			 !C7TLI ! 
+			 !C7TCI OP = NOP  !

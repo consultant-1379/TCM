@@ -1,0 +1,18 @@
+
+     SAAII:SAE=600,BLOCK=SCTP,NI=  16; !SCTP EM                       !
+     SAAII:SAE=602,BLOCK=SCTP,NI=  64; !SCTP Association for IP on RP !
+     SAAII:SAE=603,BLOCK=SCTP,NI=  32; !SCTP End Point for IP on RP   !
+     SAAII:SAE=604,BLOCK=SCTP,NI= 512; !Remote IP address for IP on RP!
+     SAAII:SAE=605 ,BLOCK=SCTP ,NI=2133 ; !Used to reassemble incoming data to be forwardedCommunication buffer!  
+     
+
+     SAAII:SAE=500,BLOCK=SSAS,NI=  32; !SCTP End Point for IP on CP  !
+     SAAII:SAE=501,BLOCK=SSAS,NI=  64; !SCTP Association for IP on CP!
+
+     SAAII:SAE=604,BLOCK=SHCC,NI=10;
+     SAAII:SAE=605,BLOCK=SHCC,NI=10;
+
+     SAAII:SAE=604,BLOCK=SHOPSRF,NI=10;
+     SAAII:SAE=701,BLOCK=SHOPSRF,NI=10;
+     SAAII:SAE=702,BLOCK=SHOPSRF,NI=10;
+     SAAII:SAE=703,BLOCK=SHOPSRF,NI=10;

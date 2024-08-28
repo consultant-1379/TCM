@@ -1,0 +1,12 @@
+
+IOTXP:** IP Transport, Virtual Ethernet Interface, Initiate  ************;
+
+IHIFP;
+IHIFI:NVIF=BC-SIG;
+IHIFP;
+
+
+IOTXP:** IP Transport, Virtual Ethernet Interface, Change  **************;
+
+IHIFC:ADD,NVIF=BC-SIG,BASEIP=10.3.10.101,NETMASK=255.255.255.0,ARP=YES;
+IHIFP;

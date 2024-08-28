@@ -1,0 +1,125 @@
+!***************************!
+! rdt APZ 21260 used as SPX !
+!***************************!
+
+!************!
+! START rdt  !
+!************!
+
+IOTXP:COLD START for SPX to use in HLRFE Blade System;
+
+emu:cont-dtfile -t none -er,errores.log -br,busy.log -lr,all.log
+
+
+IOTXP:******* LOAD BLOCKs FOR  TESTING PURPOSES *************************;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/CP_block;
+LASUL:BLOCK=CORONA;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/CORONA/Corrections/APZ21260_COR.txt
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/M/CP_block;
+LASUL:BLOCK=M;
+
+emu:set-iog-directory /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/CP_block;
+LASUL:BLOCK=PESRM;
+
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/Test_Blocks/PESRM/Corrections/MISSRA_for_LAI21_PESRM.txt
+
+
+IOTXP:******* Licenses support workaround LMCLI *************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/License_correction
+
+
+SYATI:RESTART;
+
+IOTXP:00900 ** AXE PARAMETER ADMINISTRATION *****************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/00900_axeparameters/common/00900_dualside212spx
+
+
+SYREI:RANK=LARGE,EXPL=PLAN-"SPX CONF";
+
+
+IOTXP:01010 ** SIZE ALTERATIONS EVENTS **********************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_00_apz_univ
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_01_gen
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_02_ccs_univ
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_03_ip
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_04_m3ua_univ
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_05_sctp
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_06_sua
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/01010_size_alteration/common/01010_09_apt
+
+IOTXP:*** Sie Alteration Of Data Files, Data Build **********************;
+SADBI;
+
+
+IOTXP:01400 ** HARDWARE LAYOUTS *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/01400_hw_layouts/01400_00_rpbus_position_21260spx
+
+
+IOTXP:02000 ** ALLOCATION OF RP *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/layered/02000_00_rpdata_21260spx
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02000_rp_allocation/layered/02000_01_rpsw_21260spx
+
+
+IOTXP:02020 ** ALLOCATION OF EM *****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02020_em_allocation/layered/02020_emdata_21260spx
+
+
+IOTXP:02510 ** RP and EM DEBLOCK ****************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM_DT_HW/02510_rp_em_deblock/layered/02510_00_rpem_deblock_21260spx
+
+
+IOTXP:11000 ** THRESHOLD SUPERVISION AND EVENT REPORTING ****************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/layered/11000_event_reporting
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/11000_eventreporting_thresholdsupervision/layered/11000_threshold_supervision_spx
+
+
+IOTXP:12000 ** IO SUBSYSTEM FUNCTION ************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12000_io_subsystem_function/12000_apg4x
+
+
+IOTXP:12010 ** SYSTEM START AND RESTART FUNCTIONS ***********************;
+IOTXP: Moved to the end to avoid SYFDC issue...need about 13-14 minutes after restart;
+
+IOTXP:*** Size Alteration of Data Files, Operational Control, Set *******;
+SAOCS:STATE=ACTIVE;
+
+
+IOTXP:15200 ** IP-SIP  **************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15200_ip_sip/layered/15200_05_sctp_on_cp_layer_parameter_IHLPC_spx.dt
+
+
+IOTXP:15210 ** CCS7 *****************************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_00_own_signalling_point_C7OPI_spx_is_univ.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_01_hosted_signalling_point_C7HPI_spx_univ.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_02_destination_signalling_point_spx_univ
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_03_sccp_buffer_pool_size_C7BPC.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_04_sua_application_server_UAASI_spx_is_univ.dt
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/15210_ccs7/layered/15210_08_sccp_network_configuration_spx_is_univ
+
+IOTXP:75300 ** C7 SUPERVISION DATA **************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/75300_c7_supervision/75300_c7_event_reporting
+
+IOTXP:12010 ** SYSTEM START AND RESTART FUNCTIONS ***********************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/DT_topology/12010_start_restart_functions/12010_dualside212
+
+PTSWI;
+
+IOTXP:Lic_corr_removal  ***************************************;
+! @dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/Lic_corr_removal !
+
+IOTXP:NPH_calling_adress  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/NPH_calling_address
+
+IOTXP:SPX_specific_settings  ***************************************;
+@dtfile /proj/hlr_tcm/stp/git_repository/TCM/cf_db/HelpFiles/spx_specific.dt
+
+emu:cont-dtfile -t all;
+emu:cont-dtfile -t none;
+
+!***********!
+! END rdt   !
+!***********!
+

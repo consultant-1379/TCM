@@ -1,0 +1,25 @@
+!Check SUIDs, compare RSU source with command printouts!
+
+emu:set-iog-directory /proj/hlr_tcm/cf_db/AUC/FE/15A;
+LAEUL:SUNAME=ALL;
+
+LAEIP:SUNAME=ALGENR;
+
+!REGIONAL SOFTWARE UNIT IDENTIFICATIONS                                 !
+
+!BLOCK   BN    SUNAME   SUID                             SUTYPE CNO PRIO!
+!ALGEN   H'F0C ALGENR   CXC 146 270            R1A05     RPD     20     !
+!ALGEN   H'F0C ALGENR   CXC 146 271            R1A05     RPD     18     !
+!ALGEN   H'F0C ALGENR   CXC 146 269            R1A05     RPD     19     !
+!END                                                                    !
+
+
+LAEIP:SUNAME=ALGEN2R;
+
+!REGIONAL SOFTWARE UNIT IDENTIFICATIONS                                 !
+
+!BLOCK   BN    SUNAME   SUID                             SUTYPE CNO PRIO!
+!ALGEN2  H'F0B ALGEN2R  CXC 146 267            R2A02     RPD     20     !
+!ALGEN2  H'F0B ALGEN2R  CXC 146 268            R2A02     RPD     18     !
+!ALGEN2  H'F0B ALGEN2R  CXC 146 266            R2A02     RPD     19     !
+!END!

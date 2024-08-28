@@ -1,0 +1,5 @@
+                                      
+!AUC!                                 
+SAAII:SAE=972,             NI=    485 ;             
+SAAII:SAE=501, BLOCK=ASD,  NI= 125000 ;
+SAAII:SAE=502, BLOCK=ASD,  NI=  60000 ;

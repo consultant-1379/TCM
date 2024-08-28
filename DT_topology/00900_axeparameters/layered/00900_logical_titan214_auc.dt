@@ -1,0 +1,569 @@
+
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN AUC-FE FOR GSM/WCDMA ***********************!
+	!************************************************************************!
+	
+	SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;	
+	
+	!***   AUC ADDITIONAL G-MILENAGE ALGORITHMS   ***************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATAGKDC        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUC CUSTOMIZED A3/A8 ALGORITHM   *********************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATGSM          ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUC CUSTOMIZED WCDMA ALGORITHM   *********************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATUMTS         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   DOMAIN DEPENDANT AUTHENTICATION VECTOR GENERATION  ***************!
+	!***   Parameter Owner ALMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=SQNMULTDOMAIN     ,VALUE=   1;
+	DBTRE:COM;
+
+	!***   AUC SIGNALLING CONTROL SUPPORT   *********************************!
+	!***   Parameter Owner ALMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=POLICING         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUC ADDITIONAL MILLENAGE FUNCTION SETS   *************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATAKAALG       ,VALUE=    1;
+	DBTRE:COM;
+	
+	!***   AUC SEQUENTIAL AUTHENTICATION VECTORS GENERATION  ****************!	
+	!***   Parameter Owner ALGEN2  ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC	  ,NAME=SEQAVGON		 ,VALUE=	1;
+	DBTRE:COM;			
+
+	!***   AUTHENTICATION ADVANCED FOR WCDMA   ******************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=AUCNV0122       ,VALUE=    1;
+	DBTRE:COM;
+
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN HLR-FE FOR SDASE ***************************!
+	!************************************************************************!
+
+
+	!***   LDAP SUBSCRIBER DATA ACCESS SUPPORT   ****************************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAF       ,NAME=SDASE            ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   BLADE HARDWARE SUPPORTED   ***************************************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAF       ,NAME=XMSYSMODE        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   FE-BE EXTENDED WEIGHT LOAD BALLANCING   **************************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAF       ,NAME=EWRRF            ,VALUE=    1;
+	DBTRE:COM;
+
+
+	SYPAC:ACCESS=DISABLED;
+	
+	
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN AUC-FE  ************************************!
+	!************************************************************************!
+
+	SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;	
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=AUCFEOPERTIMER   ,VALUE=    5;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAKATYPE       ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAKAALGIND     ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET15     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET14     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET13     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET12     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET11     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET10     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET9      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET8      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET7      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET6      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET5      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET4      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET3      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET2      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET1      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET0      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=MAPSUPERVTIMEM   ,VALUE=   15;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=SCCPSEGAUC       ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=SQNMULDOMACT     ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   TUAK AUTHENTICATION ALGORITHM  ***********************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=TUAKACT       ,VALUE=       1;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET16     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET17     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET18     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET19     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET20     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET21     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET22     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET23     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET24     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET25     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET26     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET27     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET28     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET29     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET30     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET31     ,VALUE=    0;
+	DBTRE:COM;
+
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN SDASE  *************************************!
+	!************************************************************************!
+
+
+	!***   ACTIVATION OF FE-BE EXTENDED WEIGHT LOAD BALLANCING   ************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAC       ,NAME=EWRRC            ,VALUE=    1;
+	DBTRE:COM;
+
+
+	!***   SUPPLIER PARAMETER CLASS   ***************************************!
+
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN ACU-FE  ************************************!
+	!************************************************************************!
+
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A3A8ALGMASK      ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG0           ,VALUE=   64;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG1           ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG2           ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG3           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG4           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG5           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG6           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG7           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=AKAALGFSET       ,VALUE=    2;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=EXTERNALMSG      ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=FSETALGMASK      ,VALUE=65535;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=GOPUSERALGMASK   ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=LOADREGAUC       ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=NCDVALUE         ,VALUE=    3;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=SIGNSYS          ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG0          ,VALUE=   64;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG1          ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG2          ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG3          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG4          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG5          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG6          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG7          ,VALUE=   63;
+	DBTRE:COM;
+
+
+	!***   M3UA RELAY AVAILABILITY   ****************************************!
+!	DBTRI;
+!	DBTSC:TAB=AXEPARS,SETNAME=SIGIPF,NAME=SUAIPSEP,VALUE=0;
+!	DBTRE:COM;
+
+!	DBTRI;
+!	DBTSC:TAB=AXEPARS,SETNAME=SIGIPF,NAME=M3UARELAY,VALUE=1;
+!	DBTRE:COM;
+
+	!***   ITU AND MTP SIGNALLING MESSAGE STRANFER USING SUA   *************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SIGIPF,NAME=SUASGW,VALUE=1;
+	DBTRE:COM;
+
+	!***   THE LIMIT OF SUA SCON BROADCAST MESSAGES (IT CORRESPONDS TO   ***!
+	!**         THE NUMBER OF BLADES IN BS SYSTEM).   **********************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SIGIPC,NAME=SUAGAP,VALUE=19;
+	DBTRE:COM;
+	
+	!***   MTP HIGH SPEED SIGNALLING LINKS   *******************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=ANSICCSF,NAME=MTPHSL,VALUE=1;
+	DBTRE:COM;
+
+	!DELAY TO AVOID OSCILLATION OF INITIAL ALIGNMENT FAILURE AND LINK RESTART!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=MTPC,NAME=Q704T17,VALUE=800;
+	DBTRE:COM;
+	
+
+	!***   THE AVAILABILITY OF THE OWN SCCP CONGESTION LEVEL CALCULATION   *!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=SCCPNODALCONG,VALUE=1;
+	DBTRE:COM;
+	
+	!***  THE AVAILABILITY OF INCOMING TRAFFIC LIMITATION PROCEDURE   ******!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=INCOTRAFFLIMIT,VALUE=1;
+	DBTRE:COM;
+
+	!  THE USAGE OF BLOCK LOAS FOR THE OWN SCCP CONGESTION LEVEL CALCULATION!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=CONGCTRLLOAS,VALUE=1;
+	DBTRE:COM;
+
+	!***   THE DETERMINATION IF THE MESSAGE RECEIVED IN OWN SCCP CONGESTION !
+	!STATE WILL BE DISCARDED OR RETURNED IF THE MESSAGE RETURN PROCEDURE APPLIES**!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=DISCTHRESHOLD,VALUE=8;
+	DBTRE:COM;
+
+	!THE WAITING TIME TO RECEIVE ALL SEGMENTS RELATED TO A REASSEMBLY PROCESS!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=REASSEMBLYTIME,VALUE=20;
+	DBTRE:COM;
+
+	!SPONTANEOUS PRINTOUT WITH HW INFORMATION ON DETECTION OF HW CHANGES ACTIVATION.!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRC,NAME=AUTODSC,VALUE=1;
+	DBTRE:COM;
+
+	!***  THE NODE LICENSED THRESHOLD AS COUNTED BY CLM FUNCTION   **********!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=CLMBHCATHR,VALUE=2;
+	DBTRE:COM;
+
+	!***  THE NODE LICENSED THRESHOLD AS COUNTED BY CLM FUNCTION   **********!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=CLMSCCTHR,VALUE=5;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=DASCCDELAY,VALUE=72;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=NOFPLEXPERLOAS,VALUE=500;
+	DBTRE:COM;
+
+	SYPAC:ACCESS=DISABLED;
+
+IOTXP:** EOF 00900.layered ** AXE PARAMETER ADMINISTRATION **************;

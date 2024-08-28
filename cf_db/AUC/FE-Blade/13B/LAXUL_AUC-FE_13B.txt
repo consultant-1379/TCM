@@ -1,0 +1,24 @@
+!Check SUIDs, compare XSU source with command printouts!
+
+emu:set-iog-directory /proj/hlr_tcm/cf_db/AUC/FE-Blade/13B;
+LAXUL:SUNAME=ALGENX&ALGEN2X;
+
+LAXIP:SUNAME=ALGENX;
+
+! XPU SOFTWARE UNIT INFORMATION                                              !
+!                                                                            !
+! SUNAME        SUID                              BLOCK    SIZE         TYP  !
+! ALGENX        CXC 146 186 R1A03                 ALGEN    45056        APT  !
+!                                                                            !
+! END                                                                        !
+
+
+LAXIP:SUNAME=ALGEN2X;
+
+! XPU SOFTWARE UNIT INFORMATION                                              !
+!                                                                            !
+! SUNAME        SUID                              BLOCK    SIZE         TYP  !
+! ALGEN2X       CXC 146 223 R1A01                 ALGEN2   45056        APT  !
+!                                                                            !
+! END                                                                        !
+

@@ -1,0 +1,6 @@
+IOTXP:***_SIZE_ALTERATION_EVENTS,_APT ******************************;
+
+	SAAII:SAE=500,		BLOCK=MGPRO,		NI=10;
+	SAAII:SAE=500,		BLOCK=MSGSPRO,		NI=10;
+
+IOTXP:***_END_OF_FILE***********************************************;

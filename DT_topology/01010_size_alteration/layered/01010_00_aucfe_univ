@@ -1,0 +1,4 @@
+! AUC-FE !   
+SAAII:SAE=1169                      ,NI=8000    ;
+SAAII:SAE=500   ,BLOCK=ALSFECH      ,NI=20260   ; 
+SAAII:SAE=502   ,BLOCK=ASD          ,NI=2       ;

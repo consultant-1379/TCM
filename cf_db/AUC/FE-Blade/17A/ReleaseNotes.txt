@@ -1,0 +1,10 @@
+******************************************************
+*  Software Unit delivery for 17A AUC-FE blade  *
+******************************************************
+
+== LSV03 new SDK R5A04 (ALGENX & ALGEN2X) ==== 
+ALGENX       CXC 146 262 R2A01       
+ALGEN2X      CXC 146 261 R3A01                
+        
+
+

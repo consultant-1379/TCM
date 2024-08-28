@@ -1,0 +1,4 @@
+
+IOTXP:** Processor Load Control Data, Change  ***************************;
+
+PLCDC:LDLIM=90,LIMCAL=1; ! 212 60 - 90% !

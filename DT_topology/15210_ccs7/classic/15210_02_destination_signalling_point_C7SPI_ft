@@ -1,0 +1,16 @@
+
+     IOTXP:** CCITT7, Signalling Point, Initiate *****************************;   
+
+     ! SPs for Function Test purposes !
+     C7SPI:SP=2-410	,OWNSP=2-300	,NET=BOTH	,PREF=IP	;
+     C7SPI:SP=2-420	,OWNSP=2-300	,NET=BOTH	,PREF=IP	;
+     C7SPI:SP=2-411	,OWNSP=2-300	,NET=BOTH	,PREF=IP	;   
+
+
+
+     IOTXP:** CCITT7, Signalling Point Name, Change **************************;
+ 
+     ! SPs for Function Test purposes !
+     C7PNC:SP=2-410	,SPID=DPC410	;
+     C7PNC:SP=2-420	,SPID=DPC420	;
+     C7PNC:SP=2-411	,SPID=DPC411	;

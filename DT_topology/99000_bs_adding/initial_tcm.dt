@@ -1,0 +1,66 @@
+
+!--- BLADE ------------------------!
+
+IHIFI:NVIF=BC-LDAP,STACK=TIPXPU;
+IHIFC:NVIF=BC-LDAP,ADD,BASEIP=192.168.2.14,NETMASK=255.255.255.0;
+
+
+IHRHP;
+IHRHC:NVIF=BC-LDAP,ADD,DEST=169.253.150.0,NETMASK=255.255.255.255,GW=192.168.2.3;
+IHRHC:NVIF=BC-LDAP,ADD,DEFGW=192.168.2.3;
+IHRHP;
+
+
+
+LAXIP:SUID=ALL;
+SAAEP:BLOCK=LAD,SAE=ALL;
+
+!SAAII:SAE=347,NI=2800;   !128W16 dynamic buffers!
+!SAAII:SAE=348,NI=3000;   !256W16 dynamic buffers!
+!SAAII:SAE=349,NI=1400;   !512W16 dynamic buffers!
+!SAAII:SAE=350,NI=1000;   !1KW16 dynamic buffers!
+!SAAII:SAE=351,NI=600;    !2KW16 dynamic buffers!
+
+EXXPI:XM=1,SUID="CAA 176 24 R4A01";  ! New SUID for PARENTX  LSV05! 
+EXXPI:XM=2,SUID="CAA 176 25 R4A04"; ! New SUID for IPLIBX  LSV05!
+EXXPI:XM=3,SUID="9000/CXC 146 184 R8A01";  !LDAPX!
+EXXPI:XM=4,SUID="9000/CXC 146 183 R8A01"; !SDAX LSV05!
+
+EXXPI:XM=5,SUID="CXC 146 262 R2A01";    !ALGENX!
+EXXPI:XM=6,SUID="CXC 146 261 R3A01";    !ALGEN2X!
+
+
+! Virtual machines should run before deblocking ! 
+
+! Make sure the seaxpu processes are running on VMs and CONNNECTED !
+BLXPE;
+EXXPP;
+
+
+
+DMIBI:BASELIP="192.168.2.14";
+DMSDI:SRV=0,PROT=0,PORT=389,USR="cn=manager,dc=o,dc=com",PWD="MANAGER";
+
+DMRII:SRV=0,IP="169.253.150.2",PRIO=0;
+
+
+@LABEL SELECTF
+@SELECTFILE {filelist} "Select DMDNI file" "%USERPROFILE%\" "Text files;*.txt"  
+@IFNDEF {filelist} THEN GOTO SELECTF
+@FOREACH {filelist} SET {DMDNIFILE} = {_CURRLINE}
+@COMMENT "Selected DMDNI file: {DMDNIFILE}" 
+@INCLUDE {DMDNIFILE}   
+
+!@dtfile /home/egrupio/git_repository/TCM_DT_Application/DMDNI/DMRNI_17A_LSV03_ASV.dt!
+!@dtfile /home/egrupio/git_repository/TCM_DT_Application/DMDNI/DMDNI_17A_LSV03_UNIV.dt!
+
+DMSDP:SRV=0;
+
+AEBSP;  
+HEBSP;      
+NHBSP; 
+
+
+
+!BLXPI:forced;
+

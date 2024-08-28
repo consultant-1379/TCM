@@ -1,0 +1,1090 @@
+
+
+IOTXP:***_DEFINITION_OF_SAE'S_RELATED_TO_IO_ADMINISTRATION_*********;
+     SAAII:SAE=301,  NI= 2000;
+
+       ! SEIZURE QUEUE FOR IO DEVICES     EXT.MIN:1      IOH        !
+       ! & ALARM LIST. APPROXIMATE VALUE      MAX:-                 !
+       ! IS 420+8 FOR EVERY 1000 SUB-     RED.MIN:1                 !
+       ! SCRIBERS, ESTIMATED FOR AN EX-       MAX:-                 !
+       ! CHANGE OF ORDINARY SIZE, IN                                !
+       ! OPERATION. THE HIGHER VALUE                                !
+       ! (EX. 2000-6000) IS NECESSARY FOR                           !
+       ! THE EXCHANGE AT THE OPERATION                              !
+       ! START.                                                     !
+       !------------------------------------------------------------!
+     SAAII:SAE=302,  NI=   1024;
+
+       ! IO INDIVIDUALS (ALPHANUMERIC)    EXT.MIN:1      ADE    ADT !
+       ! FOR CONTINUOUS INTERWORK WITH        MAX:-      AFP    AOT !
+       ! IOS. THE SUM OF IO DEVICES OF    RED.MIN:1      AUE    LOG !
+       ! ALPHANUMERIC TYPE (TW, DH ETC.)      MAX:-      OID    LOGB!
+       ! PLUS THE SUM OF IO DEVICES OF                   LOGE   AICP!
+       ! FILE ORIENTED TYPE CT, MT ETC.                             !
+       ! IS INDICATED. FOR EACH DATALINK                            !
+       ! (DC) ADD + 8 TO THE SUM.                                   !
+       !------------------------------------------------------------!
+     SAAII:SAE=303,  NI=   50;
+
+       ! DITTO (FILE-ORIENTED). THE SUM   EXT.MIN:1      FIC    FID !
+       ! OF IO DEVICES OF FILE-               MAX:-      FIE    FIO !
+       ! ORIENTED TYPE (CT, MT ETC.) IS   RED.MIN:1      FIT    FIM !
+       ! INDICATED. FOR EACH DATALINK          MAX:-                !
+       ! (DC) ADD + 8 TO THE SUM.                                   !
+       !------------------------------------------------------------!
+     SAAII:SAE=807,  BLOCK=RPDI, NI=2148;
+     SAAII:SAE=807,  BLOCK=RPDI, NI=4196;
+
+       ! NUMBER OF RECORDING RECORDS      EXT.MIN:1    DEPO   MRP   !
+       ! FOR RECORDING OF RP/EM EVENTS        MAX:-    RPADM  RPADS !
+       ! TION) IS INDICATED.              RED.MIN:1    RPAL   RPDI  !
+       ! IT GIVES THE TOTAL NUMBER OF RP/EM   MAX:-    RPFD   RPREC !
+       ! EVENTS THAT CAN BE LOGGED                     RPREP  RPRES !
+       ! SIMULTANEOUSLY.                               RPROUT LARP  !
+       ! SAE=304 * 4 + 100                             FCERT        !
+       !------------------------------------------------------------!
+     SAAII:SAE=304,  NI= 1024;
+
+       ! HERE THE RP WITH THE HIGHEST     EXT.MIN:1    DEPO   MRP   !
+       ! NUMBER + 1 (IN THE RP ALLOCA-        MAX:-    RPADM  RPADS !
+       ! TION) IS INDICATED.              RED.MIN:1    RPAL   RPDI  !
+       !                                      MAX:-    RPFD   RPREC !
+       !                                               RPREP  RPRES !
+       !                                               RPROUT LARP  !
+       !                                               FCERT        !
+       !------------------------------------------------------------!
+     SAAII:SAE=310,  NI=    64;
+
+       !                                  EXT.MIN:                  !
+       !                                      MAX:-    EMGREC EMGDI !
+       !                                  RED.MIN:1    EMGDU  EMGAL !
+       !                                      MAX:-    EMGRES FCEET !
+       !                                               LAEP         !
+       !------------------------------------------------------------!
+   ! SAAII:SAE=321,  NI=00000;
+
+       ! ALTERATION OF THE NO. OF         EXT.MIN:16     DCMT DCX25 !
+       ! LOGICAL CHANNELS WHERE THE           MAX:4096              !
+       ! NUMBER OF LOGICAL CHANNELS FOR   RED.MIN:16                !
+       ! THE DATA CHANNEL IS INDICATED.       MAX:4096              !
+       ! MAXIMUM VALUE IS 16X256=4096                               !
+       ! LOGICAL CHANNELS.                                          !
+       !------------------------------------------------------------!
+   !SAAII:SAE=322,  NI=   32;
+
+       ! ALTERATION OF THE NUMBER OF      EXT.MIN:1      DCTOS      !
+       ! PHYSICAL LINKS WHERE THE NUMBER      MAX:256               !
+       ! OF PHYSICAL LINKS FOR DATA       RED.MIN:1                 !
+       ! CHANNEL IS INDICATED. MAX 256        MAX:256               !
+       ! PHYSICAL LINKS.                                            !
+       !------------------------------------------------------------!
+   ! SAAII:SAE=323,  NI=00000;
+
+       ! EXTENSION MODULES (EM). HERE     EXT.MIN:1     DEPO        !
+       ! IS INDICATED THE SUM OF NUMBER       MAX:-                 !
+       ! OF COMMANDS, EXPOI, WHICH HAVE   RED.MIN:1                 !
+       ! A SPECIFIED DEVICE POSITION AT       MAX:-                 !
+       ! THE EXCHANGE.                                              !
+       !------------------------------------------------------------!
+     SAAII:SAE=330,  NI=   16;
+
+       ! USED PASSWORDS AT THE RELEVANT       MAX:-                 !
+       ! EXCHANGE IS INDICATED.           RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+   ! SAAII:SAE=331,  NI=00000;
+
+       ! IDENTITY CARD. HERE THE NUMBER   EXT.MIN:1      OID        !
+       ! OF USED ID-CARDS AT THE RELE-        MAX:-                 !
+       ! VANT EXCHANGE IS INDICATED.      RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=332,  NI= 5000;
+
+       ! NUMBER OF EMRP VARIABLES/EMRP.   EXT.MIN:1      LAEL       !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    ! SAAII:SAE=333,  NI=  406; !SAE not defined ! 
+
+       ! NUMBER OF TRANSPORT INDI-        EXT.MIN:1      DCLTRAN    !
+       ! VIDUALS.                             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    ! SAAII:SAE=334,  NI=   64; !SAE not defined ! 
+
+       ! NUMBER OF POSITIONS TSAP         EXT.MIN:1      DCL   TRAN !
+       ! TABLE.                               MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=335,  NI=    4;
+
+       ! NUMBER OF FMG (LSAP)             EXT.MIN:1   DCLNET DCRP   !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=336,  NI=  406;
+
+       ! NUMBER OF LOGICAL CHANNELS       EXT.MIN:1      DCLNET     !
+       ! IO-FM                                MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=337,  NI=   64;
+
+       ! NUMBER OF FMG (NSAP)             EXT.MIN:1      DCLNET     !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=338,  NI= 1024;
+
+       ! NUMBER OF QUEUE INDIVIDUALS.     EXT.MIN:1      DCLNET     !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       ! VACANT                                                     !
+       !------------------------------------------------------------!
+     SAAII:SAE=340,  NI= 1024;
+
+       ! THE NUMBER OF HIGHEST FUNCTION   EXT.MIN:1      LARI       !
+       ! CODE + 1 IS INDICATED.               MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=341,  NI=  128;
+
+       ! NUMBER OF FILE USERS AGAINST     EXT.MIN:1      FMI        !
+       ! THE FILE SYSTEM IN AN EXTERNAL       MAX:-                 !
+       ! IOS.                             RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=343,  NI=  1023;
+
+       ! NUMBER OF REGIONAL SOFTWARE      EXT.MIN:1      LAEC   LAEL!
+       ! UNITS THAT CAN BE STORED IN          MAX:-      BUE        !
+       ! CP-PS                            RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    ! SAAII:SAE=344,  NI=  250; !SAE not defined ! 
+
+       ! SESSION INDIVIDUALS FOR TRANS-   EXT.MIN:1      ASCP       !
+       ! PORT CHANNELS TOWARDS SUBSYSTEM      MAX:-                 !
+       ! DCS FOR THE ALPHA-TERMINAL       RED.MIN:1                 !
+       ! FUNCTION. LEAST EXTENSION            MAX:-                 !
+       ! STEP=1.                                                    !
+       !------------------------------------------------------------!
+     SAAII:SAE=345,  NI=  2000;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 32W16.             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=346,  NI=  2000;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 64W16.             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAESS:SAE=347,  NIE=    0;
+     SAAII:SAE=347,  NI=  4096;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 128W16.            MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    SAESS:SAE=348,  NIE=    0;
+    SAAII:SAE=348,  NI=  4096;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 256W16             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAESS:SAE=349,  NIE=    0;
+     SAAII:SAE=349,  NI=  4096;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 512W16             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAESS:SAE=350,  NIE=    0;
+     SAAII:SAE=350,  NI=  4096;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 1KW16.           MAX:-                   !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=351,  NI=   4096;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 2KW16              MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=352,  NI=    1024;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 4KW16              MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=353,  NI=    1024;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 8KW16              MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+       
+     SAAII:SAE=354,  NI=    1024;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 16KW16             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+ 
+     SAAII:SAE=355,  NI=    1024;
+
+       ! SIZE ALTERATION OF STORAGE       EXT.MIN:1      LAD        !
+       ! BANK. BUFFER SIZE 32KW16             MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=408,  NI=  512;
+
+       ! NUMBER OF CP BLOCKS HAVING       EXT.MIN:1      PXZA       !
+       ! A PROGRAM LOADED FOR PROGRAM         MAX:-                 !
+       ! CHANGE,I.E.: NUMBER OF ROWS      RED.MIN:1                 !
+       ! IN TABLE AREA OF PXPROGRAM           MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=409,  NI=   32;
+
+       ! NUMBER OF ROWS IN THE            EXT.MIN:1      PXZA       !
+       ! WORK AREA FOR TABLE PXPROGRAM        MAX:-                 !
+       ! FOR CP BLOCKS HAVING A PROGRAM   RED.MIN:1                 !
+       ! LOADED FOR PROGRAM CHANGE.           MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=417,  NI=   32;
+
+       ! NUMBER OF ROWS IN THE            EXT.MIN:1      PXZS       !
+       ! WORK AREA FOR TABLE SIGNALDIFF       MAX:-                 !
+       ! FOR CP BLOCKS HAVING A PROGRAM   RED.MIN:1                 !
+       ! LOADED FOR PROGRAM CHANGE.           MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=418,  NI=   32;
+
+       ! NUMBER OF ROWS IN THE            EXT.MIN:1      PXZS       !
+       ! TABLE AREA FOR TABLE SIGNALDIFF      MAX:-                 !
+       ! FOR CP BLOCKS HAVING A PROGRAM   RED.MIN:1                 !
+       ! LOADED FOR PROGRAM CHANGE.           MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=419,  NI=   32;
+
+       ! NUMBER OF ROWS IN THE            EXT.MIN:1      PXZD       !
+       ! WORK AREA FOR TABLE VARIABLEDIF      MAX:-                 !
+       ! FOR CP BLOCKS HAVING A PROGRAM   RED.MIN:1                 !
+       ! LOADED FOR PROGRAM CHANGE.           MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=420,  NI=   32;
+
+       ! NUMBER OF ROWS IN THE            EXT.MIN:1      PXZD       !
+       ! TABLE AREA FOR TABLE VARIABLEDIF     MAX:-                 !
+       ! FOR CP BLOCKS HAVING A PROGRAM   RED.MIN:1                 !
+       ! LOADED FOR PROGRAM CHANGE.           MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=424,  NI=  512;
+
+       ! SAEDATA - WORK  AREA:            EXT.MIN:1      SAF        !
+       ! NUMBER OF RELATIONS BETWEEN SAE      MAX:-                 !
+       ! PARTICIPANTS AND SAE EVENTS.     RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=1845, NI= 3000;
+
+       ! LOCALSAES - TABLE AREA:          EXT.MIN:1      SAFCO      !
+       ! NUMBER OF LOCAL SAE'S IN THE         MAX:-                 !
+       ! SYSTEM.                          RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=1846, NI=  512;
+
+       ! LOCALSAES - WORK  AREA:          EXT.MIN:1      SAFCO      !
+       ! NUMBER OF LOCAL SAE'S IN THE         MAX:-                 !
+       ! SYSTEM.                          RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=1849, NI= 2000;
+
+       ! GLOBALSAES - TABLE ROWS          EXT.MIN:1      SAFCO      !
+       ! THE LARGEST GLOBAL SAE NUMBER        MAX:-                 !
+       ! THAT CAN BE CODED IN THE SYSTEM. RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+IOTXP:***_GLOBAL_SIZE_ALTERATION_EVENTS,_APZ_-_DBS_*****************;
+     SAAII:SAE=363,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB1   !
+       ! FILE CONTAIN THE TABLE KEYS       RED: MIN:1               !
+       ! WORK AREA.                             MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=364,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB1   !
+       ! FILE CONTAIN THE TABLE KEYS-      RED: MIN:1               !
+       ! FIELDS WORK AREA.                      MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=367,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB1   !
+       ! FILE CONTAIN THE TABLE SYSTEM-    RED: MIN:1               !
+       ! FIELDS WORK AREA.                      MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=370,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB1   !
+       ! FILE CONTAIN THE TABLE TOWFA-     RED: MIN:1               !
+       ! ULTCODES WORK AREA.                    MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=358,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB2   !
+       ! FILE CONTAIN THE TABLE PROGRAMS   RED: MIN:1               !
+       ! WORK AREA.                             MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=365,  NI=  500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB2   !
+       ! FILE CONTAIN THE TABLE FOREIGN-   RED: MIN:1               !
+       ! KEYS TABLE AREA.                       MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=366,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB2   !
+       ! FILE CONTAIN THE TABLE FOREIGN-   RED: MIN:1               !
+       ! KEYS WORK AREA.                        MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=359,  NI=  500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB3   !
+       ! FILE CONTAIN THE TABLE TABLE      RED: MIN:1               !
+       ! TABLE AREA.                            MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=360,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB3   !
+       ! FILE CONTAIN THE TABLE TABLE      RED: MIN:1               !
+       ! WORK AREA.                             MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=361,  NI= 1000;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB4   !
+       ! FILE CONTAIN THE TABLE FIELDS     RED: MIN:1               !
+       ! WORK AREA.                             MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=362,  NI=  500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB4   !
+       ! FILE CONTAIN THE TABLE FIELDS     RED: MIN:1               !
+       ! WORK AREA.                             MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=356,  NI=   50;
+
+       ! TABLE AREA FOR TRANSLATE.         EXT.MIN:1      DBTAB5    !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=357,  NI=   50;
+
+       ! TABLE WORK AREA FOR TABLE         EXT.MIN:1      DBTAB5    !
+       ! TRANSPORT                             MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=371,  NI=   500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE           MAX: -     DBTAB6    !
+       ! FILE CONTAIN THE TABLE            RED: MIN:1               !
+       ! SYMBOLS WORK AREA.                    MAX: -               !
+       !------------------------------------------------------------!
+     SAAII:SAE=368,  NI=  500;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB7   !
+       ! FILE CONTAIN THE TABLE SYSFA-     RED: MIN:1               !
+       ! ULTCODE TABLE AREA.                    MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=369,  NI=  100;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB7   !
+       ! FILE CONTAIN THE TABLE SYSFA-     RED: MIN:1               !
+       ! ULTCODE WORK AREA.                     MAX: -              !
+       !------------------------------------------------------------!
+
+      !SAAII:SAE=389,  NI=   10;
+
+       ! OCSSTOC - TABLE ROWS              EXT.MIN:1      OCTAB02   !
+       ! NUMBER OF STOC MAGAZINES              MAX:-                !
+       ! CONNECTED TO THE OPEN            RED.MIN:1                 !
+       ! COMMUNICATION SUBSYSTEM (OCS).  C.   MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=390,  NI=   10;
+
+       ! OCSSTOC - WORK  ROWS              EXT.MIN:1      OCTAB02   !
+       ! NUMBER OF STOC MAGAZINES              MAX:-                !
+       ! CONNECTED TO THE OPEN            RED.MIN:1                 !
+       ! COMMUNICATION SUBSYSTEM (OCS).       MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=391,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB01   !
+       ! FOR TABLE OCSNETWORK.                 MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=392,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB01   !
+       ! FOR TABLE OCSNETWORK.                 MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=393,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB04   !
+       ! FOR TABLE ITSNETALARM.                MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=394,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB04   !
+       ! FOR TABLE ITSNETALARM.                MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=395,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB03   !
+       ! FOR TABLE ITSALARM.                   MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=396,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB03   !
+       ! FOR TABLE ITSALARM.                   MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=397,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB05   !
+       ! FOR TABLE ITSFHANDLING.               MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=398,  NI=   10;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB05   !
+       ! FOR TABLE ITSFHANDLING.               MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=399,  NI=  255;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB06   !
+       ! FOR TABLE ITSERRORLOG.                MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=400,  NI=  755;
+
+       ! AFFECTS THE TABLE AREA            EXT.MIN:1      OCTAB06   !
+       ! FOR TABLE ITSERRORLOG.                MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=462,  NI= 3000;
+
+       ! NUMBER OF COMMANDS THAT CAN BE   EXT.MIN:1      ADE        !
+       ! STORED IN THE HASH-CODED TABLE.      MAX:5000              !
+       ! INITIAL VALUE= 3000              RED.MIN:1                 !
+       ! MAXIMAL VALUE=65535                  MAX:5000              !
+       !------------------------------------------------------------!
+     SAAII:SAE=466,  NI= 1000;
+
+       ! NUMBER OF ALARM LIST ELEMENTS.   EXT.MIN:1      ALA        !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+IOTXP:***_DEFINITION_OF_SAE'S_RELATED_TO_AXEPAR_-_HANDLING_*********;
+
+     SAAII:SAE=958,  NI=  256;
+
+       ! CONTAINS THE NUMBER OF TABLE      EXT: MIN:1    PARTAB1    !
+       ! ROWS IN THE DATABASE TABLE             MAX: -              !
+       ! AXEPARSETS.                       RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=959,  NI=  256;
+
+       ! CONTAINS THE NUMBER OF TABLE      EXT: MIN:1   PARTAB1     !
+       ! ROWS IN THE WORK AREA FOR THE          MAX: -              !
+       ! DATABASE TABLE AXEPARSETS.        RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=962,  NI=  256;
+
+       ! CONTAINS THE NUMBER OF TABLE      EXT: MIN:1    PARA       !
+       ! ROWS IN THE DATABASE TABLE             MAX: -              !
+       ! AXEPARFAULTS.                     RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=963,  NI=   16;
+
+       ! CONTAINS THE NUMBER OF ROWS IN    EXT: MIN:1   PARA        !
+       ! THE WORK AREA FOR THE DATABASE         MAX: -              !
+       ! TABLE AXEPARFAULTS.               RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=964,  NI= 2048;
+
+       !  CONTAINS THE NUMBER OF ROWS      EXT: MIN:1    PARTAB2    !
+       !  IN THE DATABASE TABLE                 MAX: -              !
+       !  AXEPARBLOCKS.                    RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=965,  NI=  256;
+
+       !  CONTAINS THE NUMBER OF ROWS      EXT: MIN:1   PARTAB2     !
+       !  IN THE WORK AREA FOR DATABASE         MAX: -              !
+       !  TABLE AXEPARBLOCKS.              RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     !SAAII:SAE=967,  NI=  7168;
+
+       ! CONTAINS THE NUMBER OF ROWS IN    EXT: MIN:1   PARTAB2     !
+       ! THE WORK AREA FOR DATABASE TABLE       MAX: -              !
+       ! AXEPARBLOCKRELS.                  RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+
+IOTXP:***_DEFINITION_OF_SAE'S_RELATED_TO_RP_ADMINISTRATION_*********;
+     SAAII:SAE=1803,  NI= 128;
+
+	 SAAII:SAE=1806,  NI= 66;
+	 
+       ! SIZE OF THE PROGRAM STORE BUILD  EXT: IN:1                 !
+       ! LEVEL LOG FILE.                      MAX:-    AFBLA        !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     
+      SAAII:SAE=1807,  NI=  10;
+
+       ! DEFINING THE NUMBER OF WORK      EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSRPTYPES. MAX.       MAX:-    RPADM        !
+       ! NUMBER OF ROWS THAT CAN BE       RED.MIN:1                 !
+       ! CHANGED IN ONE DATABASE              MAX:-                 !
+       ! TRANSACTION.                                               !
+       !------------------------------------------------------------!
+      SAAII:SAE=1808, NI=  256;
+
+       ! ALLOWED COMBINATIONS BETWEEN     EXT.MIN:1                 !
+       ! RP TYPES AND SOFTWARE UNIT           MAX:-    RPADM2       !
+       ! COMPATIBILITY NUMBERS. (SAE      RED.MIN:1                 !
+       ! IS SEIZED WHEN A NEW COMBINATION     MAX:-                 !
+       ! IS DEFINED IN TABLE RPSHWSWCOMP                            !
+       !------------------------------------------------------------!
+      SAAII:SAE=1809, NI=  10;
+	  
+	  SAAII:SAE=1810, NI=  53;
+
+       ! DEFINING THE NUMBER OF WORK      EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSHWSWCOMP.           MAX:-    RPADM2       !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      
+      SAAII:SAE=1811, NI=  10;
+
+       ! DEFINING THE NUMBER OF WORK      EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSRPPROPERTIES.       MAX:-    RPADM        !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     
+      SAAII:SAE=1813, NI=  10;
+
+       ! DEFINING THE NUMBER OF WORK      EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSTYPESTOPROPS.       MAX:-    RPADM        !
+       !                                  RED.MIN:1                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1814,  NI=256;
+
+       ! NUMBER OF TABLE ROWS IN DB       EXT.MIN:1                 !
+       ! TABLE RPSBOARDS                      MAX:-    RPDI         !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1815,  NI=256;
+
+       ! NUMBER OF WORK ROWS IN DB        EXT.MIN:1                 !
+       ! TABLE RPSBOARDS                      MAX:-    RPDI         !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1816,  NI=256;
+
+       ! NUMBER OF TABLE ROWS IN DB       EXT.MIN:1                 !
+       ! TABLE RPSBOARDLISTS                  MAX:-    RPDI         !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1817,  NI=16;
+
+       ! NUMBER OF WORK ROWS IN DB        EXT.MIN:1                 !
+       ! TABLE RPSBOARDLISTS                  MAX:-    RPDI         !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1818,  NI=2048;
+
+       ! NUMBER OF TABLE ROWS IN DB       EXT.MIN:1                 !
+       ! TABLE RPSFAULTWEIGHTS                MAX:-    RPDI         !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1819,  NI=16;
+
+       ! NUMBER OF WORK ROWS IN DB        EXT.MIN:1                 !
+       ! TABLE RPSFAULTWEIGHTS                MAX:-    RPDI         !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    
+      SAAII:SAE=1821, NI=  10;
+
+       ! DEFINING THE NUMBER OF WORK      EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSPHYSRPTYPES.        MAX:-    RPADM        !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1822, NI= 1024;
+
+       ! DEFINING THE NUMBER OF TABLE     EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSRPBSPOS.            MAX:-    RPADM        !
+       ! THE NUMBER OF RPS IN EXCHANGES   RED.MIN:1                 !
+       ! WITH SERIAL RP BUS (RPB-S).          MAX:-                 !
+       !------------------------------------------------------------!
+      SAAII:SAE=1823, NI=  32;
+
+       ! DEFINING THE NUMBER OF WORK      EXT.MIN:1                 !
+       ! ROWS IN TABLE RPSRPBSPOS.            MAX:-    RPADM        !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+
+SAAII:SAE=1830	,NI=50000	;
+SAAII:SAE=1831	,NI=360		;
+SAAII:SAE=1832	,NI=3000	; !Number of communication buffers with size 2KW16!
+SAAII:SAE=1833	,NI=50000	; !Number of communication buffers with size 4KW16!
+
+
+IOTXP:***_LOCAL_SIZE_ALTERATION_EVENTS,_APZ_************************;
+     SAAII:SAE=500,  NI=   12, BLOCK=OCITS;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! NUMBER OF STOC'S                    MAX: -                 !
+       ! NI = NUMBER OF SNT              RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=500,  NI=    2, BLOCK=OCADM;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! NUMBER OF STOC'S                    MAX: -                 !
+       ! NI = NUMBER OF DEV              RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=501,  NI=    2, BLOCK=OCADM;
+
+       ! INCREASE OR DECREASES THE       EXT.MIN: 1                 !
+       ! TOTAL NUMBER OF DEVICES ON          MAX: -                 !
+       ! ALL STOC'S.                     RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+       ! RECOMMENDED RTSXX - AM ALLOCATION FOR GSM900 APPLICATIONS: !
+       !                                                            !
+       !      RTS00   SYSOMAM                                       !
+       !      RTS01   DASAM                                         !
+       !      RTS02   ISOMAM                                        !
+       !      RTS03   IUSAM                                         !
+       !      RTS04    -                                            !
+       !      RTS05    -                                            !
+       !      RTS06    -                                            !
+       !      RTS07    -                                            !
+       !      RTS08    -                                            !
+       !      RTS09    -                                            !
+       !      RTS10    -                                            !
+       !      RTS11    -                                            !
+       !      RTS12    -                                            !
+       !      RTS13    -                                            !
+       !      RTS14    -                                            !
+       !      RTS15    -                                            !
+       !      RTS16    -                                            !
+       !      RTS17    -                                            !
+       !      RTS18    -                                            !
+       !      RTS19    -                                            !
+       !------------------------------------------------------------!
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS00;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS01;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS02;
+     !SAAII:SAE=500,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS04;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS05;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS06;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS07;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS08;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS09;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS10;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS11;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS12;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS13;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS14;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS15;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS16;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS17;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS18;
+     !SAAII:SAE=500,  NI=  150, BLOCK=RTS19;
+
+       ! NUMBER OF PROCESS INDIVIDUALS   EXT.MIN: 1                 !
+       ! FOR AM- RUN TIME SYSTEM THAT        MAX: -                 !
+       ! NEED TO BUFFER EVENTS IN RTS    RED.MIN: 1                 !
+       ! AT ACTIVE SIGNAL RECEPTION.         MAX: -                 !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=501,  NI=  1350, BLOCK=RTS00;
+     SAAII:SAE=501,  NI=  1350, BLOCK=RTS01;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS02;
+     !SAAII:SAE=501,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS04;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS05;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS06;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS07;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS08;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS09;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS10;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS11;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS12;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS13;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS14;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS15;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS16;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS17;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS18;
+     !SAAII:SAE=501,  NI=  150, BLOCK=RTS19;
+
+       ! NUMBER OF EVENT   INDIVIDUALS   EXT.MIN: 1                 !
+       ! FOR AM- RUN TIME SYSTEM THAT        MAX: -                 !
+       ! NEED TO BE BUFFERED IN RTS      RED.MIN: 1                 !
+       ! AT ACTIVE SIGNAL RECEPTION.         MAX: -                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS00;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS01;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS02;
+     !SAAII:SAE=502,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS04;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS05;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS06;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS07;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS08;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS09;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS10;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS11;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS12;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS13;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS14;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS15;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS16;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS17;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS18;
+     !SAAII:SAE=502,  NI=  150, BLOCK=RTS19;
+
+       ! NUMBER OF FORLOPP INDIVIDUALS   EXT.MIN: 2                 !
+       ! OF SIMULTANEAOUS HLPLEX EVENT-      MAX: -                 !
+       ! PATHS OPEN ACCROSS SOME HLPLEX  RED.MIN: 2                 !
+       ! BOUNDARY.                           MAX: -                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS00;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS01;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS02;
+     !SAAII:SAE=503,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS04;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS05;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS06;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS07;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS08;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS09;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS10;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS11;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS12;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS13;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS14;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS15;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS16;
+     !SAAII:SAE=503,  NI=  220, BLOCK=RTS17;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS18;
+     !SAAII:SAE=503,  NI=  200, BLOCK=RTS19;
+
+       ! NUMBER OF MODULE INDIVIDUALS    EXT.MIN: 1                 !
+       ! IN THE HLPLEX APPLICATION           MAX: -                 !
+       ! MODULE.                         RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !       **** NOT TO BE PERFORMED DURING TRAFFIC ****         !
+       !------------------------------------------------------------!
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS00;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS01;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS02;
+     !SAAII:SAE=504,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS04;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS05;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS06;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS07;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS08;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS09;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS10;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS11;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS12;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS13;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS14;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS15;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS16;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS17;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS18;
+     !SAAII:SAE=504,  NI=  250, BLOCK=RTS19;
+
+       ! NUMBER OF OBMAN INTERFACE       EXT.MIN: 1                 !
+       ! INDIVIDUALS USED FOR EACH           MAX: -                 !
+       ! OPEN COMMUNICATION CHANNEL      RED.MIN: 1                 !
+       ! BETWEEN SOME HLPLEX MODULE          MAX: -                 !
+       ! AND OBMAN!
+       !------------------------------------------------------------!
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS00;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS01;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS02;
+     !SAAII:SAE=505,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS04;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS05;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS06;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS07;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS08;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS09;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS10;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS11;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS12;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS13;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS14;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS15;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS16;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS17;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS18;
+     !SAAII:SAE=505,  NI=  200, BLOCK=RTS19;
+
+       ! NUMBER OF APPLICATION MODULE    EXT.MIN: 1                 !
+       ! PROTOCOL CARRIER LINK INTERFACE     MAX: -                 !
+       ! INDIVIDUALS USED FOR COMMAND    RED.MIN: 1                 !
+       ! HANDLING BETWEEN HLPLEX MODULE      MAX: -                 !
+       ! AND AN APC LINK. !
+       !------------------------------------------------------------!
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS00;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS01;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS02;
+     !SAAII:SAE=506,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS04;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS05;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS06;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS07;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS08;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS09;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS10;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS11;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS12;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS13;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS14;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS15;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS16;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS17;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS18;
+     !SAAII:SAE=506,  NI=  350, BLOCK=RTS19;
+
+       ! NUMBER OF GLOBAL SEIZURE CASE   EXT.MIN: 1                 !
+       ! INDIVIDUALS SPECIFIED IN THE        MAX: -                 !
+       ! HLPLEX APPLICATION MODULE.      RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !       **** NOT TO BE PERFORMED DURING TRAFFIC ****         !
+       !------------------------------------------------------------!
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS00;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS01;
+     !SAAII:SAE=507,  NI=  270, BLOCK=RTS02;
+     !SAAII:SAE=507,  NI=  512, BLOCK=RTS03;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS04;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS05;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS06;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS07;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS08;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS09;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS10;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS11;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS12;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS13;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS14;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS15;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS16;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS17;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS18;
+     !SAAII:SAE=507,  NI=  250, BLOCK=RTS19;
+
+       ! NUMBER OF GLOBAL OBJECT SEIZURE EXT.MIN: 1                 !
+       ! CASE INDIVIDUALS SPECIFIED IN       MAX: -                 !
+       ! THE HLPLEX APPLICATION MODULE.  RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !       **** NOT TO BE PERFORMED DURING TRAFFIC ****         !
+       !------------------------------------------------------------!
+   
+     SAAII:SAE=800,BLOCK=AF,     NI=12;    ! NO OF ALPHA NUM. FILE   !
+     !SAAII:SAE=800,BLOCK=TW,     NI=16    NO OF TYPEWRITER TERM.  !
+     SAAII:SAE=800,BLOCK=LOGB,   NI=120;  ! COMMAND LOGGING BUFFER  !
+     SAAII:SAE=800,BLOCK=COCAT,  NI=300;  ! NUMBER OF CMDS IN CMD   !
+                                          ! CATEGORY TABLE          !
+     SAAII:SAE=801,BLOCK=EXAL0,  NI=32;   ! EXTERNAL ALARMS RCVRS.  !
+    !SAAII:SAE=801,BLOCK=EXAL2,  NI=64;   ! EXTERNAL ALARMS RCVRS.  !
+     SAAII:SAE=803,BLOCK=ALSA,   NI=32;   ! NO OF EXTERNAL ALARM    !
+                                          ! CATCHWORDS              !
+     SAAII:SAE=804,BLOCK=ALSA,   NI=64;   ! EXTERNAL ALARM REC      !
+     SAAII:SAE=805,BLOCK=FIE,    NI=32;   ! NO OF FILE USERS        !
+    !SAAII:SAE=806,BLOCK=ALIM,   NI=16;   ! NO OF ALI'S             !
+     SAAII:SAE=809,BLOCK=LAVS,   NI=16384;
+    !SAAII:SAE=810,BLOCK=LAVS,   NI=1024; ! 13BCM08 SAE already increased !
+    !SAAII:SAE=811,BLOCK=AFUS,   NI= 150;
+     SAAII:SAE=812 ,BLOCK=MFM ,NI=22 ; !It was 50 before dimensioning alignment!
+     SAAII:SAE=813 ,BLOCK=MFM ,NI=1000 ;
+IOTXP:*********_SIZE_ALTERATION_EVENTS,_APZ_-_DBS_******************;
+     SAAII:SAE=805,BLOCK=DBTAB7, NI=100;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB7   !
+       ! FILE CONTAIN THE TABLE            RED: MIN:1               !
+       ! DBSFCERRORS TABLE AREA                     MAX: -          !
+       !------------------------------------------------------------!
+     SAAII:SAE=806,BLOCK=DBTAB7, NI= 50;
+
+       ! THE FILE IS ONE OF DBS'S          EXT: MIN:1               !
+       ! DATA DICTIONARY TABLES. THE            MAX: -     DBTAB7   !
+       ! FILE CONTAIN THE TABLE            RED: MIN:1               !
+       ! DBSFCERRORS WORK AREA                  MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=814,BLOCK=DBPOH, NI=  10;
+
+       ! DATABASE PRINTOUT HANDLER -       EXT: MIN:1               !
+       ! NUMBER OF PRINTOUT INDIVIDUALS.        MAX: -     DBPOH    !
+       !                                   RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+     SAAII:SAE=814,BLOCK=DBCOH, NI=  12;
+
+       ! DATABASE COMMAND HANDLER -        EXT: MIN:1               !
+       ! NUMBER OF COMMAND INDIVIDUALS.         MAX: -     DBCOH    !
+       !                                   RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=  100, BLOCK=OCADM;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=   10, BLOCK=OCTAB01;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=   10, BLOCK=OCTAB02;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=   10, BLOCK=OCTAB03;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=   10, BLOCK=OCTAB04;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=   10, BLOCK=OCTAB05;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+      !SAAII:SAE=814,  NI=   10, BLOCK=OCTAB06;
+
+       ! INCREASES OR DECREASES THE      EXT.MIN: 1                 !
+       ! MAX. NUMBER OF INDIVIDUALS          MAX: -                 !
+       ! IN THE PROTECTED FILE.          RED.MIN: 1                 !
+       !                                     MAX: -                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=815,BLOCK=DBTRH, NI= 256;
+
+       ! DATABASE TRANSACTION HANDLER -    EXT: MIN:1               !
+       ! NUMBER OF TRANSACTION INDIVIDUALS.     MAX: -     DBTRH    !
+       !                                   RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+   ! SAAII:SAE=816,BLOCK=DBTRH, NI=20000;
+
+       ! DATABASE TRANSACTION HANDLER -    EXT: MIN:1               !
+       ! NUMBER OF ROW LOG INDIVIDUALS.         MAX: -     DBTRH    !
+       !                                   RED: MIN:1               !
+       !                                        MAX: -              !
+       !------------------------------------------------------------!
+   !----------------------------------------------------------------!
+IOTXP:***_END_OF_FILE_SAAPZ*****************************************;

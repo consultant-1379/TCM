@@ -1,0 +1,25 @@
+
+     IOTXP:*** Local Size Alteration Events SUA on EM/GARP  ******;
+
+
+     SAAII:SAE=600,BLOCK=SDA,NI=32;
+
+     ! FOR DMRNI ENTRIES !  
+     SAAII:SAE=510,BLOCK=SDA,NI=256;
+
+! FOR DMDNI ENTRIES !
+SAAII:SAE=511	,BLOCK=SDA	,NI=4096	;
+
+     ! QUERY !                                 
+     SAAII:SAE=604,BLOCK=SDA,NI=30000;    
+     
+ 
+     IOTXP:*** End of file   ***********************************;        
+     
+     
+     
+     
+     
+     
+     
+     

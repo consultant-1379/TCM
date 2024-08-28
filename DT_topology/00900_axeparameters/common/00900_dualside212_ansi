@@ -1,0 +1,652 @@
+
+     IOTXP:** 00900_dualside.212 ** AXE PARAMETER ADMINISTRATION *************; 
+
+     !************************************************************************!
+     !***   FEATURE ACTIVATION IN HLR/AUC/FNR   ******************************!
+     !************************************************************************!  
+
+
+
+     !***   FEATURE PARAMETER CLASS   ****************************************!       
+     
+     SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+
+     !***   MTP ROUTING VERIFICATION TEST   **********************************!
+     !***   Parameter Owner C7MVM   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=CCSMRVT;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=CCSMRVT          ,VALUE=    0;
+     DBTRE:COM;
+         
+     !***   CCS EVENT REPORTING AND DISTURBANCE SUPERVISION   ****************!
+     !***   Parameter Owner C7ER   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=CCSERDS;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=CCSERDS          ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   SCCP CONGESTION CONTROL   ****************************************!
+     !***   Parameter Owner C7SRM, C7SM   ************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=SCCPCONGCTRL;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=SCCPCONGCTRL     ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   SCCP POLICING   **************************************************!
+     !***   Parameter Owner C7PAN   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=SCCPPOLICING; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=SCCPPOLICING     ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   SCCP ACCOUNTING   ************************************************!
+     !***   Parameter Owner C7SADA   *****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=SCCPACCOUNTING;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=SCCPACCOUNTING   ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   STP FUNCTIONALITY IN MTP   ***************************************!
+     !***   Parameter Owner C7SPDA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPSTPFUNCTION;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPSTPFUNCTION   ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   ENHANCED MTP POLICING   ******************************************!
+     !***   Parameter Owner C7EPDA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPPOLICING;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPPOLICING      ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   MTP ACCOUNTING FUNCTION   ****************************************!
+     !***   Parameter Owner C7MADA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPACCOUNTING;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPACCOUNTING    ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   MTP HIGH SPEED SIGNALLING LINKS   ********************************!
+     !***   Parameter Owner C7STDA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPHSL; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPHSL           ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   BROADBAND MTP OVER ATM FEATURE  **********************************!
+     !***   Parameter Owner C7SL2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPATM; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSF       ,NAME=MTPATM           ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   ITU AND MPT SS7 OVER IP USING M3UA AVAILABILITY   ****************!
+     !***   Parameter Owner M3UADR   *****************************************!
+!     DBTSP:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UASIGIPITU; 
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UASIGIPITU     ,VALUE=    1;
+!     DBTRE:COM;
+          
+     !***   ITU AND MPT SIGNALLING MESSAGES FROM SS7 TO IP NETWORK   *********!
+     !***   AND VICEVERSA USING M3UA    **************************************!
+     !***   Parameter Owner M3UADR   *****************************************!
+!     DBTSP:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UASGWITU;
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UASGWITU       ,VALUE=    1;
+!     DBTRE:COM;
+     
+  
+     !***   ANSI OVER IP USING M3UA AVAILABILITY   ***************************!
+     !***   Parameter Owner M3UADR   *****************************************!
+	DBTSP:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UASIGIPANSI; 
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SIGIPF,NAME=M3UASIGIPANSI    ,VALUE=    1;
+	DBTRE:COM;
+
+	 
+     !***   ITU AND MPT SS7 OVER IP USING M3UA AVAILABILITY   ****************!
+     !***   Parameter Owner SCTP, IP   ***************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SLIF       ,NAME=SLISCTP;
+     DBTRI;                         
+     DBTSC:TAB=AXEPARS ,SETNAME=SLIF       ,NAME=SLISCTP          ,VALUE=    1;
+     DBTRE:COM;
+          
+     !***   ENABLE M3UA RELAY AVAILABILITY ***********************************!
+     !***   Parameter Owner M3UADR   *****************************************!
+!     DBTSP:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UARELAY;
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS ,SETNAME=SIGIPF     ,NAME=M3UARELAY        ,VALUE=    1;
+!     DBTRE:COM;             
+     
+     SYPAC:ACCESS=DISABLED;
+     
+ 
+    
+     !***   CUSTOMER PARAMETER CLASS   ***************************************!     
+    
+     SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+     
+     !***   CONGESTION STATUS IN TFC MESSAGE FOR NETWORK 0   *****************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS0; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS0      ,VALUE=    1;
+     DBTRE:COM;
+ 
+     !***   CONGESTION STATUS IN TFC MESSAGE FOR NETWORK 1   *****************!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS1;  
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS1      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   CONGESTION STATUS IN TFC MESSAGE FOR NETWORK 2   *****************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS2;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS2      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   CONGESTION STATUS IN TFC MESSAGE FOR NETWORK 3   *****************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS3;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=CONGSTATUS3      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   LOADSHARING OF LEVEL 3 MESSAGES FOR NETWORK 0   ******************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE0; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE0     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   LOADSHARING OF LEVEL 3 MESSAGES FOR NETWORK 1   ******************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE1;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE1     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   LOADSHARING OF LEVEL 3 MESSAGES FOR NETWORK 2   ******************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE2;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE2     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   LOADSHARING OF LEVEL 3 MESSAGES FOR NETWORK 3   ******************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE3;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=L3LOADSHARE3     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   LOCAL OR REMOTE PROCESSOR OUTAGE ON REMOTE PROCESSOR OUTAGE   ****!
+     !***   Parameter Owner C7SL2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=PROCOUTNAT;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=PROCOUTNAT       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DELAY TO AVOID MESSAGE MIS-SEQUENCING ON CHANGEOVER   ************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTRI;
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T1;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T1           ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING FOR CHANGEOVER ACKNOWLEDGEMENT   *************************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T2;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T2           ,VALUE= 1600;
+     DBTRE:COM;
+
+     !***   DIVERSION DELAY TO AVOID MESSAGE MIS-SEQUENCING ON CHANGEBACK   **!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTRI;
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T3;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T3           ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING FOR CHANGEBACK ACKNOWLEDGEMENT (FIRST ATTEMPT)   *********!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T4;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T4           ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING FOR CHANGEBACK ACKNOWLEDGEMENT (SECOND ATTEMPT) **********!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T5;  
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T5           ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   DELAY TO AVOID MESSAGE MIS-SEQUENCING ON CONTROLLED REROUTING   **! 
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T6;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T6           ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   TRANSFER PROHIBITED INHIBITION TIMER (TRANSIENT SOLUTION)   ******!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T8;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T8           ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING TO REPEAT SIGNALLING ROUTE SET TEST MESSAGE   ************!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T10;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T10          ,VALUE=   30;
+     DBTRE:COM;
+
+     !***   TRANSFER RESTRICTED TIMER   **************************************!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T11;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T11          ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   WAITING FOR UNINHIBIT ACKNOWLEDGEMENT   **************************!
+     !***   Parameter Owner C7SL2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T12;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T12          ,VALUE= 1200;
+     DBTRE:COM;
+
+     !***   WAITING FOR FORCE UNINHIBIT   ************************************!
+     !***   Parameter Owner C7SL2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T13; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T13          ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING FOR INHIBITION ACKNOWLEDGEMENT   *************************!
+     !***   Parameter Owner C7SL2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T14;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T14          ,VALUE= 2000;
+     DBTRE:COM;
+
+     !***   DELAY TO AVOID OSCILLATION OF INITIAL ALIGNMENT FAILURE   ********!
+     !***   Parameter Owner C7SL2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T17;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T17          ,VALUE=  400;
+     DBTRE:COM;
+
+     !***   TIMER AT RESTARTING MTP, WAITING TO RECEIVE ALL TRA MESSAGES   ***!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T19; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T19          ,VALUE=   68;
+     DBTRE:COM;
+
+     !***   LOCAL INHIBIT TEST TIMER   ***************************************!
+     !***   Parameter Owner C7SL2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T22;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T22          ,VALUE=  180;
+     DBTRE:COM;
+
+     !***   REMOTE INHIBIT TEST TIMER   **************************************!
+     !***   Parameter Owner C7SL2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T23;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=Q704T23          ,VALUE=  180;
+     DBTRE:COM;
+
+     !***   SUPPRESSION OF PERIODIC SLTM MESSAGES IN ITU AN MPT   ************!
+     !***   Parameter Owner C7SL2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=SLTMSUPPRESS;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=SLTMSUPPRESS     ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   TFP MESSAGE ON ROUTING TO A NON EXISTENT DEST IN ITU AND MPT PROT !
+     !***   Parameter Owner C7DP2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=TFPNONEXDEST; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=TFPNONEXDEST     ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   TFP MESSAGE ON ROUTING OVER AN SEP IN ITU AND MPT   **************!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=TFPROUTESEP; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=TFPROUTESEP      ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   UPU CAUSE PARAMETER FOR NETWORK 0 ******************************;
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE0;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE0        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   UPU CAUSE PARAMETER FOR NETWORK 1   ******************************!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE1;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE1        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   UPU CAUSE PARAMETER FOR NETWORK 2   ******************************!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE2; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE2        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   UPU CAUSE PARAMETER FOR NETWORK 3   ******************************!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE3; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUCAUSE3        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   SUPPRESSION OF THE USER PART UNAVAILABILITY FUNCTION   ***********!
+     !***   Parameter Owner C7DR2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUSUPPRESS;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=UPUSUPPRESS      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DELAY TO AVOID MESSAGE MIS-SEQUENCING ON CHANGEOVER IN JAPAN   ***!
+     !***   Parameter Owner C7LS2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T1;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T1         ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING FOR CHANGEOVER ACKNOWLEDGEMENT IN JAPAN   ****************!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T2;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T2         ,VALUE= 1600;
+     DBTRE:COM;
+
+     !***   DIVERSION DELAY TO AVOID MESSAGE MIS-SEQUENCING ON CHANGEBACK   **!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T3;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T3         ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   WAITING FOR CHANGEBACK ACKNOWLEDGEMENT (FIRST ATTEMPT) IN JAPAN  *!
+     !***   Parameter Owner C7LS2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T4; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T4         ,VALUE=  800;
+     DBTRE:COM;
+ 
+     !***   DELAY TO AVOID MESSAGE MIS-SEQUENCING ON CONTROLLED REROUTING   **!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T6;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T6         ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   TRANSFER PROHIBITED INHIBITION TIMER (TRANSIENT SOLUTION)   ******!
+     !***   Parameter Owner C7DP2   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T8; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTQ704T8         ,VALUE=  800;
+     DBTRE:COM;
+
+     !***   TFP MESSAGE ON ROUTING FOR AN NONEXISTING DEST. IN JAPAN   *******!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTTFPNONEXDEST; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTTFPNONEXDEST   ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   TFP MESSAGE ON ROUTING OVER AN SEP IN JAPAN   ********************!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTTFPROUTESEP;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=JTTFPROUTESEP    ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   SUPPRESSION OF PERIODIC SRT ON COMMERCIAL AGREEMENTS   ***********!
+     !***   Parameter Owner C7DP2   ******************************************!
+     DBTRI;
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=SRTSUPPRESS;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPC       ,NAME=SRTSUPPRESS      ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   HOP COUNTER IN XUDT AND XUDTS MESSAGES   *************************!
+     !***   Parameter Owner C7CL   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=HOPCOUNTERCL;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=HOPCOUNTERCL     ,VALUE=   15;
+     DBTRE:COM;
+
+     !***   MAXIMUM LENGTH FOR ORIGINATING   *********************************!
+     !***   Parameter Owner C7CL   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=MAXMSGLENGTH;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=MAXMSGLENGTH     ,VALUE=  272;
+     DBTRE:COM;
+
+     !***   WAITING TIME TO RECEIVE ALL SEGMENTS RELATED TO REASSEMBLY   *****!
+     !***   Parameter Owner C7CL   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=REASSEMBLYTIME;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=REASSEMBLYTIME   ,VALUE=   15;
+     DBTRE:COM;
+
+     !***   WAITING TIME FOR CONNECTION CONFIRM MESSAGE   ********************!
+     !***   Parameter Owner C7CO   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=CONNESTTIME;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=CONNESTTIME      ,VALUE=    2;
+     DBTRE:COM;
+
+     !***   CONNECTION ORIENTED HOPCOUNTER   *********************************!
+     !***   Parameter Owner C7CO   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=HOPCOUNTERCO; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=HOPCOUNTERCO     ,VALUE=   15;
+     DBTRE:COM;
+
+     !***   RECEIVE INACTIVITY CONTROL TIMER   *******************************!
+     !***   Parameter Owner C7CO   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=IARTIME; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=IARTIME          ,VALUE=   11;
+     DBTRE:COM;
+
+     !***   SEND INACTIVITY CONTROL TIMER   **********************************!
+     !***   Parameter Owner C7CO   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=IASTIME;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=IASTIME          ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   MAXIMUM NUMBER OF RELEASES TRIALS   ******************************!
+     !***   Parameter Owner C7CO   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=MAXRELTRIALS;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=MAXRELTRIALS     ,VALUE=    6;
+     DBTRE:COM;
+
+     !***   WAITING TIME FOR RELEASE COMPLETE MESSAGE   **********************!
+     !***   Parameter Owner C7CO   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=RELTIME;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=RELTIME          ,VALUE=   10;
+     DBTRE:COM;
+
+     !***   CONGESTION TIME   ************************************************!
+     !***   Parameter Owner C7SM   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=CONGTIME;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=CONGTIME         ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   SUBSYSTEM STATUS TEST INITIAL TIME SUPERVISION   *****************!
+     !***   Parameter Owner C7SM   *******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=SSTITIME;  
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=SSTITIME         ,VALUE=    8;
+     DBTRE:COM;
+
+     !***   SUBSYSTEM STATUS TEST MAXIMUM TIME SUPERVISION   *****************!
+     !***   Parameter Owner C7SM   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=SSTMTIME; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=SSTMTIME         ,VALUE=  600;
+     DBTRE:COM;
+
+     !***   SCCP USER PART UNAVAILABLE TREATMENT   ***************************!
+     !***   Parameter Owner C7SM   *******************************************!     
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=UPUTREATMENT;
+     DBTRI;  
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPC      ,NAME=UPUTREATMENT     ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   MTP ACCOUNTING ORDER   *******************************************!
+     !***   Parameter Owner C7MADA2   ****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=ACDOC      ,NAME=MTPACCNTORDER;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=ACDOC      ,NAME=MTPACCNTORDER    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   SCCP ACCOUNTING ORDER   ******************************************!
+     !***   Parameter Owner C7MADA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=ACDOC      ,NAME=SCCPACCNTORDER;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=ACDOC      ,NAME=SCCPACCNTORDER   ,VALUE=    1;
+     DBTRE:COM;
+     
+     !***   REJECT BEHAVIOUR   ***********************************************!
+     !***   Parameter Owner C7TCP     ****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=TCC        ,NAME=REJECTBEHAVIOUR;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=TCC        ,NAME=REJECTBEHAVIOUR  ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   TT VALUE FOR E.164 NP USED DURING GT FORMAT CONVERSION   *********!
+     !***   Parameter Owner C7TCP     ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=TCC        ,NAME=TTE164;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=TCC        ,NAME=TTE164           ,VALUE=   10;
+     DBTRE:COM;
+
+     !***   TT VALUE FOR E.214 NP USED DURING GT FORMAT CONVERSION   *********!
+     !***   Parameter Owner C7TCP     ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=TCC        ,NAME=TTE214; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=TCC        ,NAME=TTE214           ,VALUE=  255;
+     DBTRE:COM;
+
+     !***   HW FILE OUTPUT OPTION   ******************************************!
+     !***   Parameter Owner HWID      ****************************************!       
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=OMSRC      ,NAME=WEEKLYOUTPUT     ,VALUE=    0;
+     DBTRE:COM;      
+                      
+     SYPAC:ACCESS=DISABLED; 
+
+
+
+     !***   SUPPLY PARAMETER CLASS   *****************************************!       
+     
+     SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+     
+     !***   EXCHANE BEHAVIOUR 0=ITU-T, 1=MPT (CHINA), 2=TTC (JAPAN)   ********!
+     !***   Parameter Owner C7DR2     ****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=CCSS       ,NAME=CCSEXCHANGE;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=CCSS       ,NAME=CCSEXCHANGE      ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   CIRCULAR ROUTING PREVENTION FOR NETWORK 0   **********************!
+     !***   Parameter Owner C7DP2     ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP0;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP0             ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   CIRCULAR ROUTING PREVENTION FOR NETWORK 1   **********************!
+     !***   Parameter Owner C7DP2     ****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP1;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP1             ,VALUE=    0;
+     DBTRE:COM;
+
+     !***    CIRCULAR ROUTING PREVENTION FOR NETWORK 2   *********************!
+     !***   Parameter Owner C7DP2     ****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP2;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP2             ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   CIRCULAR ROUTING PREVENTION FOR NETWORK 3   **********************!
+     !***   Parameter Owner C7DP2     ****************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP3;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=CRP3             ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   MTP RESTART AVAILABILITY   ***************************************!
+     !***   Parameter Owner C7SPDA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=MTPRESTART;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=MTPRESTART       ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   REMOTE MANAGEMENT CONTROL   **************************************!
+     !***   Parameter Owner C7MCDA2   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=RMC;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=MTPS       ,NAME=RMC              ,VALUE=    0;
+     DBTRE:COM;
+     
+     !***   MTP NATIONAL OPTION   ********************************************!
+     !***   Parameter Owner C7SM   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPS      ,NAME=CONGCTRLMTPNAT; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPS      ,NAME=CONGCTRLMTPNAT   ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   XUDT/XUDTS OWN NODE MESSGES PROCESS CAPABILITY   *****************!
+     !***   Parameter Owner C7SM   *******************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPS      ,NAME=XUDTALLOW; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPS      ,NAME=XUDTALLOW        ,VALUE=    1;
+     DBTRE:COM;                        
+
+     !***   REMOTE SUBSYSTEM SUPERVISION   **********************************!
+     !***   Parameter Owner C7SNSA   ****************************************!
+     DBTSP:TAB=AXEPARS ,SETNAME=SCCPS      ,NAME=SCCPRSS;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=SCCPS      ,NAME=SCCPRSS          ,VALUE=    0;
+     DBTRE:COM;
+    
+     !***   TC PROTOCOL BEHAVIOUR   ******************************************!
+     !***   Parameter Owner C7TCP   ******************************************! 
+     DBTSP:TAB=AXEPARS ,SETNAME=TCS        ,NAME=TCBEHAVIOUR;
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=TCS        ,NAME=TCBEHAVIOUR      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   OUTPUT DESTINATION OPTIONALITY   *********************************!
+     !***   Parameter Owner CHOC   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=AMCFOAMS   ,NAME=POSSIBLEOUTDEST  ,VALUE=    3;
+     DBTRE:COM;                       
+
+     SYPAC:ACCESS=DISABLED;
+     
+     
+     IOTXP:** EOF 00900_dualside.212 ** AXE PARAMETER ADMINISTRATION  ********;  
+     
+     

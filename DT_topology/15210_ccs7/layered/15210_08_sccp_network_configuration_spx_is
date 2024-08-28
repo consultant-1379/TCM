@@ -1,0 +1,23 @@
+
+IOTXP:** CCITT7, SCCP Network Signalling Point, Initiate ****************;
+
+C7NPI:SP=2-3101    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3102    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3103    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3104    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3105    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3106    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3107    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3108    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3109    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-3110    ,MTC=1    ,MSG=1  ,HPCCON    ;
+
+C7NPI:SP=2-5201    ,MTC=1    ,MSG=1  ,HPCCON    ;
+C7NPI:SP=2-5202    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5203    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5204    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5205    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5206    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5207    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5208    ,MTC=1    ,MSG=1  ,HPCCON    ;
+!    C7NPI:SP=2-5209    ,MTC=1    ,MSG=1  ,HPCCON    ;

@@ -1,0 +1,135 @@
+
+/* WIOL R5G, CLIPSAVE, Fri Oct 22 10:33:05 2004 */
+/* reecrv_SEA_CHAM - reecrv_bb_AT-4 */
+
+emu:set-iog-directory /project_5/UDB_R12/stp/tbi/AUC/AGENR/RPG2
+Old CP IOG directory was '/project_5/UDB_R12/stp/R11Base/REF30'
+CP IOG directory is changed to /project_5/UDB_R12/stp/tbi/AUC/AGENR/RPG2
+END
+laeip:suname=agenr;
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0037  PAGE    1
+NOT ACCEPTED
+FAULT CODE  400
+SOFTWARE UNIT NOT LOADED
+
+<laeul:suname=all;
+ LAEUL:SUNAME=ALL;
+<;
+ORDERED
+
+<
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0041  PAGE    1
+REGIONAL SOFTWARE UNIT LOADING RESULT
+
+
+BLOCK   SUNAME   SUID                             SUTYPE  CNO
+AGEN    AGENR    CAA 165 0131           R1A01     RPD      18
+RESULT
+LOADED
+END
+emu:set-iog-directory /project_5/UDB_R12/stp/tbi/AUC/AGENR/RPG3
+Old CP IOG directory was '/project_5/UDB_R12/stp/tbi/AUC/AGENR/RPG2'
+CP IOG directory is changed to /project_5/UDB_R12/stp/tbi/AUC/AGENR/RPG3
+END
+laeul:suname=all;
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0047  PAGE    1
+ LAEUL:SUNAME=ALL;
+<;
+ORDERED
+
+<
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0047  PAGE    1
+REGIONAL SOFTWARE UNIT LOADING RESULT
+
+
+BLOCK   SUNAME   SUID                             SUTYPE  CNO
+AGEN    AGENR    CAA 204 071            R1A02     RPD      20
+RESULT
+LOADED
+END
+emu:set-iog-directory /project_5/UDB_R12/stp/tbi/AUC/AGEN2R/RPG3
+Old CP IOG directory was '/project_5/UDB_R12/stp/tbi/AUC/AGENR/RPG3'
+CP IOG directory is changed to /project_5/UDB_R12/stp/tbi/AUC/AGEN2R/RPG3
+END
+laeip:suname=agen2r;
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0055  PAGE    1
+NOT ACCEPTED
+FAULT CODE  400
+SOFTWARE UNIT NOT LOADED
+
+<laeul:suname=all;
+ LAEUL:SUNAME=ALL;
+<;
+ORDERED
+
+<
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0055  PAGE    1
+REGIONAL SOFTWARE UNIT LOADING RESULT
+
+
+BLOCK   SUNAME   SUID                             SUTYPE  CNO
+AGEN2   AGEN2R   CAA 204 015            R1A02     RPD      20
+RESULT
+LOADED
+END
+emu:set-iog-directory /project_5/UDB_R12/stp/tbi/AUC/AGEN2R/RPG2
+Old CP IOG directory was '/project_5/UDB_R12/stp/tbi/AUC/AGEN2R/RPG3'
+CP IOG directory is changed to /project_5/UDB_R12/stp/tbi/AUC/AGEN2R/RPG2
+END
+laeul:suname=all;
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0058  PAGE    1
+ LAEUL:SUNAME=ALL;
+<;
+ORDERED
+
+<
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0058  PAGE    1
+REGIONAL SOFTWARE UNIT LOADING RESULT
+
+
+BLOCK   SUNAME   SUID                             SUTYPE  CNO
+AGEN2   AGEN2R   CAA 165 0109           R1A02     RPD      18
+RESULT
+LOADED
+END
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0059  PAGE    1
+<
+<
+< 
+TIME OUT
+emu:set-iog-directory /project_5/UDB_R12/stp/tbi/AUC/EMRP
+Old CP IOG directory was '/project_5/UDB_R12/stp/tbi/AUC/AGEN2R/RPG2'
+CP IOG directory is changed to /project_5/UDB_R12/stp/tbi/AUC/EMRP
+END
+laesp:suname=agenr&agen2r;
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0108  PAGE    1
+ORDERED
+
+<
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0108  PAGE    1
+REGIONAL SOFTWARE UNIT OUTPUT
+BLOCK   FCODE SUNAME   SUID                             SUTYPE CNO
+
+AGEN        5 AGENR    CAA 165 0131           R1A01     RPD     18
+AGEN       10 AGENR    CAA 204 071            R1A02     RPD     20
+AGEN2      10 AGEN2R   CAA 204 015            R1A02     RPD     20
+AGEN2      10 AGEN2R   CAA 165 0109           R1A02     RPD     18
+END
+emu:set-iog-directory /project_5/UDB_R12/stp/tbi/AUC/
+Old CP IOG directory was '/project_5/UDB_R12/stp/tbi/AUC/EMRP'
+CP IOG directory is changed to /project_5/UDB_R12/stp/tbi/AUC
+END
+laesp:suname=agenr&agen2r;
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0112  PAGE    1
+ORDERED
+
+<
+EX-A    RE__IA30R11IRE08_040903   AT-4    TIME 041022 0112  PAGE    1
+REGIONAL SOFTWARE UNIT OUTPUT
+BLOCK   FCODE SUNAME   SUID                             SUTYPE CNO
+
+AGEN          AGENR    CAA 165 0131           R1A01     RPD     18
+AGEN          AGENR    CAA 204 071            R1A02     RPD     20
+AGEN2         AGEN2R   CAA 204 015            R1A02     RPD     20
+AGEN2         AGEN2R   CAA 165 0109           R1A02     RPD     18
+END

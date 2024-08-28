@@ -1,0 +1,9 @@
+
+IOTXP:** CCITT7, Own Signalling Point, Initiate *************************;
+
+C7OPI:OWNSP=0-300,SPTYPE=SEP;
+
+
+IOTXP:** CCITT7, Signalling Point Name, Change **************************;
+
+C7PNC:OWNSP=0-300,SPID=HLR;

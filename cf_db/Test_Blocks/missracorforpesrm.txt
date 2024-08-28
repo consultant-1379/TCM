@@ -1,0 +1,88 @@
+!                                                                                               !
+!    MISSRA correction for use with testblock LAI21/PESRM                                       !
+!                                                                                               !
+! If your version of MISSRA is not in this list you may try the following                       !
+! method, which really does the same thing but leaves no hints about it                         !
+! and therefore should be avoided:                                                              !
+! TEST SYSTEM;                                                                                  !
+! LAVSC:BLOCK=MISSRA,VAR=H'B3,VCAT=RE;                                                          !
+! SET VAR MISSRA H'B3=1;                                                                        !
+! END TEST;                                                                                     !
+!     When you're done testing don't forget to deactivate the testing:                          !
+! TEST SYSTEM;                                                                                  !
+! SET VAR MISSRA h'B3=0;                                                                        !
+! END TEST;                                                                                     !
+!                                                                                               !
+! For more information please refer to:                                                         !
+! https://axe-apztech.rnd.ki.sw.ericsson.se/apztest/www/ukyhome/testblocks_testapplications.htm !
+!                                                                                               !
+
+    ! MISSRA 7PAA/CAA 107 7256/M08AC R8A01
+PCORL:BLOCK=MISSRA,IA =H'8E5,SUID="7PAA/CAA1077256/M08ACR8A01",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA =H'8E5;
+PCORS:BLOCK=MISSRA,IA =H'8E5;
+
+    ! MISSRA 7PAA/CAA 107 7256/M08Y R7A01
+PCORL:BLOCK= MISSRA , IA =H'8A1,SUID="7PAA/CAA1077256/M08YR7A01",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK= MISSRA , IA =H'8A1;
+PCORS:BLOCK= MISSRA , IA =H'8A1;
+
+    ! MISSRA 7PAA/CAA 107 7256/M08T R6A03
+PCORL:BLOCK=MISSRA,IA=H'842,SUID="7PAA/CAA1077256/M08TR6A03",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'842;
+PCORS:BLOCK=MISSRA,IA=H'842;
+
+    ! MISSRA 7PAA/CAA 107 7256/M08S R5A02
+PCORL:BLOCK=MISSRA,IA=H'7F8,SUID="7PAA/CAA 107 7256/M08S R5A02",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'7F8;
+PCORS:BLOCK=MISSRA,IA=H'7F8;
+
+    ! MISSRA 5400/CAA 107 7256/M06AF R4A01
+PCORL:BLOCK=MISSRA,IA=H'83C,SUID="5400/CAA1077256/M06AFR4A01",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'83C;
+PCORS:BLOCK=MISSRA,IA=H'83C;
+
+    ! MISSRA 5400/CAA 107 7256/M06K R3A01
+PCORL:BLOCK=MISSRA,IA=H'8EA,SUID="5400/CAA1077256/M06KR3A01",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'8EA;
+PCORS:BLOCK=MISSRA,IA=H'8EA;
+
+    ! MISSRA 5400/CAA 107 7256/M02F R2A03
+PCORL:BLOCK=MISSRA,IA=H'8EA,SUID="5400/CAA1077256/?????2A03",CI=X12TCZZJ0495;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'8EA;
+PCORS:BLOCK=MISSRA,IA=H'8EA;
+
+    ! MISSRA 5400/CAA 107 7256/M02F R2A02
+PCORL:BLOCK=MISSRA,IA=H'8F9,SUID="5400/CAA1077256/M02FR2A02",CI=X12TCZZJ0495;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'8F9;
+PCORS:BLOCK=MISSRA,IA=H'8F9;
+
+    ! MISSRA 4400/CAA 107 7256/M02A R1A03
+PCORL:BLOCK=MISSRA,IA=H'854,SUID="4400/CAA1077256/M02AR1A03",CI=X12TCZZJ0237;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'854;
+PCORS:BLOCK=MISSRA,IA=H'854;
+
+    ! MISSRA 4400/CAA 107 7080/M02A R2A05
+PCORL:BLOCK=MISSRA,IA=H'79E,SUID="4400/CAA 107 7080/M02A R2A05",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA=H'79E;
+PCORS:BLOCK=MISSRA,IA=H'79E;

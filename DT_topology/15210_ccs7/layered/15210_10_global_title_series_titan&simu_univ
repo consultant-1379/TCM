@@ -1,0 +1,181 @@
+
+IOTXP:** CCITT7, Global Title Series, Initiate **************************;
+
+IOTXP:** HLR incoming traffic *******************************************;
+
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS= 4917240,GTRC= 1,status=old; 
+    !C7GSI:TT=  0, NP=  1,  NA=  4,  NS= 4917240,GTRC= 1;
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS= 49700,  GTRC= 1;  
+
+IOTXP:** AUC incoming traffic *******************************************;
+
+    C7GSI:TT=  1, NP=  6,  NA=  4,  NS=   260,     GTRC=1;
+
+IOTXP:** AUC for HSS *******************************************;
+
+    C7GSI:TT=0,	NP=7,	NA=4,	NS=49810,			GTRC=1; 
+    C7GSI:TT=0,	NP=1,	NA=4,	NS=50151111300,	GTRC=130;
+    C7GSI:TT=0,	NP=1,	NA=4,	NS=49151111300,	GTRC=130;  
+    C7GSI:TT=0,	NP=1,	NA=4,	NS=50151111400,	GTRC=140;
+    C7GSI:TT=0,	NP=1,	NA=4,	NS=49151111400,	GTRC=140;  
+    C7GSI:TT=0,	NP=7,	NA=4,	NS=4928,					GTRC=1;
+    C7GSI:TT=1,	NP=6,	NA=4,	NS=262,					GTRC=1;
+
+IOTXP:** HLR incoming traffic from FNR/NPH (default route) **************;
+
+    C7GSI:TT=249,NP=1,  NA=4,NS=49810, GTRC=1;
+
+
+IOTXP:** NPH incoming traffic for MAP analysis (Ericsson ATI) ***********;
+
+    C7GSI:TT=99,NP=1,NA=4,NS=49810, GTRC=5;
+
+
+IOTXP:** NPH relay from SCCP to MAP level  ******************************;
+
+
+    C7GSI:TT=247,NP=1,NA=4,NS=490,  GTRC=5;
+    C7GSI:TT=247,NP=1,NA=4,NS=492,  GTRC=5;  
+    C7GSI:TT=247,NP=1,NA=4,NS=4910, GTRC=5;! avoid 4917 own !
+    C7GSI:TT=247,NP=1,NA=4,NS=4911, GTRC=5;
+    C7GSI:TT=247,NP=1,NA=4,NS=4912, GTRC=5;
+    C7GSI:TT=247,NP=1,NA=4,NS=4913, GTRC=5;
+    C7GSI:TT=247,NP=1,NA=4,NS=4914, GTRC=5;
+    C7GSI:TT=247,NP=1,NA=4,NS=49810,GTRC=5;
+    
+    C7GSI:TT=247,NP=1,NA=4,NS=49701925202,GTRC=5;   !NPH TCAP!  
+    C7GSI:TT=247,NP=1,NA=4,NS=49701925203,GTRC=5;
+    
+    C7GSI:TT=247,NP=1,NA=4,NS=49701925204,GTRC=5;
+    
+    C7GSI:TT=247,NP=1,NA=4,NS=4970192300,GTRC=5;
+
+
+
+IOTXP:** NPH relay from SCCP to MAP level with NPREFIX preventing *******;
+IOTXP:** from second CUDB search  ***************************************;
+
+    C7GSI:TT=250,NP=1,NA=4,NS=49,   GTRC=5;
+
+
+IOTXP:** NPH incoming traffic for SCCP analysis  ***********************;
+
+!    C7GSI:TT=  0, NP=  6,  NA=  4,  NS=   26217        ,  GTRC=  6;
+!    C7GSI:TT=  0, NP=  7,  NA=  4,  NS=   4917         ,  GTRC=  6;
+!    C7GSI:TT= 17, NP=  1,  NA=  4,  NS=   4917         ,  GTRC=  6;
+!    C7GSI:TT=128, NP=  1,  NA=  4,  NS=   4917         ,  GTRC=  6;
+!    C7GSI:TT=128, NP=  1,  NA=  4,  NS=   4927         ,  GTRC=  6;
+!    C7GSI:TT=128, NP=  1,  NA=  4,  NS=   4937         ,  GTRC=  6;
+
+    C7GSI:TT=0,NP=1,NA=4,NS=490,  GTRC=6;  !Home imported!
+    C7GSI:TT=0,NP=1,NA=4,NS=4910, GTRC=6; !export!
+    C7GSI:TT=0,NP=1,NA=4,NS=4911, GTRC=6; !Other ported !
+    C7GSI:TT=0,NP=1,NA=4,NS=4912, GTRC=6; !other ported !
+    C7GSI:TT=0,NP=1,NA=4,NS=4913, GTRC=6; !other !
+    C7GSI:TT=0,NP=1,NA=4,NS=4914, GTRC=6; !other !
+    C7GSI:TT=0,NP=1,NA=4,NS=49810,GTRC=1;
+    
+    C7GSI:TT=0,NP=1,NA=4,NS=49701925202,GTRC=6;   !NPH SCCP!  
+    C7GSI:TT=0,NP=1,NA=4,NS=49701925203,GTRC=6;  
+    
+    !simu in blades 5203, 5204!
+    C7GSI:TT=0,NP=1,NA=4,NS=49701925204,GTRC=6;
+    
+    C7GSI:TT=0,NP=1,NA=4,NS=4970192300,GTRC=6;   !simu in a loop !
+
+
+IOTXP:** NPH incoming traffic with second query indication  ************;
+
+C7GSI:TT=0,NP=1,NA=114,NS=3337250444,GTRC=252; !OTHER NPREFIX+NS has to be routed to 2-5202! 
+C7GSI:TT=0,NP=1,NA=114,NS=3337250333,GTRC=252; !OTHER PORTED NPREFIX+NS has to be routed to 2-5202! 
+C7GSI:TT=0,NP=1,NA=114,NS=9997240999,GTRC=252; !EXPORTED NPREFIX+NS has to be routed to 2-5202! 
+
+
+IOTXP:** NPH incoming traffic for IDP relay ****************************;
+
+!    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4910190310   ,  GTRC=  7;
+
+
+IOTXP:** NPH outgoing traffic with second query indication *********;
+
+!    C7GSI:TT=  0, NP=   1, NA= 114, NS=   2604174000   ,  GTRC=  31;
+!    C7GSI:TT=  0, NP=   1, NA= 114, NS=   6116174020   ,  GTRC=  31;
+!    C7GSI:TT= 17, NP=   1, NA= 114, NS=   2604174000   ,  GTRC=  31;
+!    C7GSI:TT= 17, NP=   1, NA= 114, NS=   6116174020   ,  GTRC=  31;
+!    C7GSI:TT=128, NP=   1, NA= 114, NS=   2604174000   ,  GTRC=  31;
+!    C7GSI:TT=128, NP=   1, NA= 114, NS=   6116174020   ,  GTRC=  31;
+
+
+IOTXP:** NPH outgoing traffic for IDP relay ****************************;
+
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903101  ,  GTRC=  31;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903102  ,  GTRC=  32;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903103  ,  GTRC=  33;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903104  ,  GTRC=  34;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903105  ,  GTRC=  35;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903106  ,  GTRC=  36;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903107  ,  GTRC=  37;
+!    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903108  ,  GTRC=  38;
+
+
+IOTXP:** NPH outgoing traffic to IWSMC *********************************;
+
+    C7GSI:TT=249,NP=1,NA=4,NS=49701925202,GTRC=252; !2-5202 SMS-SC! 
+    C7GSI:TT=249,NP=1,NA=4,NS=49701925203,GTRC=253; !2-5203 SMS-SC   only for simu in blade! 
+
+IOTXP:** HLR outgoing traffic for simulated entities *******************;
+
+C7GSI:TT=0,NP=1,NA=4,NS=49555555101,GTRC=151;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557101,GTRC=151;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557102,GTRC=151;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557103,GTRC=151;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557104,GTRC=151;
+C7GSI:TT=0,NP=1,NA=4,NS=4999,       GTRC=151;
+C7GSI:TT=0,NP=1,NA=3,NS=555555101,  GTRC=151;
+
+
+C7GSI:TT=0,NP=1,NA=4,NS=49555555102,GTRC=152;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557108,GTRC=152;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557109,GTRC=152;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557110,GTRC=152;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557111,GTRC=152;
+C7GSI:TT=0,NP=1,NA=4,NS=49555557112,GTRC=152;
+
+C7GSI:TT=0,NP=1,NA=4,NS=55172420000,GTRC=153;  !VLR  PLMNID-1 ,CC=55!
+C7GSI:TT=0,NP=1,NA=4,NS=55172430000,GTRC=154;  !VLR  PLMNID-2 ,CC=55!
+C7GSI:TT=0,NP=1,NA=4,NS=55172440000,GTRC=155;  !VLR  PLMNID-3 ,CC=55!
+C7GSI:TT=0,NP=1,NA=4,NS=47173390000,GTRC=153;  !SGSN PLMNID-1 ,CC=47! 
+C7GSI:TT=0,NP=1,NA=4,NS=47173413333,GTRC=154;  !SGSN PLMNID-2 ,CC=47!
+C7GSI:TT=0,NP=1,NA=4,NS=47173512222,GTRC=155;  !SGSN PLMNID-3 ,CC=47!
+C7GSI:TT=0,NP=1,NA=4,NS=59856350000,GTRC=156;  !SGSN PLMNID-1 ,CC=598!
+C7GSI:TT=0,NP=1,NA=4,NS=43173350000,GTRC=156;  !VLR  PLMNID-1 ,CC=43!
+C7GSI:TT=0,NP=1,NA=4,NS=72185634000,GTRC=157;  !VLR  PLMNID-1 ,CC=7 CID=21! 
+C7GSI:TT=0,NP=1,NA=4,NS=12017840000,GTRC=157;  !SGSN PLMNID-1 ,CC=1 CID=20!
+C7GSI:TT=0,NP=1,NA=4,NS=72185636000,GTRC=158;  !VLR  PLMNID-2 ,CC=7 CID=21!
+C7GSI:TT=0,NP=1,NA=4,NS=12117850000,GTRC=158;  !SGSN PLMNID-2 ,CC=1 CID=21!
+
+! SIMU TRAFFIC;
+C7GSI:TT=0,  NP=1, NA=4, NS=4926015202, GTRC=252;
+C7GSI:TT=0,  NP=1, NA=4, NS=4926015203, GTRC=252;
+C7GSI:TT=0,  NP=1, NA=4, NS=49172445555,GTRC=252;
+C7GSI:TT=77, NP=1, NA=4, NS=49172445555,GTRC=252;
+
+C7GSI:TT=248,NP=1, NA=4, NS=49172445555,GTRC=252;
+C7GSI:TT=249,NP=1, NA=4, NS=49172445555,GTRC=252;
+
+
+C7GSI:TT=249,NP=1,NA=4,NS=490, GTRC=2;  !Home imported!
+C7GSI:TT=249,NP=1,NA=4,NS=4910,GTRC=2; !export!
+C7GSI:TT=249,NP=1,NA=4,NS=4912,GTRC=2; !Other ported !
+C7GSI:TT=249,NP=1,NA=4,NS=4911,GTRC=2; !other ported !
+C7GSI:TT=249,NP=1,NA=4,NS=4913,GTRC=2; !other !
+C7GSI:TT=249,NP=1,NA=4,NS=4914,GTRC=2; !other !
+
+C7GSI:TT=249,NP=1,NA=4,NS=4970192300,GTRC=252;    
+
+
+    C7TAI;
+    C7TLI;
+    C7TCI;
+
+IOTXP:** End of File ***************************************************; 

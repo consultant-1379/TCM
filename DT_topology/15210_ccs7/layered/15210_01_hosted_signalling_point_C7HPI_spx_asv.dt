@@ -1,0 +1,5 @@
+
+IOTXP:** CCITT7, Hosted Signalling Point, Initiate ****************;
+
+C7HPI:HPC=2-300; ! HLR-FE in Quasi Associate, Mode SUA protocol !
+C7HPI:HPC=2-301;

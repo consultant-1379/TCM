@@ -1,0 +1,22 @@
+
+     IOTXP:** CCITT7, Signalling Point, Initiate *****************************;
+
+
+     ! SIMU !
+     C7SPI:SP=2-5201	,OWNSP=2-330	,NET=BOTH	,PREF=IP	;
+     C7SPI:SP=2-5202	,OWNSP=2-330	,NET=BOTH	,PREF=IP	;
+	 
+	 ! HLR !
+	 C7SPI:SP=2-300		,OWNSP=2-330	,NET=BOTH	,PREF=IP	; 
+
+
+     IOTXP:** CCITT7, Signalling Point Name, Change **************************;
+
+     ! TITANSIM or MGTS!
+     C7PNC:SP=2-5201	,SPID=DPC5201	;
+     C7PNC:SP=2-5202	,SPID=DPC5202	;
+	 
+	 ! HLR !
+     C7PNC:SP=2-300		,SPID=DPC0300	;
+	 
+

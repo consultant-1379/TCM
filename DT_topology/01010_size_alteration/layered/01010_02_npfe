@@ -1,0 +1,21 @@
+
+     ! SAE value does not follow dimensioning guideline (5000) due to TM4 requirements !
+     SAAII:BLOCK=NPNAN   ,SAE=500 ,NI=15000  ;   
+	 
+     SAAII:BLOCK=NPNAN   ,SAE=605 ,NI=65534 ;
+     SAAII:BLOCK=NPNAN   ,SAE=611 ,NI=65534 ; 
+     SAAII:BLOCK=NPNAN   ,SAE=612 ,NI=130  ;
+                                           
+     ! SAE value does not follow dimensioning guideline (5000) due to TM4 requirements !
+	 SAAII:BLOCK=NPSRFSC ,SAE=500 ,NI=15000 ;
+                                           
+	 SAAII:BLOCK=NPSDCH  ,SAE=500 ,NI=65535	;
+     SAAII:BLOCK=NPMAPTC ,SAE=500 ,NI=65535 ;
+     SAAII:BLOCK=NPRGAP  ,SAE=500 ,NI=5000  ;
+     SAAII:BLOCK=NPMAPTC ,SAE=604 ,NI=65535 ;  
+                                           
+     SAAII:BLOCK=NPINATC ,SAE=500 ,NI=65535 ; 
+	 
+	 SAAII:BLOCK=NPNA	 ,SAE=602 ,NI=5000;
+     
+     

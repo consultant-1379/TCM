@@ -1,0 +1,695 @@
+
+     !****************************************************************!
+     ! Additional MSISDN (ADD)                                        !
+     !****************************************************************!
+
+     HEEPC:PROP=ADDMAXNUM-10;
+     !                             Description                        !
+     !                             Maximum number of AMSISDN          !
+     !                             allowed per subscription           !
+     !                                                                !
+     !                             Property value: 0-15               !
+     !                             Default value: 10                  !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLASND.           !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Authentication Center (AUC)                                    !
+     !****************************************************************!
+
+     HEEPC:PROP=AUCALARMLOG-1;
+     !                             Alarm activation                   !
+     !                             Logging is performed when a        !
+     !                             request for authentication         !
+     !                             data,sent from the HLR FE to       !
+     !                             the AUC has failed. This           !
+     !                             parameter specifies, whether       !
+     !                             an alarm is given or not in        !
+     !                             this case.                         !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Alarm not given                 !
+     !                             1  Alarm given                     !
+     !                                                                !
+     !                             Default value: 1                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLAULGA           !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=AUCTRANTYPE-1;
+     !                            Translation type                    !
+     !                            Used to direct requests for         !
+     !                            authentication to the               !
+     !                            appropriate Global Title (GT)       !
+     !                            translation function in SCCP.       !
+     !                                                                !
+     !                            Property value: 0-255               !
+     !                            Default value: 1                    !
+     !                            Type: - Optional                    !
+     !                            Involved blocks: HLAUTAP            !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Authentication (AUT)                                           !
+     !****************************************************************!
+
+     HEEPC:PROP=AUTMAXTRIPLETS-4;
+     !                             Maximum number of triplets to be   !
+     !                             sent to VLR/SGSN in operation      !
+     !                             Send Parameters                    !
+     !                             Depends on the number of           !
+     !                             triplets MSC/VLR/SGSN is able      !
+     !                             to store.                          !
+     !                                                                !
+     !                             Property value: 1-5                !
+     !                             Default value: 3                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDPAP           !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=AUTNUMTRIPLETS-4;
+     !                             Maximum number of                  !
+     !                             authentication vectors to be       !
+     !                             sent to VLR/SGSN in operation      !
+     !                             Send Authentication Info           !
+     !                                                                !
+     !                             Property value: 1-4                !
+     !                             Default value: 3                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDPAP           !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Barring (BAR)                                                  !
+     !****************************************************************!
+
+     HEEPC:PROP=BARMAXREATPWD-3;
+     !                             Number of password mismatches      !
+     !                             Defines the number of consecutive  !
+     !                             password mismatch attempts that    !
+     !                             leads to the blocking of the       !
+     !                             password. The password is used     !
+     !                             for control of barring services    !
+     !                             by the mobile subscriber.          !
+     !                                                                !
+     !                             Property value: 1-5                !
+     !                             Default value: 3                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSSD             !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Call Forwarding (CF)                                           !
+     !****************************************************************!
+
+     HEEPC:PROP=CFMAXNUMFORWARD-1;
+     !                             Maximum number of forwarding       !
+     !                             allowed                            !
+     !                             If the number of current           !
+     !                             forwarding exceeds the specified   !
+     !                             maximum number,                    !
+     !                             the call will not be forwarded.    !
+     !                                                                !
+     !                             Property value: 1-5                !
+     !                             Default value: 3                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRGAP, HLRGAP2,  !
+     !                             HLRGAP3.                           !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=CFNRCVALIDCOND-1;
+     !                             No reachable subscriber VLR        !
+     !                             condition                          !
+     !                             Defines if location unknown,       !
+     !                             barred, restricted or purged are   !
+     !                             valid conditions for forwarding    !
+     !                             of the call according to the       !
+     !                             service call forwarding on mobile  !
+     !                             subscriber not reachable.          !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  No                              !
+     !                             1  Yes                             !
+     !                             Default value: 1                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRGAP, HLRGAP2,  !
+     !                             HLRGAP3                            !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=CFNRTIME-15;
+     !                             Default no reply condition time    !
+     !                             value                              !
+     !                             for call forwarding on no reply    !
+     !                             and default call forwarding        !
+     !                             Defines the time interval from the !
+     !                             point when the subscriber is first !
+     !                             alerted until the call is          !
+     !                             redirected.                        !
+     !                             Used when no value has been        !
+     !                             assigned by the operator or by the !
+     !                             mobile subscriber and the service  !
+     !                             was not previously registered at   !
+     !                             registration time.                 !
+     !                             Value is set in steps of 5         !
+     !                             seconds.                           !
+     !                                                                !
+     !                             Property value: 5-30               !
+     !                             Default value: 15                  !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLBSPD, HLBSGD    !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Intelligent Network (IN)                                       !
+     !****************************************************************!
+
+     HEEPC:PROP=INAPPLIESBS-1;
+     !                             Scope Intelligent Network (IN)     !
+     !                             services                           !
+     !                             Indicates if the Intelligent       !
+     !                             Network services can be applied    !
+     !                             to all basic services or           !
+     !                             only to telephony and              !
+     !                             auxiliary telephony.               !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Only telephony and auxiliary    !
+     !                                telephony                       !
+     !                             1  All Basic Services              !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRGAP, HLRGAP2   !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=INCKAPPLIESBS-0;
+     !                             Scope Intelligent Network          !
+     !                             Category Key services              !
+     !                             Indicates if the Intelligent       !
+     !                             Network Category Key services      !
+     !                             can be applied to all basic        !
+     !                             services or only to telephony      !
+     !                             and auxiliary telephony.           !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Only telephony and auxiliary    !
+     !                                telephony                       !
+     !                             1  All Basic Services              !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRGAP2, HLRGAP3  !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Load Priority Level (LOAD)                                     !
+     !****************************************************************!
+
+     HEEPC:PROP=LOADPRIOLEVEL-0;
+     !                             Load priority level for load       !
+     !                             regulation of incoming             !
+     !                             traffic                            !
+     !                             Defines which one of the           !
+     !                             two existing priority allocation   !
+     !                             tables is used.                    !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Priority levels are             !
+     !                                distributed                     !
+     !                             1  Priority values are joined      !
+     !                                in high levels                  !
+     !                             Default value: 1                   !
+     !                             Type: - Mandatory                  !
+     !                             Involved blocks:HLMAPTC,HLINATC    !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! MAP Version 2 (MV2))                                           !
+     !****************************************************************!
+
+     HEEPC:PROP=MV2ACRESETTIME-90;
+     !                             Time of the periodical reset of    !
+     !                             the Application Context (AC)       !
+     !                             version control table              !
+     !                             When the table is reset, all the   !
+     !                             VLRs are considered able to        !
+     !                             handle Application Context         !
+     !                             version 2.                         !
+     !                             Value is set in steps of 1 day.    !
+     !                                                                !
+     !                             Value 0 means the table is never   !
+     !                             reset, that is the system values   !
+     !                             are kept.                          !
+     !                                                                !
+     !                             Property value: 0-365              !
+     !                             Default value: 90 days             !
+     !                             Type: - Optional                   !
+     !                             Involved blocks:                   !
+     !                                      HLIDAP2, HLRVAP2,         !
+     !                                      HLDDAP2, HLUDAP2,         !
+     !                                      HLRETAP, HLRESAP,         !
+     !                                      HLSTAP2, HLLUAP2,         !
+     !                                      HLRDAP2                   !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=MV2RESTRICTION-2;
+     !                             Restriction in the use of the      !
+     !                             MAP version 2 protocol             !
+     !                             Defines whether MAP version 2      !
+     !                             protocol can be used by HLR FE to  !
+     !                             interwork with other GSM nodes.    !
+     !                             This restriction applies to        !
+     !                             incoming and outgoing dialogues.   !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  MAP version 2 not allowed       !
+     !                                to be used                      !
+     !                             1  MAP version 2 not allowed       !
+     !                                to be used with the VLRs        !
+     !                                not belonging to the areas      !
+     !                                that have got the Roaming       !
+     !                                Area Characteristic 'TRAFFV2'   !
+     !                             2  MAP version 2 allowed to be     !
+     !                                used with any node              !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks:                   !
+     !                                      HLDDAP2, HLIDAP2          !
+     !                                      HLRVAP2, HLLUAP2,         !
+     !                                      HLRDAP2, HLRGAP2,         !
+     !                                      HLBEAP2, HLUDAP2,         !
+     !                                      HLPGAP2, HLPGAP3,         !
+     !                                      HLRETAP, HLLUAP3,         !
+     !                                      HLRDAP3, HLRGAP3,         !
+     !                                      HLASAP2, HLRMAP2,         !
+     !                                      HLMDAP2, HLSTAP2,         !
+     !                                      HLMRAP2, HLMRAP3,         !
+     !                                      HLSDPAP, HLLCAP,          !
+     !                                      HLRESAP, HLRMAP3,         !
+     !                                      HLMDAP3, HLSAAP2,         !
+     !                                      HLSAAP3                   !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     !MAP VERSION 3 (MV3)                                             !
+     !****************************************************************!
+
+     HEEPC:PROP=MV3ACRESETTIME-90;
+     !                             Time of the periodical reset of    !
+     !                             the Application Context (AC)       !
+     !                             version control table              !
+     !                             When the table is reset, all the   !
+     !                             VLRs are considered able to        !
+     !                             handle Application Context         !
+     !                             version 3.                         !
+     !                                                                !
+     !                             Value is set in steps of 1 day.    !
+     !                             Value 0 means the table is never   !
+     !                             reset, that is the system values   !
+     !                             are kept.                          !
+     !                                                                !
+     !                             Property value: 0-365              !
+     !                             Default value: 90 days             !
+     !                             Type: - Optional                   !
+     !                             Involved blocks:                   !
+     !                                      HLIDAP3, HLRVAP3,         !
+     !                                      HLDDAP3, HLPIAP3,         !
+     !                                      HLLCAP, HLSTAP3,          !
+     !                                      HLLUAP3, HLRDAP3          !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=MV3RESTRICTION-2;
+     !   MV3RESTRICTION    0-2     Restriction in the use of the      !
+     !                             MAP version 3 protocol             !
+     !                             Defines whether MAP version 3      !
+     !                             protocol can be used by HLR FE to  !
+     !                             interwork with other GSM and       !
+     !                             WCDMA nodes.                       !
+     !                             This restriction applies to        !
+     !                             incoming and outgoing dialogues.   !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  MAP version 3 not allowed       !
+     !                                to be used                      !
+     !                             1  MAP version 3 not allowed       !
+     !                                to be used with the VLRs        !
+     !                                not belonging to the areas      !
+     !                                that have got the Roaming       !
+     !                                Area Characteristic 'TRAFFV3'   !
+     !                             2  MAP version 3 allowed to be     !
+     !                                used with any node              !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks:                   !
+     !                                      HLDDAP3, HLIDAP3          !
+     !                                      HLRVAP3, HLLUAP3,         !
+     !                                      HLRDAP3, HLRGAP3          !
+     !                                      HLAIAP3, HLPIAP3,         !
+     !                                      HLMRAP3, HLLCAP,          !
+     !                                      HLPGAP3, HLSTAP3,         !
+     !                                      HLRMPAP, HLRLAP3,         !
+     !                                      HLRMAP3, HLMDAP3,         !
+     !                                      HLSAAP3, HLIAAP3,         !
+     !                                      HLICAP3                   !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Monitoring of Call Forwarding Registration (MCF)               !
+     !****************************************************************!
+
+     HEEPC:PROP=MCFTIMESUP-30;
+     !                             Time supervision period in         !
+     !                             minutes for monitoring of call     !
+     !                             forwarding                         !
+     !                             Defines the time interval from     !
+     !                             the point when the monitoring      !
+     !                             period starts until the            !
+     !                             monitoring period is over.         !
+     !                             Value is set in steps of           !
+     !                             15 minutes.                        !
+     !                                                                !
+     !                             Property value: 30-120             !
+     !                             Default value: 60 minutes          !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLMCFD            !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=MCFTHRESHOLD-5;
+     !                             Threshold for the number           !
+     !                             of successful forwarded-to         !
+     !                             number registrations in a time     !
+     !                             supervision period                 !
+     !                             before the alarm is                !
+     !                             triggered                          !
+     !                                                                !
+     !                             Property value: 5-20               !
+     !                             Default value: 5                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLMCFD            !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=MCFALARM-0;
+     !                             Alarm activation                   !
+     !                             Logging is performed               !
+     !                             when the monitored subscriber      !
+     !                             has reached the threshold          !
+     !                             This parameter specifies           !
+     !                             whether the alarm is given         !
+     !                             or not in this case.               !
+     !                                                                !
+     !                             Property value: 0-1                !
+     !                             0  Alarm printout is not           !
+     !                                 generated                      !
+     !                             1  Alarm printout is generated     !
+     !                                                                !
+     !                             Default value: 1                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLMCFD            !
+     !----------------------------------------------------------------!
+
+
+
+
+     !****************************************************************!
+     ! Note Subscriber Data Modified (NSDM)                           !
+     !****************************************************************!
+
+     HEEPC:PROP=NSDMMAXRATE-150;
+     !                             Number of Kbits per second that    !
+     !                             can be sent for NSDM operations    !
+     !                             to the GSM Service Control         !
+     !                             Functions (gsmSCFs) in             !
+     !                             steps of 1Kbits/sec.               !
+     !                                                                !
+     !                             Property value: 10-300             !
+     !                             Default value: 10                  !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLDMAP3           !
+     !----------------------------------------------------------------!
+
+
+
+
+     !****************************************************************!
+     ! Operator Call Barring (OCB)                                    !
+     !****************************************************************!
+
+     HEEPC:PROP=OCBODBOIC-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Determined Barring   !
+     !                             of all Outgoing International      !
+     !                             (BOIC) calls is active             !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+!	HEEPC:PROP=OCBODBOIC-1 !
+
+
+
+     HEEPC:PROP=OCBODBOIEXH-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Determined Barring   !
+     !                             of all Outgoing International      !
+     !                             Calls Except those directed to     !
+     !                             the HPLMN Country (BOIEXH)         !
+     !                             is active                          !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=OCBODBOSB1-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Specific Barring     !
+     !                             type 1 (OSB1) is active            !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=OCBODBOSB2-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Specific Barring     !
+     !                             type 2 (OSB2) is active            !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=OCBODBOSB3-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Specific Barring     !
+     !                             type 3 (OSB3) is active            !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=OCBODBOSB4-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Specific Barring     !
+     !                             type 4 (OSB4) is active            !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                              Default value: 0                  !
+     !                              Type: - Optional                  !
+     !                              Involved blocks: HLSDH            !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=OCBODBPREE-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP Version 1 message    !
+     !                             when Operator Determined Barring   !
+     !                             of Outgoing Premium Rate calls     !
+     !                             (entertainment)(OBOPRE)            !
+     !                             is active                          !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                             Default value: 0                   !
+     !                             Type: - Optional.                  !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=OCBODBPREI-0;
+     !                             Subscriber status parameter        !
+     !                             value for MAP version 1 message    !
+     !                             when Operator Determined Barring   !
+     !                             of Outgoing Premium Rate calls     !
+     !                             (information)(OBOPRI) is active    !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Calls do not have to be         !
+     !                                barred in the VLR due to this   !
+     !                                Operator Determined Barring     !
+     !                             1  All outgoing calls shall be     !
+     !                                barred in the VLR               !
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSDH             !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Redundancy (RED)                                               !
+     !****************************************************************!
+
+     HEEPC:PROP=REDFAILNORM-10;
+     !                             Percentage of redundant            !
+     !                             subscribers pending to be          !
+     !                             updated to transit                 !
+     !                             from Failure to Normal state       !
+     !                                                                !
+     !                             Property value: 0-100              !
+     !                             Default value: 10                  !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRNC             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=REDINCOMPDATA-0;
+     !                             Threshold to trigger the           !
+     !                             subscribers                        !
+     !                             with incompatible data alarm       !
+     !                             It is set in steps of 10           !
+     !                             subscribers.                       !
+     !                                                                !
+     !                             Property value: 1-65535            !
+     !                             Default value: 10                  !
+     !                             (100 subscribers)                  !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRNC             !
+     !----------------------------------------------------------------!
+
+     HEEPC:PROP=REDRATE-10;
+     !                             Number of Kbits per second that    !
+     !                             can be sent to the mated HLR in    !
+     !                             steps of 1Kbits/sec                !
+     !                                                                !
+     !                             Property value: 10-8200            !
+     !                             Default value: 10                  !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLRSC             !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Regional Services (REG)                                        !
+     !****************************************************************!
+
+     HEEPC:PROP=REGMSCREST-1;
+     !                             Specifies whether the MSC is       !
+     !                             restricted by HLR FE when, for a   !
+     !                             mobile subscriber, the result of   !
+     !                             Insert Subscriber Data message     !
+     !                             indicates 'Zone Code Conflict'     !
+     !                             or 'Too many Zone Codes'           !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  MSC is not restricted           !
+     !                             1  MSC is restricted               !
+     !                                                                !
+     !                             Default value: 1                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLZONED           !
+     !----------------------------------------------------------------!
+
+
+
+     !****************************************************************!
+     ! Unstructured Supplementary Service Data (USSD)                 !
+     !****************************************************************!
+
+     HEEPC:PROP=USSDTEXTESCAPE-1;
+     !                             Escape code used when entering     !
+     !                             a text string by command           !
+     !                                                                !
+     !                             Property value:                    !
+     !                             0  Escape code '%'                 !
+     !                             1  Escape code '#'                 !
+     !                             2  Escape code '*'                 !
+     !                             3  Escape code ':'                 !
+     !                             4  Escape code '!
+     !                                                                !
+     !                             Default value: 0                   !
+     !                             Type: - Optional                   !
+     !                             Involved blocks: HLSSUDA           !
+     !----------------------------------------------------------------!
+

@@ -1,0 +1,12 @@
+
+IOTXP:** CCITT7, SCCP Network Signalling Point, Initiate ****************;
+
+C7NPI:SP=2-500 ,MSG=1	,MTC=1	;
+C7NPI:SP=2-300 ,MSG=1	,MTC=1	;
+C7NPI:SP=2-310 ,MSG=1	,MTC=1	;
+
+IOTXP:** CCITT7, SCCP Network Subsystem Number, Initiate ****************;
+
+C7NSI:SSN=6&7&8&10&128&145&149&224&252&253  ,NSST	,SP=2-500	;
+C7NSI:SSN=6&7&8&10&128&224&252&253&149&145  ,NSST	,SP=2-300	;
+C7NSI:SSN=6&7&8&10&128&224&252&253&149&145  ,NSST	,SP=2-310	;

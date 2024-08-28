@@ -1,0 +1,2430 @@
+
+IOTXP:** 00900.monolithic ** AXE PARAMETER ADMINISTRATION ***************;
+
+
+	!***   FEATURE PARAMETER CLASS   ****************************************!
+
+
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN HLR-FE FOR GSM/WCDMA ***********************!
+	!************************************************************************!
+
+	SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+
+	!***   IMMEDIATE CALL ITEMIZATION SUBSCRIPTION   ************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF114         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   DUAL NUMBERING   *************************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF115         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HOME NETWORK INITIATED CALLS (GSMSCF INITIATED CALLS, CAMEL PH4) *!
+	!***   Parameter Owner HLRGAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF215         ,VALUE=    1;
+	DBTRE:COM;
+	!***   IMMEDIATE SERVICE TERMINATION   **********************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF255         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   SPATIAL TRIGGERS   ***********************************************!
+	!***   Parameter Owner HLSTEA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF471         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   PERSONALIZED RING BACK TONE   ************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF473         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   ACCOUNT CODES   **************************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF483         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HIGH SPEED CIRCUIT SWITCHED DATA   *******************************!
+	!***   Parameter Owner HLBCAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF484         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MOBILITY RELATED TRIGGERS   **************************************!
+	!***   Parameter Owner HLDPA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF487         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   REMOTE SUBSCRIBER PROCEDURE MECHANISM   **************************!
+	!***   Parameter Owner HLBEAP2   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF488         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HIGH PENETRATION NOTIFICATION   **********************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF490         ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   ANY TIME INTERROGATION   *****************************************!
+	!***   Parameter Owner HLAIAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF497         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   ANONYMOUS CALL REJECTION   ***************************************!
+	!***   Parameter Owner HLUSIAH   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF503         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   REAL TIME CHARGING FOR ALL   *************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF507         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HIGH SPEED DOWNLINK PACKET ACCESS   ******************************!
+	!***   Parameter Owner HLGPRSA   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF508         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MULTIPLE SUBSCRIPTION SUPPORT   **********************************!
+	!***   Parameter Owner HLUSIAH   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF510         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   SMS SPAM CONTROL   ***********************************************!
+	!***   Parameter Owner HLSPSMA   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF512         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   OPERATOR DETERMINED BARRING FOR INTER-ZONAL CALLS   ****** *******!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF528         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   OPERATOR DETERMINED BARRING FOR CALL Ft-N NUMBER   ***************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF530         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   GENERIC ACCESS TO UDI AND MODEM SERVICES   ***********************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF553         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MISSED CALL ALERT   **********************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF563         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   GPRS SUPPORT   ***************************************************!
+	!***   Parameter Owner HLGPRSD   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF633         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   14.1KBPS DATA CHANNEL CODING   ************************************!
+	!***   Parameter Owner HLBCAN   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF635         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   SMS OVER GPRS   **************************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF636         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   ENHANCED MULTI-LEVEL PRECEDENCE AND PRE-EMPTION   ****************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF637         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   SUPPORT OF MOBILE TRAFFIC RECORDING   ****************************!
+	!***   Parameter Owner HLSTRA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF655         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   2G/3G ROAMING RESTRICTION   **************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF685         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   GSM POSITIONING SUPPORT   ****************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF687         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   CAMEL FOR CS CALL CONTROL   **************************************!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF746         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   EXTENDED CAMEL SUPPORT   *****************************************!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF498         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   EXTENDED ROAMING SERVICE CONTROL   *******************************!
+	!***   Parameter Owner HLRSD   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF841         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   PREFERRED ROAMING PARTNER   **************************************!
+	!***   Parameter Owner HLRTDA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF842         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   DATA COMPRESSION   ***********************************************!
+	!***   Parameter Owner HLBCA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF857         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   3G.324M MULTIMEDIA SUPPORT   *************************************!
+	!***   Parameter Owner HLBCAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF981         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   SUPPORT OF UDI/RDI SYNCHRONOUS TRANSPARENT SERVICE  **************!
+	!***   Parameter Owner HLBCAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF982         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   WCDMA CS DATA SERVICE   ******************************************!
+	!***   Parameter Owner HLBCAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF983         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUTOMATIC DEVICE DETECTION   *************************************!
+	!***   Parameter Owner HLADDA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF998         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   POSITIONING FOR PS   *********************************************!
+	!***   Parameter Owner HLLCSD   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF023         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HOME NETWORK SERVICES AND CONTROL FOR MT-SMS (CAMEL PH4)   *******!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF024         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   CAMEL SUPPORT FOR CS MOBILITY MANAGEMENT   ***********************!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF025         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   CAMEL SUPPORT FOR CONDITIONAL TRIGGERING CRITERIA  ***************!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF026         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   OPERATOR DETERMINED BARRING FOR PACKET ORIENTED SERVICES   *******!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF065         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   EXPLICIT CALL TRANSFER   *****************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF073         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   ROAMING SERVICE RESTRICTIONS   ***********************************!
+	!***   Parameter Owner HLRSD   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF074         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   OPTIMAL ROUTING FOR LATE CALL FORWARDING   ***********************!
+	!***   Parameter Owner HLRGAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF075         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   GLOBAL EQUAL ACCESS   ********************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF080         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   COLLECT CALL DIALING AUTOMATIC   *********************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF086         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   WIRELESS PRIORITY SERVICE   **************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF097         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HOME NETWORK DIALING WHILE ROAMING (D-CSI CAMEL PH3)   ***********!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF099         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   SAE MOBILITY MANAGEMENT  *****************************************!
+	!***   Parameter Owner HLSMH   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0147         ,VALUE=   1;
+	DBTRE:COM;
+
+	!***   SMS HOME ROUTING   ***********************************************!
+	!***   Parameter Owner HLSMHRD   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0153        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   UNSTRUCTURED SS DATA TRANSPARENT TRANSFER TO GSMSCF   ************!
+	!***   Parameter Owner HLUDEXA   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0154        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HOME CONTROLLED OPTIMAL ROUTING FOR LATE CALL FORWARDING   *******!
+	!***   Parameter Owner HLRGAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0155        ,VALUE=    1;
+	DBTRE:COM;
+	
+	!***   SAE MOBILITY SUPPORT IN HLR   ************************************!
+	!***   Parameter Owner HLAIAP3   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0160        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MULTIPLE CLASSIC HLR NODE REDUNDANCY IN HLR-FE   *****************!
+	!***   Parameter Owner HLNREA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0162        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   HIGH SPEED UPLINK PACKET ACCESS   ********************************!
+	!***   Parameter Owner HLGPRSA   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0172        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MULTI-REGION SUPPORT   *******************************************!
+	!***   Parameter Owner HLMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0176        ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   LOGICAL HLR SUPPORT   ********************************************!
+	!***   Parameter Owner HLSD   *******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0177         ,VALUE=   1;
+	DBTRE:COM;
+
+	!***   IMS CENTRALIZED SERVICES   ***************************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0210        ,VALUE=    1;
+	DBTRE:COM;
+	
+	!***   Positioning for PS for M2M  - FAJ 122 0212/1   *******************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0212,VALUE=1;
+	DBTRE:COM;
+
+	!***   Roaming Service Restrictions for M2M - FAJ 122 0215/2   **********!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0215,VALUE=1;
+	DBTRE:COM;
+
+	!***   Immediate Call Itemization Subscription for M2M  - FAJ 122 0217/1 !
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0217,VALUE=1;
+	DBTRE:COM;
+
+	!***   Any Time Interrogation for M2M  - FAJ 122 0219/1   ***************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0219,VALUE=0;
+	DBTRE:COM;
+
+	!***   Spatial Triggers Support for M2M  - FAJ 122 0220/1   *************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0220,VALUE=1;
+	DBTRE:COM;
+	
+	!***   Retrieve Information to SCP from HLR and MSC/VLR for M2M   *******!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0221,VALUE=1;
+	DBTRE:COM;
+
+	!***   Mobility Related Triggers for M2M  - FAJ 122 0223/1   ************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0223,VALUE=1;
+	DBTRE:COM;
+	
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0224,VALUE=1;
+	DBTRE:COM;
+	
+	!***   Real Time Charging for All for M2M - FAJ 122 0225/1   ************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0225,VALUE=1;
+	DBTRE:COM;
+	
+	!***   Operator Determined Barring for Inter-zonal Calls for M2M   ******!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0226,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0229,VALUE=1;
+	DBTRE:COM;
+
+	!***   MAP Policing for M2M  - FAJ 122 0230/1   *************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0230,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0232,VALUE=1;
+	DBTRE:COM;
+
+	!***   Extended Roaming Service Control for M2M  - FAJ 122 0233/1   *****!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0233,VALUE=1;
+	DBTRE:COM;
+
+	!***   Positioning in CS for M2M  - FAJ 122 0237/1   ********************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0237,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0240,VALUE=1;
+	DBTRE:COM;
+
+	!***   Mobile Subscriber Priority Level in Channel Allocation for M2M   *!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0241,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0242,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0243,VALUE=1;
+	DBTRE:COM;
+	
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0255,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0257,VALUE=1;
+	DBTRE:COM;
+
+	!***   Any Time Subscription Interrogation (ATSI) - FAJ 122 0266/1   ****!
+	!***   Parameter Owner HLSIAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0266        ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 0                                                      !
+	! 0 - ATSI NOT SUPPORTED                                                 !
+	! 1 - ATSI SUPPORTED                                                     !
+	!------------------------------------------------------------------------!
+
+	!***   Any Time Modification (ATM) - FAJ 122 0267/1   *******************!
+	!***   Parameter Owner HLAMAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0267        ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 0                                                      !
+	! 0 - ATM NOT SUPPORTED                                                  !
+	! 1 - ATM SUPPORTED                                                      !
+	!------------------------------------------------------------------------!
+
+	!***   Camel Notify Subscriber Data Change (NSDC) - FAJ 122 0268/1   ****!
+	!***   Parameter Owner HLDMAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0268        ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 0                                                      !
+	! 0 - NSDC NOT SUPPORTED                                                 !
+	! 1 - NSDC SUPPORTED                                                     !
+	!------------------------------------------------------------------------!
+
+	!***   MOBILE TERMINATING ROAMING FORWARDING   **************************!
+	!***   Parameter Owner HLSD   *******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0269        ,VALUE=    1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0270,VALUE=1;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF0332,VALUE=1;
+	DBTRE:COM;
+
+	!***   VOLTE SS SYNCHRONIZATION FUNCTIONALITY   *************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF0379        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   POSITIONING IN CS   **********************************************!
+	!***   Parameter Owner HLLCSD   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF1053        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   GPRS CHARGING CHARACTERISTICS   **********************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF1055        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   CAMEL PH3 SUPPORT FOR GPRS INTERWORKING (GPRS-CSI)   *************!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF1058       ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   CAMEL SUPPORT FOR MO-SMS (MO-SMS-CSI)   **************************!
+	!***   Parameter Owner HLCSIA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAF     ,NAME=HLRNF1059       ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   UNSTRUCTURED SS DATA TO EXTERNAL NODE   **************************!
+	!***   Parameter Owner HLUDEXA   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF1115        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   Mobile Subscriber Priority Level in Channel Allocation  **********!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=HRSLAF,NAME=HLRNF1123,VALUE=1;
+	DBTRE:COM;
+
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN HLR-FE FOR M2M  ****************************!
+	!************************************************************************!
+
+	!***   Any Time Subscription Interrogation M2M (ATSI) - FAJ 122 0277/1   !
+	!***   Parameter Owner HLSIAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0277        ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 0                                                      !
+	! 0 - ATSI NOT SUPPORTED                                                 !
+	! 1 - ATSI SUPPORTED                                                     !
+	!------------------------------------------------------------------------!
+
+	!***   Any Time Modification (ATM) M2M - FAJ 122 0278/1   ***************!
+	!***   Parameter Owner HLAMAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0278        ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 0                                                      !
+	! 0 - ATM NOT SUPPORTED                                                  !
+	! 1 - ATM SUPPORTED                                                      !
+	!------------------------------------------------------------------------!
+
+	!***   Camel Notify Subscriber Data Change M2M (NSDC) - FAJ 122 0279/1   !
+	!***   Parameter Owner HLDMAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0279        ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 0                                                      !
+	! 0 - NSDC NOT SUPPORTED                                                 !
+	! 1 - NSDC SUPPORTED                                                     !
+	!------------------------------------------------------------------------!
+
+	!***   SMS over IP - FAJ 122 0380/1   !
+	!***   Parameter Owner HLRMAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNF0380        ,VALUE=    1;
+	DBTRE:COM;
+	!------------------------------------------------------------------------!
+	
+	!***   Evolved Subscription Handling FAJ 801 0116/1   !
+	!***   Parameter Owner HLICA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAF     ,NAME=HLRNV116         ,VALUE=    1;
+	DBTRE:COM;
+	!------------------------------------------------------------------------!
+	
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN AUC-FE FOR GSM/WCDMA ***********************!
+	!************************************************************************!
+	
+	!***   AUC ADDITIONAL G-MILENAGE ALGORITHMS   ***************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATAGKDC        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUC CUSTOMIZED A3/A8 ALGORITHM   *********************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATGSM          ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUC CUSTOMIZED WCDMA ALGORITHM   *********************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATUMTS         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   DOMAIN DEPENDANT AUTHENTICATION VECTOR GENERATION  ***************!
+	!***   Parameter Owner ALMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=SQNMULTDOMAIN     ,VALUE=   1;
+	DBTRE:COM;
+
+	!***   AUC SIGNALLING CONTROL SUPPORT   *********************************!
+	!***   Parameter Owner ALMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=POLICING         ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   AUC ADDITIONAL MILLENAGE FUNCTION SETS   *************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=FEATAKAALG       ,VALUE=    1;
+	DBTRE:COM;
+	
+	!***   AUC SEQUENTIAL AUTHENTICATION VECTORS GENERATION  ****************!	
+	!***   Parameter Owner ALGEN2  ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC	  ,NAME=SEQAVGON		 ,VALUE=	1;
+	DBTRE:COM;			
+
+	!***   AUTHENTICATION ADVANCED FOR WCDMA   ******************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAF    ,NAME=AUCNV0122       ,VALUE=    1;
+	DBTRE:COM;
+
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN MNP-FE FOR GSM/WCDMA ***********************!
+	!************************************************************************!
+
+
+	!***   MOBILE NUMBER PORTABILITY, SRF SOLUTION   ************************!
+	!***   Parameter Owner NPNAN   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF0150        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   PREVENTION OF SMS FRAUD   ****************************************!
+	!***   Parameter Owner NPNAN   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF0151        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MOBILE NUMBER PORTABILITY, DATA ACCESS   *************************!
+	!***   Parameter Owner NPMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF0152        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   IN-BASED SOLUTION FOR NUMBER PORTABILITY   ***********************!
+	!***   Parameter Owner NPINATC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF0167        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MOBILE NUMBER PORTABILITY FOR JAPANESE NETWORKS   ****************!
+	!***   Parameter Owner NPNAN   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF0178        ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   MNP-FE OPERATIONAL EFFICIENCY   ********************************!
+	!***   Parameter Owner NPNAN   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF0752        ,VALUE=    1;
+	DBTRE:COM;
+	
+    !***   INITIAL DETECTION POINT (IDP) RELAY IN NPH  **********************!
+    !***   Parameter Owner NPINATC   ****************************************! 
+    DBTRI;                                           
+    DBTSC:TAB=AXEPARS ,SETNAME=NPHF       ,NAME=NPHNF1160        ,VALUE=    1;
+    DBTRE:COM;
+
+
+	!************************************************************************!
+	!***   FEATURE ACTIVATION IN HLR-FE FOR SDASE ***************************!
+	!************************************************************************!
+
+
+	!***   LDAP SUBSCRIBER DATA ACCESS SUPPORT   ****************************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAF       ,NAME=SDASE            ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   BLADE HARDWARE SUPPORTED   ***************************************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAF       ,NAME=XMSYSMODE        ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   FE-BE EXTENDED WEIGHT LOAD BALLANCING   **************************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAF       ,NAME=EWRRF            ,VALUE=    1;
+	DBTRE:COM;
+
+
+	SYPAC:ACCESS=DISABLED;
+
+
+	!***   CUSTOMER PARAMETER CLASS   ***************************************!
+
+
+     !************************************************************************!
+     !***   PARAMETER SETTINGS IN HLR-FE  ************************************!
+     !************************************************************************!
+
+     !***   ACTIVATION OF MULTIPLE HLR NODE REDUNDANCY   *********************!
+     !***   Parameter Owner HLRSC   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=REDNPLUS1ACT     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   PLMN SPECIFIC SS CODE FOR ACR SS   *******************************!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ACRSSCODE        ,VALUE=  254;
+     DBTRE:COM;
+
+     !***   ANY TIME INTERROGATION FUNCTIONALITY  ****************************!
+     !***   Parameter Owner HLAIAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=ATIACT           ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - ATI NOT ACTIVATED                                                  !
+     ! 1 - ATI ACTIVATED                                                      !
+     !------------------------------------------------------------------------!
+
+     !***   ACTIVATION OF ATM FUNCTIONALITY   ********************************!
+     !***   Parameter Owner HLAMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=ATMACT           ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - ATM NOT ACTIVE                                                     !
+     ! 1 - ATM ACTIVE                                                         !
+     !------------------------------------------------------------------------!
+
+     !***   ACTIVATION OF ATM FOR M2M FUNCTIONALITY  *************************!
+     !***   Parameter Owner HLAMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=ATMM2MACT        ,VALUE=    1;
+     DBTRE:COM;       
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - ATM NOT ACTIVE                                                     !
+     ! 1 - ATM ACTIVE                                                         !
+     !------------------------------------------------------------------------!
+
+     !***   ACTIVATION OF ATSI FUNCTIONALITY   *******************************!
+     !***   Parameter Owner HLSIAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=ATSIACT          ,VALUE=    1;
+     DBTRE:COM;       
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - MSISDNS OF THE SUBSCRIPTION WILL BE PRESENTED                      !
+     ! 1 - MSISDN OF THE MASTER  SUBSCRIPTION WILL BE PRESENTED               !
+     !------------------------------------------------------------------------!
+
+     !***   ACTIVATION OF ATSI FOR M2M FUNCTIONALITY  ************************!
+     !***   Parameter Owner HLSIAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=ATSIM2MACT       ,VALUE=    1;
+     DBTRE:COM;       
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - MSISDNS OF THE SUBSCRIPTION WILL BE PRESENTED                      !
+     ! 1 - MSISDN OF THE MASTER  SUBSCRIPTION WILL BE PRESENTED               !
+     !------------------------------------------------------------------------!
+
+     !***   ROUTING INDICATION BETWEEN HLR AND AUC   *************************!
+     !***   Parameter Owner HLAUTAP   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=AUCCOLLOCATED    ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - MAP MESSAGES TOWARDS AUC ROUTED ON GT,                             !
+     ! 1 - MAP MESSAGES TOWARDS AUC ROUTED ON LOCAL MESSAGE INDICATOR,        !
+     !------------------------------------------------------------------------!
+
+     !***   ORIGINATING ENTITY NUMBER IN BEGIN SUBSCRIBER ACTIVITY   *********!
+     !***   Parameter Owner HLUXAP   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=BSAORGENUM       ,VALUE=    0;
+     DBTRE:COM; 
+
+     !***   CAMEL PRECEDENCE   ***********************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=CAMELPRE         ,VALUE=    0;
+     DBTRE:COM;      
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - SUBS. SPEC. CAMEL DATA TAKES PRECEDENCE OVER CSP DATA ON CSI LEVEL !
+     ! 1 - CSP DATA TAKES PRECEDENCE OVER SUBS. CAMEL SPEC. DATA ON CSI LEVEL !
+     ! 2 - CAMEL PROFILE DATA TAKES PREC.  OVER CAMEL SUBS. SPECIFIC DATA     !
+     ! 3 - CAMEL SPECIFIC SUBS. DATA TAKES PREC. OVER CSP DATA                !
+     !------------------------------------------------------------------------!
+
+     !***   PLMN SPECIFIC SS CODE OF CCDA   **********************************!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=CCDASSCODE       ,VALUE=  249;
+     DBTRE:COM;
+
+     !***   THE CONTROL OF CGPA IN SCCP USAGE FOR SPAM SMS   *****************!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=CGPACHECKSPAM    ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   THE CONTROL OF SCCP SEGMENTATION FOR ATSI, ATM AND NSDM   ********!
+     !***   Parameter Owner HLSIAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=CISDSEG          ,VALUE=    0;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 1                                                      !
+     ! 0= SCCP segmentation not used, TC-Result-NL segmentation used          !
+     ! 1= SCCP segmentation used                                              !
+     !------------------------------------------------------------------------!
+
+     !***   THE CONTROL OF ACTION TOWARDS NETWORK DEPENDING ON CUDB **********!
+     !***   Parameter Owner HLENAH   *****************************************!
+     ! DBTRI;
+     ! DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC   ,NAME=CUDBFAULTACTION  ,VALUE=    0;
+     ! DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0= no action                                                           !
+     ! 1= disconnect from SCCP                                                !
+     ! 2= disconnect from M3UA                                                !
+     !------------------------------------------------------------------------!
+
+     !***   DEFAULT PRIMARY HLR IDENTITY FOR NUMBER SERIES ANALYSIS  *********!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=DEFHLRPID        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DEFAULT SUBSCRIPTION TYPE WHEN TTC SIGNALLING IS SUPPORTED   *****!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=DEFMINTARIFF     ,VALUE=  127;
+     DBTRE:COM;
+
+     !***   SUPPORT OF E/// IMPLEMENTATION OF CSI DATA   *********************!
+     !***   IN ATSI, ATM AND NSDM MESSAGES IN EXTSENSION CONTAINER    ********!
+     !***   Parameter Owner HLDMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=ECSISUPPORT      ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0= Implementation of CSI not supported                                 !
+     ! 1= Implementation of CSI supported                                     !
+     !------------------------------------------------------------------------!
+
+     !***   CONTROL OF PREFERRED INTER-EXCHANGE CARRIER INFORMATION PRESENCE *!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=EXCPICROAM       ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   FEATURE CODE FOR HORLCF IN ERICSSON MAP EXTENSION   **************!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=FEATCODEHORLCF   ,VALUE=   22;
+     DBTRE:COM;
+
+     !***   FEATURE CODE FOR SAE MOBILITY IN ERICSSON MAP EXTENSION   ***!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=FEATCODESAEMOB   ,VALUE=   23;
+     DBTRE:COM;
+
+     !***   PREFERENCE FOR FTM ASYNCHRONOUS OVER SYNCHRONOUS SERVICES   ******!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=FTMPREFERENCE    ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   CONTROL OF ACTIVATION OF SEPARATE FT-N PER LOGICAL HLR   *********!
+     !***   Parameter Owner HLFNA   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=FTNTABRID        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   INDICATION OF GMSC SUPPORTING PRBT INSIDE MAP EXTENSION  *********!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=GMSCPRBTSUPPORT  ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF GSMSCF INITIATED CALLS  ****************************!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=GSMSCFINITCACT   ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   MAXIMUM TIME WAITING WHEN ACCESSING CUDB   ***********************!
+     !***   Parameter Owner HLENAH   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HLRFEOPERTIMER   ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF HORLCF FUNCTIONALITY   *****************************!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HORLCFACT        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE ROUTING PREFIX TO RELAY THE CALL TO HORLCF ADAPTED GMSC   ****!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HORLCFGMSCPREF   ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF HSDPA FUNCTIONALITY   ******************************!
+     !***   Parameter Owner HLGPRSA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HSDPAACT         ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF HSDPA FUNCTIONALITY FOR M2M   **********************!
+     !***   Parameter Owner HLGPRSA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HSDPAM2MACT      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF HSUPA FUNCTIONALITY   ******************************!
+     !***   Parameter Owner HLGPRSA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HSUPAACT         ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF HSUPA FUNCTIONALITY FOR M2M   **********************!
+     !***   Parameter Owner HLGPRSA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=HSUPAM2MACT      ,VALUE=    1;
+     DBTRE:COM;
+	 
+     !***   ICS RESTRICTION CONFIGURATION   **********************************!
+     !***   Parameter Owner HLSDH3   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ICSCONTROL       ,VALUE=    2;
+     DBTRE:COM;
+
+     !***   INDICATION OF EARLY INVOCATION OF ICB FOR ICS SUBSCRIBERS   ******!
+     !***   Parameter Owner HLTRAN   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ICSICBINV        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF ICS FUNCTIONALITY   ********************************!
+     !***   Parameter Owner HLTRAN   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ICSINDACT        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   INDICATION TO THE MGCF TO AVOID DIVERSION FOR ICS SUBSCRIBERS ****!
+     !***   Parameter Owner HLTRAN   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ICSMGCFDIV       ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   B-NUMBER PRESENTATION OF MASTER MSISDN   *************************!
+     !***   Parameter Owner HLSDH   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IDPRESENTED      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   SUBSCRIPTION TYPE WHEN TTC SIGNALLING SUPPORTED WHILE ROAMING   **!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;     
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=INTERTARIFF      ,VALUE=  126;
+     DBTRE:COM;
+
+     !***   THE TIMER FOR WAITING FOR REPORT SM DELIVERY STATUS   ************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;     
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=INTERTIMS        ,VALUE=   60;
+     DBTRE:COM;
+
+     !***   THE SIZE AND DIGITS OF INTERNATIONAL TRUNK PREFIX   **************!
+     !***   Parameter Owner HLREAP2   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=INTLENPREFIX     ,VALUE=  200;
+     DBTRE:COM;
+
+     !***   THE CONTROL OF TERMINATED CALLS AT IST ALERT   *******************!
+     !***   Parameter Owner HLIAAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ISTALLCALLSTERM  ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   THE LOGGING OF TERMINATED CALLS AT IST ALLERT   ******************!
+     !***   Parameter Owner HLIAAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ISTLOGGING       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR TC-ABORT, SRI FOR SM   **********************!
+     !***   Parameter Owner HLRMAP2   ****************************************!
+     DBTRI;     
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVSRISMABORT     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR TC-CONT, SRI FOR SM   ***********************!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVSRISMCONT      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR TC-END, SRI FOR SM   ************************!
+     !***   Parameter Owner HLRMAP2   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVSRISMEND       ,VALUE=    6;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR TC-ABORT, UPDATE LOCATION   *****************!
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVUPLOCABORT     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR FIRST TC-CONTINUE, UPDATE LOCATION   ********!
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVUPLOCCONT1     ,VALUE=    4;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR SECOND TC-CONTINUE, UPDATE LOCATION   *******!
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVUPLOCCONT2     ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR THIRD TC-CONTINUE, UPDATE LOCATION   ********!
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVUPLOCCONT3     ,VALUE=    6;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR TC-END WITH RESULT/INVOKE, UPDATE LOCATION   !
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVUPLOCSUCCEND   ,VALUE=    4;
+     DBTRE:COM;
+
+     !***   IMPORTANCE VALUE FOR TC-END WITH REJECT/ERROR, UPDATE LOCATION   *!
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=IVUPLOCUNSEND    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF LOGICAL HLR FUNCTIONALITY   ************************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=LOGICALHLRACT    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   MAXIMUM NUMBER OF CONSECUTIVE UPDATE GPRS LOCATION REJECTIONS   **!
+     !***   Parameter Owner HLRTD   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MAXGLOCUPDATREJ   ,VALUE=   4;
+     DBTRE:COM;
+
+     !***   MAXIMUM NUMBER OF CONSECUTIVE UPDATE LOCATION REJECTIONS   *******!
+     !***   Parameter Owner HLRTD   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MAXLOCUPDATREJ    ,VALUE=   4;
+     DBTRE:COM;
+
+     !***   MAXIMUM NUMBER OD REATTEMPTS ALLOWED TO RELAY TO IP-SM-GW   ******!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=MAXREATSMS        ,VALUE=   1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 1                                                      !
+     ! 0= no reattempt                                                        !
+     ! 1-3= Number of reattempts                                              !
+     !------------------------------------------------------------------------!
+
+     !***   MAXIMUM NUMBER OF REATTEMPTS ALLOWED TO RELAY TO SMS ROUTER   ****!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MAXREATSMSHR    ,VALUE=     1;
+     DBTRE:COM;
+
+     !***   MAXIMUM NUMBER OD REATTEMPTS OF INVOCATION OF NSDM OPERATION   ***!
+     !***   Parameter Owner HLDMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=MAXREATTNSDM     ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 1                                                      !
+     ! 0= no reattempt of NSDM message                                        !
+     ! 1-3= Number of reattempts                                              !
+     !------------------------------------------------------------------------!
+
+     !***   THE LIMIT OF THE UDCD RATE   *************************************!
+     !***   Parameter Owner HLUPDAT   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MAXUDCDPERSEC    ,VALUE=  150;
+     DBTRE:COM;
+
+     !***   THE VALIDITY TIMER FOR MCEF   ************************************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MCEFVALTIMS      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   CONTROL OF ACTIVATION OF MCF FOR LOGICAL HLR   *******************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MONCFWDRID       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF MTRF FUNCTIONALITY   *******************************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MTRFACT          ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF MTRF FUNCTIONALITY FOR M2M  ************************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MTRFM2MACT       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF MULTIREGION FUNCTIONALITY   ************************!
+     !***   Parameter Owner HLMAPTC   ****************************************!
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MULTIREGIONACT   ,VALUE=    0;
+!     DBTRE:COM;
+
+     !***   ACTIVATION OF CAMEL NSDC FUNCTIONALITY    ************************!
+     !***   Parameter Owner HLDMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=NSDMACT          ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - NSDC NOT ACTIVE                                                    !
+     ! 1 - NSDC ACTIVE                                                        !
+     !------------------------------------------------------------------------!
+
+     !***   ACTIVATION OF CAMEL NSDC FOR M2M FUNCTIONALITY   *****************!
+     !***   Parameter Owner HLDMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=NSDMM2MACT       ,VALUE=    1;
+     DBTRE:COM;
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0 - NSDC for M2M NOT ACTIVE                                            !
+     ! 1 - NSDC for M2M ACTIVE                                                !
+     !------------------------------------------------------------------------!
+
+     !***   CONTROL OF SENDING NSDM   ****************************************!
+     !***   Parameter Owner HLDMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=NSDMCONF         ,VALUE=    0;
+     DBTRE:COM;       
+     ! DEFAULT VALUE = 0                                                      !
+     ! 0= NSDM always sent                                                    !
+     ! 1= NSDM is not sent during massive change                              !
+     ! 2= NSDM sending is stopped                                             !
+     !------------------------------------------------------------------------!
+
+     !***   MAPPING OF UNSUPPORTED ECT TO ODB   ******************************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ODBECTMAPPING    ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   MAPPING OF UNSUPPORTED ODB   *************************************!
+     !***   Parameter Owner HLGPRSD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ODBMAPPING       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   MAPPING OF UNSUPPORTED ODB OF PACKET ORIENTED SERVICES   *********!
+     !***   Parameter Owner HLGPRSD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ODBPSMAPPING     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DETERMINATION OF ERROR CODE USED FOR RSR   ***********************!
+     !***   Parameter Owner HLLUAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=OPERDETBARCAUSE  ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF PRP FUNCTIONALITY   ********************************!
+     !***   Parameter Owner HLRTDA   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=PRPACT           ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF PRP FUNCTIONALITY FOR M2M  *************************!
+     !***   Parameter Owner HLRTDA   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=PRPM2MACT        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   CONTROL OF INCOMING USD IN SEPARATED STATE   *********************!
+     !***   Parameter Owner HLRSC   ******************************************!
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=REDINFOSEPARATE  ,VALUE=    1;
+!     DBTRE:COM;
+
+     !***   SERIES INDICATOR USED WHEN ASSIGNING PRIMARY NODE ID   ***********!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=REDSERIES        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   TRANSFER OF SS DATA IN USD   *************************************!
+     !***   Parameter Owner HLRSC   ******************************************!
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=REDTRANSFERSS    ,VALUE=    1;
+!     DBTRE:COM;
+
+     !***   TRANSFER OF SS DATA IN USD   *************************************!
+     !***   Parameter Owner HLRODAP   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=REDUSDMAXLENGTH  ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF 2G/3G ROAMING RESTRICTION FUNCTIONALITY   **********!
+     !***   Parameter Owner HLTRAN   *****************************************!
+     DBTRI;     
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=RR2G3GACT        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF 2G/3G ROAMING RESTRICTION FUNCTIONALITY FOR M2M  ***!
+     !***   Parameter Owner HLTRAN   *****************************************!
+     DBTRI;     
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=RR2G3GM2MACT     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   PLMN SPECIFIC SS CODE FOR RTCA   *********************************!
+     !***   Parameter Owner HLSDH3   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=RTCASSCODE       ,VALUE=  253;
+     DBTRE:COM;
+
+     !***   HLR-HSS INTERWORKING FOR EPC SUPPORT *****************************!
+     !***   Parameter Owner HLMAPTC  *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=S6DGRACT         ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   HLR EARLY CONGESTION NOTIFICATION THRESHOLD **********************!
+     !***   Parameter Owner HLPCH  *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SAECONGTHRESH    ,VALUE=   80;
+     DBTRE:COM;
+
+     !***   HLR EARLY CONGESTION NOTIFICATION HYSTERESIS *********************!
+     !***   Parameter Owner HLPCH  *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SAECONGHYST     ,VALUE=    10;
+     DBTRE:COM;
+
+	 !***  ACTIVATION OF SAE MOBILITY FUNCTIONALITY   ************************!
+	 !***   Parameter Owner HLMAPTC   ****************************************!
+	 DBTRI;
+	 DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SAEMOBACT        ,VALUE=    1;
+	 DBTRE:COM;
+	
+     !***   INDICATION OF SCCP SEGMENTATION   ********************************!
+     !***   Parameter Owner HLMAPTC   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SCCPSEGMENT      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF SMS HR FUNCTIONALITY   *****************************!
+     !***   Parameter Owner HLSMHRD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SMSHRACT         ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF SMS HR FUNCTIONALITY FOR M2M  **********************!
+     !***   Parameter Owner HLSMHRD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SMSHRM2MACT      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE SCOPE OF MT-SMS SCREENING 1   ********************************!
+     !***   Parameter Owner HLSMHRD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SMSHRSCOPE1      ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   THE SCOPE OF MT-SMS SCREENING 2   ********************************!
+     !***   Parameter Owner HLSMHRD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SMSHRSCOPE2      ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF SMS OVER IP FUNCTIONALITY   ************************!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SMSOVERIPACT     ,VALUE=    1;
+     DBTRE:COM; 
+
+     !***   DETERMINATION OF SMS PRIORITY  ***********************************!
+     !***   Parameter Owner HLSPSMA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SMSPRIORITY      ,VALUE=    1;
+     DBTRE:COM; 
+
+     !***   THE INDICATION OF THE SPAM SMS LIST   ****************************!
+     !***   Parameter Owner HLSPSMD   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SPAMSCALLOWED    ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF SPAM SMS FUNCTIONALITY   ***************************!
+     !***   Parameter Owner HLSPSMA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SPAMSMSACT       ,VALUE=    1;
+     DBTRE:COM; 
+
+     !***   ACTIVATION OF SPAM SMS FUNCTIONALITY FOR M2M  ********************!
+     !***   Parameter Owner HLSPSMA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SPAMSMSM2MACT    ,VALUE=    1;
+     DBTRE:COM; 
+
+     !***   PLMN SPECITIC CODE FOR PRBT   ************************************!
+     !***   Parameter Owner HLRGAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SSCODEPRBT       ,VALUE=  255;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF VOLTE SS SYNCHRONIZATION FUNCTIONALITY   ***********!
+     !***   Parameter Owner HLTRAN   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SSICSACT         ,VALUE=    1;
+     DBTRE:COM;
+	 
+	 !***  PARAMETER DEFINING ICSCAWPROC *************************************!
+     !***   Parameter Owner HLSINT   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC      ,NAME=ICSCAWPROC      ,VALUE=    1;  
+     DBTRE:COM;
+
+     !***   THE TIMER OF SC REMAINS IN THE MWDL   ****************************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=STORSCTIMS       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE TIMER OF GAP BETWEEN TWO RED CONTROL   ***********************!
+     !***   Parameter Owner HLRSC   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=T1               ,VALUE= 1000;
+     DBTRE:COM;
+
+     !***   THE TIMER OF SWITCHING TO SEPARATED   ****************************!
+     !***   Parameter Owner HLRSC   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=T2               ,VALUE=18000;
+     DBTRE:COM;
+
+     !***   THE TIMER OF SWITCHING TO NORMAL   *******************************!
+     !***   Parameter Owner HLRSC   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=T3               ,VALUE=30000;
+     DBTRE:COM;
+
+     !***   THE TIMER OF GAP BETWEEN TO RED CONTROL WHEN DISCONNECTED   ******!
+     !***   Parameter Owner HLRSC   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=T4               ,VALUE=  600;
+     DBTRE:COM;
+
+     !***   TIME GAP BETWEEN EACH REATTEMPT TO SEND NSDM OPERATION   *********!
+     !***   Parameter Owner HLDMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=TIMEGAPNSDM      ,VALUE=    5;
+     DBTRE:COM;
+     ! VALUE expressed in unit of 5 seconds                                   !
+     ! DEFAULT VALUE = 5 (25 seconds), min=1 ,max=10                          !
+     ! 1= Shortest period of time                                             !
+     ! 10= Longest period of time                                             !
+     !------------------------------------------------------------------------!
+
+     !***   THE TIMER OF SRISM RELAY TO IP-SM-GW   ***************************!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=TIMEGAPSMS       ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   THE TIMER OF SRISM RELAY TO SMS ROUTER REATTEMPT   ***************!
+     !***   Parameter Owner HLRMAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=TIMEGAPSMSHR     ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   TIME GAP OF SAI SUPERVISION   ************************************!
+     !***   Parameter Owner HLSAAP3   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=TIMSAISEGMRESP   ,VALUE=   30;
+     DBTRE:COM;
+
+     !***   THE CONTROL OF SENDING HIGHEST PRIORITY PIC   ********************!
+     !***   Parameter Owner HLSD   *******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=TRANSFPIC        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF USSD TT TO EXTERNAL NODE FUNCTIONALITY   ************!
+     !***   Parameter Owner HLUDEXA   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=USSDTTENACT      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF USSD TT TO EXTERNAL NODE FUNCTIONALITY FOR M2M  *****!
+     !***   Parameter Owner HLUDEXA   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=USSDTTENM2MACT      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF USSD TT TO GSMSCF FUNCTIONALITY   ******************!
+     !***   Parameter Owner HLUDEXA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=USSDTTSCFACT     ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF USSD TT TO GSMSCF FUNCTIONALITY FOR M2M   **********!
+     !***   Parameter Owner HLUDEXA   ****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=USSDTTSCFM2MACT  ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   SUPERVISION FOR SAV TO AUC   **************************************!
+     !***   Parameter Owner HLAUTAP   *****************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=VECTRQTIMESUP    ,VALUE=   15;
+     DBTRE:COM;
+     
+     !***   CAPACITY LICENSE LIMIT   *****************************************!
+     !***   Parameter Owner HLLMAH   *****************************************!
+    ! DBTRI;
+    ! DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=ACTIVESUBSHLRFE  ,VALUE=    0;
+    ! DBTRE:COM;
+
+
+     !***   MSISDN Changeover   **********************************************!
+     !***   Parameter Owner HLICA   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=MSISDNCHOACT      ,VALUE=    1;
+     DBTRE:COM;
+     
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN AUC-FE  ************************************!
+	!************************************************************************!
+
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=AUCFEOPERTIMER   ,VALUE=    5;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAKATYPE       ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAKAALGIND     ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET15     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET14     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET13     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET12     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET11     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET10     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET9      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET8      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET7      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET6      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET5      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET4      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET3      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET2      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET1      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET0      ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=MAPSUPERVTIMEM   ,VALUE=   15;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=SCCPSEGAUC       ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=SQNMULDOMACT     ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   TUAK AUTHENTICATION ALGORITHM  ***********************************!
+	!***   Parameter Owner ALSDA   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=TUAKACT       ,VALUE=       1;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET16     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET17     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET18     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET19     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET20     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET21     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET22     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET23     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET24     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET25     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET26     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET27     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET28     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET29     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET30     ,VALUE=    0;
+	DBTRE:COM;
+	
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAC    ,NAME=DEFAMFFSET31     ,VALUE=    0;
+	DBTRE:COM;
+	
+     !************************************************************************!
+     !***   PARAMETER SETTINGS IN NPH-FE  ************************************!
+     !************************************************************************!
+
+
+     !***   INDICATION OF OWN CALLING ADDRESS GENERATION    ******************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=CALLINGADDIND    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   INDICATION OF CGPA CHECKING   ************************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=CGPACHECK        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE IN CONNECT OPERATION SUPERVISION TIMER   *********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=CONNECTOPTIMER   ,VALUE=    2;
+     DBTRE:COM;
+     
+     !***   THE COUNTRY CODE   ***********************************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=COUNTCODE        ,VALUE=   49;
+     DBTRE:COM;
+     
+     !***   THE ACTION TOWARDS NETWORK WHEN CUDB UNAVAILABLE    **************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     ! DBTRI;
+     ! DBTSC:TAB=AXEPARS ,SETNAME=NPHC     ,NAME=CUDBFAULTACTION  ,VALUE=    0;
+     ! DBTRE:COM;
+     
+     !***   THE CAUSE FOR RELEASING A CALL WHEN DATABASE MISMATCH   **********!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=DBMISERRORCAUSE  ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DEFAULT ACTION FOR NON CALL RELATED AND DATABASE MISMATCH   ******!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=DEFDBMIND        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DPC TO RELAY TO HLR (DPC+SSN ROUTING)   **************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=HLRDPC0          ,VALUE=  300;
+     DBTRE:COM;
+
+     !***   DPC TO RELAY TO HLR (DPC+SSN ROUTING)   **************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=HLRDPC1          ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   NI TO RELAY TO HLR (DPC+SSN ROUTING)   ***************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=HLRNI            ,VALUE=    2;
+     DBTRE:COM;
+
+     !***   SSN TO RELAY TO HLR (DPC+SSN ROUTING)   **************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=HLRSSN           ,VALUE=    6;
+     DBTRE:COM;
+
+     !***   IN MESSAGE TO BE SENT BACK FOR HOME AND IMPORTED SUBSCRIBER   ****!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=IDPRESULTMSSG    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF JAPANESE MNP FUNCTIONALITY   ***********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=JMNPACT          ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   MAXIMUM NUMBER OF REATTEMPTS FOR IDP RELAY   *********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MAXREATIDPREL    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE ERROR FOR SRI OR RIR MAPv1 AT DATABASE MISMATCH   ************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MISMATCHV1       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE ERROR FOR SRI OR RIR MAPv2 AT DATABASE MISMATCH   ************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MISMATCHV2       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE ERROR FOR SRI OR RIR MAPv3 AT DATABASE MISMATCH   ************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MISMATCHV3       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   DPC TO RELAY TO MNP (DPC+SSN ROUTING)   **************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MNPDPC0          ,VALUE=  300;
+     DBTRE:COM;
+
+     !***   DPC TO RELAY TO MNP (DPC+SSN ROUTING)   **************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MNPDPC1          ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   NI TO RELAY TO MNP (DPC+SSN ROUTING)   ***************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MNPNI            ,VALUE=    2;
+     DBTRE:COM;
+
+     !***   THE NATURE OF ADDRESS USED FOR IN NP   ***************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=NOAROUTINGNUM    ,VALUE=    4;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF MNP SRF FUNCTIONALITY   ****************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=NPACT            ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   MAXIMUM TIME WAITING FOR OPERATIONS REQUESTED TOWARDS CUDB   *****!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=NPHOPERTIMER     ,VALUE=   10;
+     DBTRE:COM;
+
+     !***   THE NATURE OF ADDRESS FOR SECOND QUERY   *************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=NPNOA            ,VALUE=  114;
+     DBTRE:COM;
+
+     !***   THE LENGTH OF THE NETWORK PREFIX   *******************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=NPREFIXLENGTH    ,VALUE=    4;
+     DBTRE:COM;
+
+     !***   THE NATURE OF ADDRESS FOR OUTGOING MESSAGES   ********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=OUTGOINGNOA      ,VALUE=    4;
+     DBTRE:COM;
+	 
+     !***   THE NUMBERING PLAN FOR OUTGOING MESSAGES   ********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=OUTGOINGNP      ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE BEHAVIOR FOR MESSAGES RECEIVED WITH TT=0   *******************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=RELAYMESS        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   THE ROUTING INDICATION (DPC+SSN OR GT)   *************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=ROUTETYPE        ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF SMS FRAUD PREVENTION FUNCTIONALITY   ***************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SMSFRAUDPREVACT  ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE TYPE OF ADDRESSING USED IN SRI ACK   *************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SRIACKADDR       ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   THE BEHAVIOR WHEN SRI/RIR ARE RECEIVED FOR EXPORTED SUBSCREIBER   !
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SRIMNGNTFOREXP   ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   SSN FOR CAP RELAY OPERATIONS   ***********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SSNCAPIDPREL     ,VALUE=  146;
+     DBTRE:COM;
+
+     !***   SSN FOR INAP RELAY OPERATIONS   **********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SSNINAPIDPREL    ,VALUE=  241;
+     DBTRE:COM;
+
+     !***   SSN FOR OUTGOING MESSAGES IN DIRECT SCCP RELAYING   **************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SSNT1            ,VALUE=    6;
+     DBTRE:COM;
+
+     !***   SSN FOR OUTGOING CCBS MESSAGES   *********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SSNT2            ,VALUE=  128;
+     DBTRE:COM;
+
+     !***   SSN FOR OUTGOING CCBS MESSAGES   *********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=SSNT3            ,VALUE=   11;
+     DBTRE:COM;
+
+     !***   MAXIMUM TIME GAP BETWEEN CAP/INAP IDP RELAYS REATTEMPTS  *********!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TIMEGAPIDPREL    ,VALUE=    5;
+     DBTRE:COM;
+
+     !***   TT TO IDENTIFY INCOMING ERICSSON ATI   ***************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTATI            ,VALUE=   99;
+     DBTRE:COM;
+
+     !***   TT USED TO RELAY CAP/INAP IDP   **********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTIDPREL         ,VALUE=    21;
+     DBTRE:COM;
+
+     !***   TT FOR INCOMING MESSAGES WHEN ANSI SCCP IS USED   ****************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTIN1            ,VALUE=    0;
+     DBTRE:COM;
+
+     !***   TT FOR INCOMING INAP MESSAGES    *********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTIN2            ,VALUE=   11;
+     DBTRE:COM;
+
+     !***   TT FOR INCOMING CCBS MESSAGES   **********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTIN3            ,VALUE=   17;
+     DBTRE:COM;
+
+     !***   TT FOR SMS-RELATED MESSAGES RELAYED TO SECOND OPERATOR (JMNP)  ***!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINSMSIN1       ,VALUE=  244;
+     DBTRE:COM;
+
+     !***   TT FOR SMS-RELATED MESSAGES RELAYED TO FINAL OPERATOR (JMNP)  ****!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINSMSIN2       ,VALUE=  242;
+     DBTRE:COM;
+
+     !***   TT FOR OUTGOING SMS-RELATED MESSAGES RELAYED TO FINAL OPERATOR ***!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINSMSOUT1      ,VALUE=  243;
+     DBTRE:COM;
+
+     !***   TT FOR PASSING MESSAGES FROM SCCP TO TCAP   **********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINT1           ,VALUE=  247;
+     DBTRE:COM;
+
+     !***   TT FOR PASSING MESSAGES FROM SCCP TO TCAP WITH NPREFIX  **********!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINT2           ,VALUE=  250;
+     DBTRE:COM;
+
+     !***   TT FOR PASSING SMS-RELATED OR NON-CALL RELATED MESSAGES  *********!
+     !***   FROM SCCP TO TCAP TO BE ANSWERRED WITH ERROR OR ABORT  ***********!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINT3           ,VALUE=  191;
+     DBTRE:COM;
+
+     !***   TT FOR PASSING SMS-RELATED OR NON-CALL RELATED MESSAGES  *********!
+     !***   FROM SCCP TO TCAP FOR EXPORTED OR OTHER  *************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTINT4           ,VALUE=  192;
+     DBTRE:COM;
+
+     !***   TT IN CDPA FOR DIRECT RELAYING THROUGH SCCP   ********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTOUT1           ,VALUE=  249;
+     DBTRE:COM;
+
+     !***   TT IN CDPA FOR IN MESSAGES   *************************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTOUT2           ,VALUE=   77;
+     DBTRE:COM;
+
+     !***   TT IN CDPA FOR CCBS MESSAGES   ***********************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=TTOUT3           ,VALUE=  248;
+     DBTRE:COM;
+	 
+     !***   ACTIVATION OF IDP RELAY FUNCTIONALITY   **************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=IDPRELACT        ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF IN BASED NUMBER PORTABILITY FUNCTIONALITY   ********!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=INNPACT          ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF MNP DA FUNCTIONALITY   *****************************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MNPDAACT         ,VALUE=    1;
+     DBTRE:COM;
+ 
+     !***   ACTIVATION OF MSISDN-BASED REROUTING DESTINATION FUNCTIONALITY ***!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=FAMACT           ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   ACTIVATION OF IMSI-BASED REROUTING DESTINATION FUNCTIONALITY *****!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=FAIACT           ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   VALUE OF NATURE OF ADDRESS FOR FAI FUNCTIONALITY *****************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=OUTGOINGNOAFAI   ,VALUE=    4;
+     DBTRE:COM;
+
+     !***   VALUE OF NUMBERING PLAN FOR FAI FUNCTIONALITY ********************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=OUTGOINGNPFAI    ,VALUE=    1;
+     DBTRE:COM;
+
+     !***   VALUE OF SUBSYSTEM NUMBER FOR FAI FUNCTIONALITY ******************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=OUTGOINGSSNFAI   ,VALUE=    6;
+     DBTRE:COM;
+
+     !***   VALUE OF TRANSLATION TYPE FOR FAI FUNCTIONALITY ******************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=OUTGOINGTTFAI   ,VALUE=   255;
+     DBTRE:COM;
+
+     !***   VALUE OF MOBILE COUNTRY CODE FOR FAI FUNCTIONALITY ***************!
+     !***   Parameter Owner XXXXX   ******************************************!
+     DBTRI;
+     DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=MCOUNTCODE     ,VALUE=    262;
+     DBTRE:COM;
+
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN SDASE  *************************************!
+	!************************************************************************!
+
+
+	!***   ACTIVATION OF FE-BE EXTENDED WEIGHT LOAD BALLANCING   ************!
+	!***   Parameter Owner SDA   ********************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=SDAC       ,NAME=EWRRC            ,VALUE=    1;
+	DBTRE:COM;
+
+
+	!***   SUPPLIER PARAMETER CLASS   ***************************************!
+
+
+	SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+
+
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN HLR-FE  ************************************!
+	!************************************************************************!
+
+
+	!***   THE TIMER OF GAP BETWEEN ALERTSC   *******************************!
+	!***   Parameter Owner HLASAP2  *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS	,SETNAME=HRSLAS		,NAME=ALERTTIMS		,VALUE=	0	;
+	DBTRE:COM;
+
+	!***   THE DEFINITION OF M2M NODE  **************************************!
+	!***   Parameter Owner HLADDA   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=M2MNODE          ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   THE CONTROL OF MIGRATION MODE   **********************************!
+	!***   Parameter Owner HLRSC   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=MIGRATIONMODE    ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   THE CONTROL OF MULTIPLE PICI   ***********************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=MULTPICHANDL     ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   MAXIMUM NUMBER OF COLISIONS TO BE DETECTED   *********************!
+	!***   Parameter Owner HLSDNH   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=NCDVALUE         ,VALUE=   10;
+	DBTRE:COM;
+
+	!***   NUMBER OF MATED PRIMARY NODES   **********************************!
+	!***   Parameter Owner HLRSC   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=NUMPRIMARY       ,VALUE=   3;
+	DBTRE:COM;
+
+	!***   THE SIGNALLING SYSTEM SUPPORTED   ********************************!
+	!***   Parameter Owner HLMAPTC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAS     ,NAME=SIGNSYS          ,VALUE=    0;
+	DBTRE:COM;
+
+
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN ACU-FE  ************************************!
+	!************************************************************************!
+
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A3A8ALGMASK      ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG0           ,VALUE=   64;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG1           ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG2           ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG3           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG4           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG5           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG6           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=A4ALG7           ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=AKAALGFSET       ,VALUE=    2;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=EXTERNALMSG      ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=FSETALGMASK      ,VALUE=65535;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=GOPUSERALGMASK   ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=LOADREGAUC       ,VALUE=    1;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=NCDVALUE         ,VALUE=    3;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=SIGNSYS          ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG0          ,VALUE=   64;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG1          ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG2          ,VALUE=  128;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG3          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG4          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG5          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG6          ,VALUE=   63;
+	DBTRE:COM;
+
+	!***   XXX XXXXXXX XXXXXXXXXX XXXXXX   **********************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=AUCSLAS    ,NAME=UA4ALG7          ,VALUE=   63;
+	DBTRE:COM;
+
+
+	!************************************************************************!
+	!***   PARAMETER SETTINGS IN NPH-FE  ************************************!
+	!************************************************************************!
+
+
+	!***   THE PROTOCOL USED IN THE NODE   **********************************!
+	!***   Parameter Owner NPSRFSC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHS       ,NAME=SCCPPROTOCOL1    ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   THE MAXIMUM NUMBER OF OCTETS OF THE OUTGOING MESSAGE   ***********!
+	!***   Parameter Owner NPSRFSC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS	,SETNAME=NPHS		,NAME=SEGMENTATION	,VALUE=	0	;
+	DBTRE:COM;
+
+	!***   SPC LENGTH CAPABILITIES SUPPORTED   ******************************!
+	!***   Parameter Owner NPSRFSC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHS       ,NAME=SPCLENGTH        ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   IMSIS LENGTH FOR FAI FUNCTIONALITY   *****************************!
+	!***   Parameter Owner NPNAN   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHS       ,NAME=IMSISLENGTH      ,VALUE=    5;
+	DBTRE:COM;
+
+	!***   MGT LENGTH FOR FAI FUNCTIONALITY   *******************************!
+	!***   Parameter Owner NPNAN   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHS       ,NAME=MGTSLENGTH       ,VALUE=    5;
+	DBTRE:COM;
+
+	!***   M3UA RELAY AVAILABILITY   ****************************************!
+!	DBTRI;
+!	DBTSC:TAB=AXEPARS,SETNAME=SIGIPF,NAME=SUAIPSEP,VALUE=0;
+!	DBTRE:COM;
+
+!	DBTRI;
+!	DBTSC:TAB=AXEPARS,SETNAME=SIGIPF,NAME=M3UARELAY,VALUE=1;
+!	DBTRE:COM;
+
+	!***   ITU AND MTP SIGNALLING MESSAGE STRANFER USING SUA   *************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SIGIPF,NAME=SUASGW,VALUE=1;
+	DBTRE:COM;
+
+	!***   THE LIMIT OF SUA SCON BROADCAST MESSAGES (IT CORRESPONDS TO   ***!
+	!**         THE NUMBER OF BLADES IN BS SYSTEM).   **********************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SIGIPC,NAME=SUAGAP,VALUE=19;
+	DBTRE:COM;
+	
+	!***   MTP HIGH SPEED SIGNALLING LINKS   *******************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=ANSICCSF,NAME=MTPHSL,VALUE=1;
+	DBTRE:COM;
+
+	!DELAY TO AVOID OSCILLATION OF INITIAL ALIGNMENT FAILURE AND LINK RESTART!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=MTPC,NAME=Q704T17,VALUE=800;
+	DBTRE:COM;
+	
+
+	!***   THE AVAILABILITY OF THE OWN SCCP CONGESTION LEVEL CALCULATION   *!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=SCCPNODALCONG,VALUE=1;
+	DBTRE:COM;
+	
+	!***  THE AVAILABILITY OF INCOMING TRAFFIC LIMITATION PROCEDURE   ******!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=INCOTRAFFLIMIT,VALUE=1;
+	DBTRE:COM;
+
+	!  THE USAGE OF BLOCK LOAS FOR THE OWN SCCP CONGESTION LEVEL CALCULATION!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=CONGCTRLLOAS,VALUE=1;
+	DBTRE:COM;
+
+	!***   THE DETERMINATION IF THE MESSAGE RECEIVED IN OWN SCCP CONGESTION !
+	!STATE WILL BE DISCARDED OR RETURNED IF THE MESSAGE RETURN PROCEDURE APPLIES**!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=DISCTHRESHOLD,VALUE=8;
+	DBTRE:COM;
+
+	!THE WAITING TIME TO RECEIVE ALL SEGMENTS RELATED TO A REASSEMBLY PROCESS!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=SCCPC,NAME=REASSEMBLYTIME,VALUE=20;
+	DBTRE:COM;
+
+	!SPONTANEOUS PRINTOUT WITH HW INFORMATION ON DETECTION OF HW CHANGES ACTIVATION.!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRC,NAME=AUTODSC,VALUE=1;
+	DBTRE:COM;
+
+	!***  THE NODE LICENSED THRESHOLD AS COUNTED BY CLM FUNCTION   **********!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=CLMBHCATHR,VALUE=2;
+	DBTRE:COM;
+
+	!***  THE NODE LICENSED THRESHOLD AS COUNTED BY CLM FUNCTION   **********!
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=CLMSCCTHR,VALUE=5;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=DASCCDELAY,VALUE=72;
+	DBTRE:COM;
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS,SETNAME=OMSRS,NAME=NOFPLEXPERLOAS,VALUE=500;
+	DBTRE:COM;
+
+	SYPAC:ACCESS=DISABLED;
+
+IOTXP:** EOF 00900.layered ** AXE PARAMETER ADMINISTRATION **************;

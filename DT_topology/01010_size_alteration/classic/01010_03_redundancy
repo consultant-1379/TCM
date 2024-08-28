@@ -1,0 +1,9 @@
+IOTXP:***_SIZE_ALTERATION_EVENTS,_APT ******************************;
+
+	SAAII:SAE=500,		BLOCK=HRUODAP,		NI=1000;
+	SAAII:SAE=500,		BLOCK=HRUIDAP,		NI=1000;
+	SAAII:SAE=500,		BLOCK=HRMAPTC,		NI=2000;
+	
+	
+
+IOTXP:***_END_OF_FILE***********************************************;

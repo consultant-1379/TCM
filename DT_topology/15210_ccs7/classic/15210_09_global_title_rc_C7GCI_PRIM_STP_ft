@@ -1,0 +1,18 @@
+
+     IOTXP:** CCITT7, Global Title Routing Case, Initiate ********************;
+
+	! TTCN !
+     C7GCI:GTRC=1  ,PSP=2-410 ,PTERM,status=old     ;
+     C7GCI:GTRC=19  ,PSP=2-411 ,PTERM                ;
+     C7GCI:GTRC=2  ,PSP=2-420 ,PTERM                ;
+	 
+	! RC !
+    C7GCI:GTRC=130  ,PSP=2-300 ,PTERM                ;
+    C7GCI:GTRC=131  ,PSP=2-310 ,PTERM                ;
+    C7GCI:GTRC=139  ,PSP=2-390 ,PTERM                ;	 
+
+	! USD !
+    C7GCI:GTRC=230 ,PSP=2-300,PTERM,SSP=2-390,STERM;
+    C7GCI:GTRC=231 ,PSP=2-310,PTERM,SSP=2-390,STERM;
+	C7GCI:GTRC=239 ,PSP=2-390,PTERM;
+

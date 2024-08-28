@@ -1,0 +1,4 @@
+!***   Locking mechanism for feature that registered slogan LICENSECONT is switched on.  *********************!
+! This command is accepted as a workaround for problem reported in TR HV89303 instead of loading EC.!
+
+HEFLC:FEATCODE=LICENSECONT-1;

@@ -1,0 +1,7 @@
+
+IOTXP:** IP Transport, Route Handling, Change  **************************;
+
+IHRHP;
+IHRHC:ADD,VIF=ETHA-2001,DEFGW=xxx.xxx.xxx.xxx, PREF=101; ! SIGNALLING NET. (BC-SIG) SIGTRAN, DEFGW: ISER VRPP VIP !
+IHRHC:ADD,VIF=ETHB-2001,DEFGW=xxx.xxx.xxx.xxx, PREF=100;
+IHRHP;

@@ -1,0 +1,23 @@
+
+IOTXP:** CCITT7, Global Title Series, Initiate **************************;
+
+
+IOTXP:** AUC incoming traffic *******************************************;
+
+    C7GSI:TT=  1, NP=  6,  NA=  4,  NS=   26201        ,  GTRC=  1, STATUS= OLD;
+	
+IOTXP:** VLR incoming traffic from SIMU - Traffic Mix 1 *****************;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4950201      ,  GTRC=251;	
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4950202      ,  GTRC=252;	
+    C7GSI:TT=  1, NP=   6, NA=   4, NS=   26217        ,  GTRC=  1;
+	
+IOTXP:** AUC outgoing traffic to HLR * **********************************;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101901111      ,  GTRC=300;	
+	
+    C7TAI;
+    C7TLI;
+    C7TCI;
+
+IOTXP:** End of File ***************************************************; 

@@ -1,0 +1,5 @@
+
+IOTXP:** Sigtran User Adaptation Layer, Application Server, Initiate ****************;
+
+UAASI:ASID=AHLRBS,SPTYPE=SGP,DPC=300,NI=2,PROT=SUA,RC=300;
+UAASI:ASID=AHLRB2,SPTYPE=SGP,DPC=310,NI=2,PROT=SUA,RC=310;

@@ -1,0 +1,14 @@
+
+IOTXP:** CCITT7, Signalling Point, Initiate *****************************;
+
+! STP !
+C7SPI:SP=2-500	,OWNSP=2-200	,NET=BOTH	,PREF=IP	;
+C7SPI:SP=2-300	,OWNSP=2-200	,NET=BOTH	,PREF=IP	;
+C7SPI:SP=2-310	,OWNSP=2-200	,NET=BOTH	,PREF=IP	;
+
+IOTXP:** CCITT7, Signalling Point Name, Change **************************;
+
+! STP !
+C7PNC:SP=2-500,   SPID=DPC500;
+C7PNC:SP=2-300,   SPID=DPC300;
+C7PNC:SP=2-310,   SPID=DPC310;

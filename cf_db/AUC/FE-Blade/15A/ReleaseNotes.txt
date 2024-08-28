@@ -1,0 +1,28 @@
+******************************************************
+* eXtra Software Unit delivery for 15A AUC-FE blade  *
+******************************************************
+
+== LSV08 "feature Increase paralell autentication vectors" (ALGENX & ALGEN2X) ==== 
+
+ALGEN2X      CXC 146 261 R1A07                
+ALGENX       CXC 146 262 R1A05               
+
+== LSV09 "aligment due to introduction VDE & SDK R3B01 for CP processor"(ALGENX & ALGEN2X)==== 
+
+ALGEN2X      CXC 146 261 R1A08                
+ALGENX       CXC 146 262 R1A06                
+
+== LSV10 "feature sequential SQN" (ALGEN2X) ==== 
+
+ALGEN2X      CXC 146 261 R2A01                
+ALGENX       CXC 146 262 R1A06                
+
+== CM02 "TRs and SCNs and minor amendment  PRIM  product id (ALGEN2X) ==== 
+
+ALGEN2X      CXC 146 261 R1A09                
+ALGENX       CXC 146 262 R1A06                
+
+== CM04 "CNI due to GBA impacts (ALGEN2X) ==== 
+
+ALGEN2X      CXC 146 261 R1A09                
+ALGENX       CXC 146 262 R1A06                

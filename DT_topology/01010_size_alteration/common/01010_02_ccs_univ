@@ -1,0 +1,326 @@
+
+IOTXP:***_COMMON CHANNEL SIGNALLING SUBSYSTEM_(CCS-7)  *************;
+
+     SAAII:SAE=156,  NI=   350;
+
+       ! THE NUMBER OF SUBSYSTEMS, USERS  EXT.MIN:1      SCRD  SCMD !
+       ! OF THE SCCP SERVICES, KNOWN TO       MAX:-      C7SM  SCGD !
+       ! THE SCCP. THE SUBSYSTEM DATA     RED.MIN:1      C7GT       !
+       ! RECORDS CONTAIN INFORMATION          MAX:-                 !
+       ! REGARDING EACH SUBSYSTEM DEFINED                           !
+       ! TO THE LOCAL SCCP.                                         !
+       !------------------------------------------------------------!
+     SAAII:SAE=157,  NI=  350;
+
+       ! THE NUMBER OF GLOBAL TITLE:     EXT.MIN:1       SCRD  SCMD !
+       ! CASES DEFINED IN THE SCCP.          MAX:-       C7SM  C7GT !
+       ! THE GLOBAL TITLE CASE DATA      RED.MIN:1       SCGD       !
+       ! RECORD CONTAIN INFORMATION          MAX:-                  !
+       ! REGARDING EACH GLOBAL TITLE                                !
+       ! CASE DEFINED AT THE LOCAL SCCP.                            !
+       !------------------------------------------------------------!
+     SAAII:SAE=159,  NI= 1000;
+
+       ! WITHIN THE GLOBAL TITLE TRANS-      MAX:-       C7GT       !
+       ! LATION TREE. THE TREE DATA      RED.MIN:1                  !
+       ! RECORD CONTAINS POINTERS TO         MAX:-                  !
+       ! TRANSLATION RESULT.                                        !
+       !------------------------------------------------------------!
+     SAAII:SAE=160,  NI=  800;
+
+       ! NUMBER OF GLOBAL TITLE SERIES     EXT.MIN:1    C7GT        !
+       ! TRANSLATION RESULTS.                  MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=165,NI=2000;
+
+       ! NUMBER OF CCITT 7 SIGNALLING     EXT.MIN:1  C7DP2   C7DR2  !
+       ! POINTS IN ALL NETWORKS. (MTP2)       MAX:-  C7LS2   C7PVC2 !
+       ! THE TOTAL NUMBER OF DEFINED      RED.MIN:1  C7MCDA2 C7EPC2 !
+       ! SIGNALLING POINTS SHALL BE           MAX:-                 !
+       ! GIVEN.                                                     !
+       !------------------------------------------------------------!
+     SAAII:SAE=164,NI=60;
+
+       ! NUMBER OF CCITT 7 SIGNALLING     EXT.MIN:1    C7LS2 C7DR2  !
+       ! LINK SETS. (MTP2)                    MAX:-    C7DP2 C7PVC2 !
+       !                                      MIN:1    C7EPC2       !
+       !                                      MAX:-    C7PDA        !
+       !------------------------------------------------------------!
+     
+     SAAII:SAE=166,NI=600;
+
+       ! NUMBER OF BUFFERING POSITIONS.   EXT.MIN:1      C7DR2      !
+       ! (MTP2). SIZE OF MESSAGE SIGNAL       MAX:-                 !
+       ! UNIT (MSU) BUFFER USED AT            MIN:1                 !
+       ! REROUTING AND CONGESTION. ONE        MAX:-                 !
+       ! INDIVIDUAL PER BUFFERED MSU.                               !
+       !------------------------------------------------------------!
+
+     SAAII:SAE=163,NI=70;
+
+       ! NUMBER OF CCITT 7 SIGNALLING     EXT.MIN:1    C7SL2  C7LS2 !
+       ! LINKS. (MTP2)                        MAX:-    C7DR2        !
+       !                                      MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+          SAAII:SAE=191,  NI=   1000;
+
+       ! THE NUMBER OF SIGNALLING POINTS  EXT.MIN:1      C7SR  C7SM !
+       ! KNOWN TO THE SCCP. THE SIGNAL-       MAX:-      C7CO  C7GT !
+       ! LING POINT RECORD CONTAIN IN-    RED.MIN:1                 !
+       ! FORMATION REGARDING EACH SIGNAL-     MAX:-                 !
+       ! LING POINT DEFINED AT LOCAL SCCP.                          !
+       !------------------------------------------------------------!
+     SAAII:SAE=256,  NI= 2000;
+
+       ! NO. OF RECORDING INDIVIDUALS FOR EXT.MIN:1      C7ER       !
+       ! CCITT7 EVENT REPORTING.EACH IND.     MAX:65534  EVREP      !
+       ! CONTAINS ONE RECORDED EVENT.     RED.MIN:1                 !
+       !                                      MAX:65534             !
+       !------------------------------------------------------------!
+    SAAII:SAE=500,   NI= 1024, BLOCK=C7SRM;
+
+       ! ONE INDIVIDUAL IS SEIZED TO       EXT.MIN:1                !
+       ! STORE MESSAGE RELATED DATA            MAX:-                !
+       ! FOR DIFFERENT PROCESSES HANDLED   RED.MIN:1                !
+       ! BY BLOCK C7RSM.                       MAX:-                !
+       !------------------------------------------------------------!
+    SAAII:SAE=500,   NI= 10496, BLOCK=C7SRMH;
+
+       ! ONE INDIVIDUAL IS SEIZED TO       EXT.MIN:1                !
+       ! STORE MESSAGE RELATED DATA            MAX:-                !
+       ! FOR DIFFERENT PROCESSES HANDLED   RED.MIN:1                !
+       ! BY BLOCK C7RSMH.                      MAX:-                !
+       !------------------------------------------------------------!
+    SAAII:SAE=500,   NI=    0, BLOCK=C7PCD24;
+
+       ! NUMBER OF DEVICES.                EXT.MIN:1                !
+       !                                       MAX:-                !
+       !                                   RED.MIN:1                !
+       !                                       MAX:-                !
+       !------------------------------------------------------------!
+      SAAII:SAE=500, NI=   32, BLOCK=C7PCDD;
+
+       ! NUMBER OF INDIVIDUALS.            EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=500,  NI=  500, BLOCK=C7CO;
+
+       ! NUMBER OF SUPERVISED ACTIVE      EXT.MIN:1                 !
+       ! CONNECTION ORIENTED SCCP             MAX:-                 !
+       ! DIALOGUES.                       RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=500,  NI=  500, BLOCK=C7CLAN;
+
+       ! NUMBER OF CONNECTION SECTIONS.   EXT.MIN:1                 !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=500,  NI=  256, BLOCK=C7SR;
+
+       ! NUMBER OF CONFUSION MESSAGE      EXT.MIN:1                 !
+       ! VIOLATION REPORTS INITIATED BY       MAX:-                 !
+       ! COMPABLILITY REPORTING.          RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=501,  NI=  200, BLOCK=C7CO;
+
+       ! NUMBER OF ELEMENTS IN THE        EXT.MIN:1                 !
+       ! CONNECTION ORIENTED MESSAGE          MAX:-                 !
+       ! QUEUE.                           RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=501,  NI= 10496, BLOCK=C7CL;
+
+       ! NUMBER OF CONNECTIONLESS SEG-    EXT.MIN:1                 !
+       ! MENTATION AND REASSEMBLY             MAX:-                 !
+       ! MESSAGE INDIVIDUALS.             RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=512,  NI=    8, BLOCK=C7LABT;
+
+       ! NUMBER OF BT LIST RECORDS FOR     EXT.MIN:1                !
+       ! CCITT7 LABEL TRANSLATION FOR         MAX:-                 !
+       ! USER PART TOWARDS MTP2           RED.MIN1                  !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     !SAAII:SAE=513,  NI=    8, BLOCK=C7LABT;
+
+       ! NUMBER OF BT DEVICE LISTS.        EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    SAAII:SAE=566,   NI=   32, BLOCK=C7ST2;
+
+       ! NUMBER OF SIGNALLING TERMINAL     EXT.MIN:1                !
+       ! DEVICES.                              MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=566,  NI=   176, BLOCK=C7ST2C;
+
+       ! NUMBER OF SIGNALLING TERMINAL     EXT.MIN:1                !
+       ! DEVICES.                              MAX:-                !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    SAAII:SAE=566,   NI=  200, BLOCK=J7ST;
+
+       ! NUMBER OF SIGNALLING              EXT.MIN:1                !
+       ! TERMINAL INDIVIDUALS.                 MAX:-                !
+       !                                   RED.MIN:1                !
+       !                                       MAX:-                !
+       !------------------------------------------------------------!         
+     SAAII:SAE=583,  NI= 1024, BLOCK=C7SC2;
+
+       ! DIMENSION FILE FOR CCITT7 TRAF-   EXT.MIN:1                !
+       ! FIC MEASUREMENT AND CCITT7            MAX:-                !
+       ! PERFORMANCE MEASUREMENT.          RED.MIN:1                !
+       ! RECORDS RELATE TO RECORDING           MAX:-                !
+       ! OBJECTS (LINK SETS, SIGNALLING                             !
+       ! LINKS AND DESTINATIONS).                                   !
+       !------------------------------------------------------------!
+     SAAII:SAE=584,  NI=  128, BLOCK=C7TMA2;
+
+       ! NUMBER OF TRAFFIC RECORDING       EXT.MIN: 1               !
+       ! GROUP.                                MAX:-                !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=585,  NI=  512, BLOCK=C7TMP2;
+
+       ! NUMBER OF OUTREC'S.               EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=587,  NI=  128, BLOCK=C7PMA2;
+
+       ! NUMBER OF TRAFFIC RECORDING       EXT.MIN:1                !
+       ! GROUPS.                               MAX:-                !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=588,  NI=  512, BLOCK=C7PMP2;
+
+       ! NUMBER OF OUTREC'S.               EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=607,  NI=    0, BLOCK=C7ACCL2;
+
+       ! NO. OF ACCOUNTING CLASS          EXT.MIN:1                 !
+       ! INDIVIDUALS. ONE INDIVIDUAL IS       MAX:-                 !
+       ! USED TO STORE THE INFORMATION    RED.MIN:1                 !
+       ! RELATING TO ONE ACCOUNTING CLASS.    MAX:-                 !
+       !------------------------------------------------------------!
+    SAAII:SAE=608,  NI=     0, BLOCK=C7ACCL2;
+
+       ! NO. OF ACCOUNTING CASE           EXT.MIN:1                 !
+       ! INDIVIDUALS. ONE INDIVIDUAL IS        MAX:-                !
+       ! USED TO STORE THE INFO RELATING  RED.MIN:1                 !
+       ! TO ONE ACCOUNTING CASE.               MAX:-                !
+       !------------------------------------------------------------!
+     SAAII:SAE=607,  NI=   50, BLOCK=C7EPC2;
+
+       ! NUMBER OF MTP POLICING            EXT.MIN:1                !
+       ! SPECIFICATION INDIVIDUALS FOR A      MAX:-                 !
+       ! PARTICULAR COMBINATION OF        RED.MIN:1                 !
+       ! LS, OWNSP, DSP, SERVICE INDICATOR.   MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=607,  NI=  256, BLOCK=C7PAN;
+
+       ! NUMBER OF PARAMETER VALUE TREE    EXT.MIN:1                !
+       ! INDIVIDUALS USED FOR MTP POLICING    MAX:-                 !
+       ! SPECIFICATIONS.                   RED.MIN:1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=607,  NI=   10, BLOCK=C7SACP;
+
+       ! NUMBER OF ACCOUNTING CLASS        EXT.MIN:1                !
+       ! INDIVIDUALS USED FOR ACCOUNTING      MAX:-                 !
+       ! CRITERIONS.                      RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=608,  NI=   50, BLOCK=C7EPC2;
+
+       ! NUMBER OF MTP POLICING            EXT.MIN:1                !
+       ! SPECIFICATION INDIVIDUALS FOR A      MAX:-                 !
+       ! PARTICULAR COMBINATION OF        RED.MIN:1                 !
+       ! LS, OWNSP, DSP, HEADER CODE AND      MAX:-                 !
+       ! CONCERNED DESTINATION POINT.                               !
+       !------------------------------------------------------------!
+     SAAII:SAE=608,  NI=  256, BLOCK=C7SACP;
+
+       ! NUMBER OF ACCOUNTING CRITERIONS.  EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=630,  NI=   60, BLOCK=C7DR2;
+
+       ! NUMBER OF MAIN SIGNALLING AREA    EXT.MIN:1                !
+       ! AND SUB SIGNALLING AREA              MAX:-                 !
+       ! COMBINATIONS IN MTP-NETWORK=2.   RED.MIN:1                 !
+       ! (EQUALS SAE=165)                     MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=634,  NI= 1000, BLOCK=C7PVC2;
+
+       ! NUMBER OF REGISTERED MSU'S.       EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN: 1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    !SAAII:SAE=635,  NI=   10, BLOCK=C7CVR2;
+
+       ! NUMBER OF LONG MESSAGE VIOLATION EXT.MIN:1                 !
+       ! REPORTS INITIATED BY COMPABILITY     MAX:-                 !
+       ! REPORTING.                       RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+    !SAAII:SAE=636,  NI=   10, BLOCK=C7CVR2;
+
+       ! NUMBER OF CONFUSION MESSAGE      EXT.MIN:1                 !
+       ! VIOLATION REPORTS INITIATED BY       MAX:-                 !
+       ! COMPABLILITY REPORTING.          RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=667,  NI=  250, BLOCK=C7GT;
+
+       ! NUMBER OF GLOBAL TITLE TRANSLA-   EXT.MIN:1                !
+       ! TION TYPE AND NUMBERING PLAN          MAX:-                !
+       ! COMBINATIONS.                     RED.MIN:1                !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=700,  NI= 60000, BLOCK=C7TCP;
+
+       ! NUMBER OF DIALOGUE INDIVIDUALS.   EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=700,  NI=  100, BLOCK=C7OMASE;
+
+       ! NUMBER OF DIALOGUE INDIVIDUALS    EXT.MIN:1                !
+       ! OF OMAP SERVICE ELEMENTS.            MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+     SAAII:SAE=701,  NI= 30000	,BLOCK=C7TCP	;
+     SAAII:SAE=702,  NI= 12000, BLOCK=C7TCP;
+
+
+       ! NUMBER OF OPERATION INDIVIDUALS.  EXT.MIN:1                !
+       !                                      MAX:-                 !
+       !                                  RED.MIN:1                 !
+       !                                      MAX:-                 !
+       !------------------------------------------------------------!
+IOTXP:***_END_OF_SUBFILE_CCS ***************************************;

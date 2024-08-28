@@ -1,0 +1,55 @@
+
+	 IOTXP:_REGISTRATION_OF_MISSING_SIG._RECEPTION_STATEMENTS_AS_PROG._ERROR *;
+     SYRAC:SIGREC=ACTIVE;
+     
+	 
+     IOTXP:***_ACTIVATE_FORLOPP_RELEASE_FUNCTION_FOR_APZ_DETECTED_FAULTS_*****;
+     IOTXP:***_ONLY_TO_BE_ACTIVATED_AFTER_PRETEST*****************************;
+	 
+     SYRAC:FORLOPPRES=ACTIVE	;
+     SYRAC:SELRES	 =ACTIVE	;
+	 SYRAC:SELRESTYPE=TERMINATED;
+     SYFSC:FLSTATUS	 =ACTIVE	;
+     SYFSC:FLERROR	 =ON		;
+	 SYFSC:FLMODE	 =TEST		;
+     
+
+     !------------------------------------------------------------------------!
+     ! NOTE THAT YOU HAVE A 24-HRS SECURITY PERIOD BETWEEN SETTING            !
+	 ! FLSTATUS AND FLECF WHICH CAN BE BYPASSED BY A LARGE RESTART            !
+     ! AFTER SETTING FLSTATUS OR DOING A SET VAR AS FOLLOWS:                  !
+     ! SET VARIABLE CSYFSCACTIVEDELAY = 0                                     !
+	 ! LASIP:BLOCK=MFM;
+     ! VALID FOR : 7PAD/CAAZ 107 7901/M08AA R9A03                             !
+
+     TEST SYSTEM;
+     PRINT VAR MFM 207;
+	 SET VAR MFM 207 = 0;
+     END TEST;
+
+	 SYFSC:FLECF=ON;
+     ! This command sets the Forlopp Execution Control Function (ECF) state to ON or OFF.      ! 
+     ! The state can be changed globally or for a specified block.                             ! 
+     ! The global ECF state can be changed to ON only if FLSTATUS is ACTIVE.                   ! 
+     ! The change to ON is rejected unless either at least 24 hours have passed since FLSTATUS ! 
+     ! was set to ACTIVE or a large restart was initiated after FLSTATUS was set to ACTIVE.    ! 
+     !-----------------------------------------------------------------------------------------!  
+
+
+     SYFDC:START,DURATION=24,ALARM=YES;
+	 
+     
+     IOTXP:LIMIT_NUMBER_OF_SMALL_RESTARTS_ALLOWED_BEFORE_RANK_BECOMES_LARGE **;
+	 SYRAC:SMALLNUM=5;
+     
+
+     IOTXP:LIMIT_NUMBER_OF_LARGE_RESTARTS_ALLOWED_BEFORE_RANK_BECOMES_RELOAD *;
+	 SYRAC:LARGENUM=5;
+     
+     
+	 IOTXP:***_ACTIVATE_LARGE_ERROR_INTERUPT_PRINTOUT_************************;
+     DIEFC:FORM=LARGE;
+     
+	 
+
+                                     

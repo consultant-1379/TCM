@@ -1,0 +1,101 @@
+
+     !*******************************************************!
+     !***   APZ MAG, GARP for System Clock Synchronization  *!
+     !*******************************************************!
+
+     !GARP1E NTP!
+     EXEMI:RP=   8 ,EM=0  ,EQM=OCITS-2      ,SUID="9000/CXC 146 084       R2E01";
+     EXEMI:RP=   8 ,EM=1  ,EQM=JOB  -2      ,SUID="9000/CAA 140 090       R1A03";
+
+
+     !********************************************!
+     !***   STANDARD MAG EGEM GARP1&GARP2    *****!
+     !********************************************!
+
+     !GARP2E LDAP!
+     EXEMI:RP= 994 ,EM=0  ,EQM=SDA- 8       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP= 994 ,EM=1  ,EQM=IP - 8       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP= 995 ,EM=0  ,EQM=SDA- 9       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP= 995 ,EM=1  ,EQM=IP - 9       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP= 996 ,EM=0  ,EQM=SDA-10       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP= 996 ,EM=1  ,EQM=IP -10       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP= 997 ,EM=0  ,EQM=SDA-11       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP= 997 ,EM=1  ,EQM=IP -11       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP= 998 ,EM=0  ,EQM=SDA-12       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP= 998 ,EM=1  ,EQM=IP -12       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1009 ,EM=0  ,EQM=SDA-13       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=1009 ,EM=1  ,EQM=IP -13       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1010 ,EM=0  ,EQM=SDA-14       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=1010 ,EM=1  ,EQM=IP -14       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1011 ,EM=0  ,EQM=SDA-15       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=1011 ,EM=1  ,EQM=IP -15       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1012 ,EM=0  ,EQM=SDA-16       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=1012 ,EM=1  ,EQM=IP -16       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1013 ,EM=0  ,EQM=SDA-17       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=1013 ,EM=1  ,EQM=IP -17       ,SUID="9000/CXC 146 087       R3A03";
+
+     !GARP2 SIGTRAN!
+     EXEMI:RP=1002 ,EM=0  ,EQM=SCTP-0       ,SUID="9000/CXC 146 202       R3C03";
+     EXEMI:RP=1002 ,EM=1  ,EQM=IP  -0       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1003 ,EM=0  ,EQM=SCTP-1       ,SUID="9000/CXC 146 202       R3C03";
+     EXEMI:RP=1003 ,EM=1  ,EQM=IP  -1       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1006 ,EM=0  ,EQM=SCTP-2       ,SUID="9000/CXC 146 202       R3C03";
+     EXEMI:RP=1006 ,EM=1  ,EQM=IP  -2       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=1007 ,EM=0  ,EQM=SCTP-3       ,SUID="9000/CXC 146 202       R3C03";
+     EXEMI:RP=1007 ,EM=1  ,EQM=IP  -3       ,SUID="9000/CXC 146 087       R3A03";
+
+     !GARP1 AUC GSM!
+     EXEMI:RP=1014 ,EM=0  ,EQM=ALGEN -0&-1  ,SUID="CAA 204 179            R1A01";
+     EXEMI:RP=1016 ,EM=0  ,EQM=ALGEN -2&-3  ,SUID="CAA 204 179            R1A01";
+
+     !GARP1 AUC WCDMA!
+     EXEMI:RP=1015 ,EM=0  ,EQM=ALGEN2-0&-1  ,SUID="CAA 204 265            R1A01";
+     EXEMI:RP=1017 ,EM=0  ,EQM=ALGEN2-2&-3  ,SUID="CAA 204 265            R1A01";
+
+
+
+     !*********************************************!
+     !***   APT OPTIONAL MAG EGEM GARP1&GARP2   ***!
+     !*********************************************!
+
+     !GARP2 LDAP!
+     EXEMI:RP=966  ,EM=0  ,EQM=SDA-18       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=966  ,EM=1  ,EQM=IP -18       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=967  ,EM=0  ,EQM=SDA-19       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=967  ,EM=1  ,EQM=IP -19       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=968  ,EM=0  ,EQM=SDA-20       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=968  ,EM=1  ,EQM=IP -20       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=984  ,EM=0  ,EQM=SDA-21       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=984  ,EM=1  ,EQM=IP -21       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=985  ,EM=0  ,EQM=SDA-22       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=985  ,EM=1  ,EQM=IP -22       ,SUID="9000/CXC 146 087       R3A03";
+
+     EXEMI:RP=986  ,EM=0  ,EQM=SDA-23       ,SUID="9000/CXC 146 138       R5B01";
+     EXEMI:RP=986  ,EM=1  ,EQM=IP -23       ,SUID="9000/CXC 146 087       R3A03";
+
+
+     !*********************************************!
+     !***   APT EXTRA GARP IN OPTIONAL MAG      ***!
+     !*********************************************!
+
+     !GARP1 AUC GSM!
+     EXEMI:RP=975  ,EM=0  ,EQM=ALGEN -4&-5  ,SUID="CAA 204 179            R1A01";
+
+     !GARP1 AUC WCDMA!
+     EXEMI:RP=978  ,EM=0  ,EQM=ALGEN2-4&-5  ,SUID="CAA 204 265            R1A01";

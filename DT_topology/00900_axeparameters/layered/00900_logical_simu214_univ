@@ -1,0 +1,248 @@
+!Feature chaged...;
+
+	SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+
+!HRSLAC;
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=IVSRISMEND,VALUE=1;  !it is 6 in 00900_logical_titan214...maybe ok to keep 6!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=TRANSFPIC,VALUE=0;   !it is 1 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=ISTLOGGING,VALUE=1;  !it is 0 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=STORSCTIMS,VALUE=5;  !it is 1 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=MCEFVALTIMS,VALUE=3;  !it is 1 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=IVUPLOCCONT3,VALUE=3;  !it is 6 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=IVUPLOCCONT2,VALUE=2;  !it is 5 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=IVUPLOCCONT1,VALUE=1;  !it is 4 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=GMSCPRBTSUPPORT,VALUE=1;  !it is 0 in 00900_logical_titan214!
+DBTRE:COM;
+
+!HRSLAF;
+DBTRI;                                                    
+DBTSC:TAB=AXEPARS, SETNAME=HRSLAF, NAME=HLRNF490,  VALUE= 1;  !it is 0 in 00900_logical_titan214!
+DBTRE:COM;                                                
+           
+!HRSLAS;
+IOTXP:** NUMBER OF COLLISIONS TO BE DETECTED ***************************;
+DBTRI;
+DBTSC:TAB=AXEPARS, SETNAME=HRSLAS,	NAME=NCDVALUE,	VALUE=4;   !it is 10 in 00900_logical_titan214!
+DBTRE:COM;
+
+!AUCSLAF;
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=AUCSLAF,NAME=POLICING,VALUE=0;     !it is 1 in 00900_logical_titan214!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=AUCSLAF,NAME=FEATAKAALG,VALUE=0;   !it is 1 in 00900_logical_titan214!
+DBTRE:COM;  
+
+!AUCSLAC;
+!Sequential Authentication Vectors Generation!
+
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=AUCSLAC,NAME=SEQAVGON,VALUE=1;      !MISSING IN 00900_logical_titan214!
+DBTRE:COM;
+
+!NPHC;
+DBTRI;
+IOTXP:**_HOW_THE_OWN_CALLING_ADDRESS_IS_GENERATED ************;
+DBTSC:TAB=AXEPARS, SETNAME=NPHC, NAME=CALLINGADDIND,     VALUE=  0;  !it is 1 in 00900_logical_titan214!
+DBTRE:COM;                                           
+              
+DBTRI;                                               
+IOTXP:*_INDICATORS TO BE CHECKED ON GLOBAL TITLE IN CALLING PARTY ADDRESS;
+DBTSC:TAB=AXEPARS, SETNAME=NPHC, NAME=CGPACHECK,         VALUE=  0; !it is 1 in 00900_logical_titan214!
+DBTRE:COM;                                           
+             
+           
+iotxp:*_Length_of_the_prefixes_in_the_network ********************************;
+DBTRI;                                               
+DBTSC:TAB=AXEPARS, SETNAME=NPHC, NAME=NPREFIXLENGTH,     VALUE= 10;   !it is 4 in 00900_logical_titan214!
+DBTRE:COM;                                           
+
+DBTRI;                                                
+DBTSC:TAB=AXEPARS, SETNAME=NPHC, NAME=NPHOPERTIMER,      VALUE=  5;   !it is 10 in 00900_logical_titan214!
+DBTRE:COM;   
+
+!SUA214;
+!DBTRI;
+!DBTSC:TAB=AXEPARS,SETNAME=SIGIPF  ,NAME=SUAIPSEP       ,VALUE= 1; !it is already 1 in 00900_logical_titan214!
+!DBTRE:COM; 
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=SIGIPC  ,NAME=SUANAUTORECO   ,VALUE= 0;   !MISSING!
+DBTRE:COM; 
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=TSSC    ,NAME=CALLEDPARTYST  ,VALUE= 1;    !MISSING!
+DBTRE:COM; 
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=AMCTSSC ,NAME=BICALLEDPARTYST,VALUE= 1;    !MISSING!
+DBTRE:COM; 
+
+!DBTRI;
+!DBTSC:TAB=AXEPARS,SETNAME=AMCFOAMS,NAME=POSSIBLEOUTDEST,VALUE= 3;   !already set to 3!
+!DBTRE:COM; 
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=GCPHC   ,NAME=NUMNOMGWREPLIES,VALUE=10;   !MISSING!
+DBTRE:COM; 
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=SIGIPF  ,NAME=SUASGW         ,VALUE=0;  !it is 0 in 00900_logical_titan214!
+DBTRE:COM; 
+
+!DBTRI;
+!DBTSC:TAB=AXEPARS,SETNAME=SIGIPF  ,NAME=M3UARELAY      ,VALUE=0;   !it is 1 in 00900_logical_titan214...KEEP 1 !
+!DBTRE:COM;  
+
+!hrslaf12A;
+DBTRI;                                                    
+DBTSC:TAB=AXEPARS, SETNAME=HRSLAF, NAME=HLRNF0176,  VALUE= 1;     !it is 0 in 00900_logical_titan214!
+DBTRE:COM;                                                
+
+	!***   ACTIVATION OF LOGICAL HLR FUNCTIONALITY   ************************!
+	!***   Parameter Owner HLSD   *******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=LOGICALHLRACT    ,VALUE=    0;
+	DBTRE:COM;
+
+
+!hlslac12A;
+IOTXP:** Logical HLR with Multi HPLMN support in HLR Server ****************;
+IOTXP:** Only ONE can be active ****************;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=MULTIREGIONACT,VALUE=0;     !MISSING!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=GSMHRSC,NAME=HORLCFGMSCPREF, VALUE=1;   !MISSING!
+DBTRE:COM;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=HORLCFGMSCPREF, VALUE=1;    !it is 0 in 00900_logical_titan214!
+DBTRE:COM;
+
+
+!hlslac12B;
+IOTXP:** SPAM SMS control ****************;
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=CGPACHECKSPAM,VALUE=1;     !it is 0 in 00900_logical_titan214!
+DBTRE:COM;
+
+
+DBTRI;
+DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=CAMELPRE,VALUE=1;          !it is 0 in 00900_logical_titan214!
+DBTRE:COM;
+
+!GSMHRSSlic are for Classic HLR so not added anymore;
+
+
+	!***   ACTIVATION OF MULTIPLE HLR NODE REDUNDANCY   *********************!
+	!***   Parameter Owner HLRSC   ******************************************!
+!NEEDS TO BE 0, OTHERWISE SUBS PROF ARE CHANGED WITH MRDMCH-1 !
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=REDNPLUS1ACT     ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   THE CONTROL OF SCCP SEGMENTATION FOR ATSI, ATM AND NSDM   ********!
+	!***   Parameter Owner HLSIAP3   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS, SETNAME=HRSLAC     ,NAME=CISDSEG          ,VALUE=    1;
+	DBTRE:COM;
+	! DEFAULT VALUE = 1                                                      !
+	! 0= SCCP segmentation not used, TC-Result-NL segmentation used          !
+	! 1= SCCP segmentation used                                              !
+	!------------------------------------------------------------------------!
+
+    !***   SSN FOR INAP RELAY   *********************************************!
+    !***   Parameter Owner NPINATC   ****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHC,NAME=SSNINAPIDPREL,VALUE=    252;
+	DBTRE:COM;   
+
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHC,NAME=MISMATCHV2,VALUE=    2;
+	DBTRE:COM;
+
+	DBTSp:TAB=AXEPARS ,SETNAME=NPHC,NAME=MISMATCHV1;
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHC,NAME=MISMATCHV1,VALUE=    5;
+	DBTRE:COM;                                                 
+
+	!***   ACTIVATION OF VOLTE SS SYNCHRONIZATION FUNCTIONALITY   ***********!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=SSICSACT         ,VALUE=    0;
+	DBTRE:COM;
+           
+	!***   ACTIVATION OF ICS FUNCTIONALITY   ********************************!
+	!***   Parameter Owner HLTRAN   *****************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=HRSLAC     ,NAME=ICSINDACT        ,VALUE=    0;
+	DBTRE:COM;
+
+	!***   ACTIVATION OF IDP RELAY FUNCTIONALITY   **************************!
+	!***   Parameter Owner XXXXX   ******************************************!
+	DBTRI;
+	DBTSC:TAB=AXEPARS ,SETNAME=NPHC       ,NAME=IDPRELACT        ,VALUE=    0;
+	DBTRE:COM;
+
+	DBTSP:TAB=AXEPARS,SETNAME=HRSLAC,NAME=IDPRESENTED;
+	!0   MSISDN of the call originating subscription is presented. ;
+	!1   MSISDN of the master subscription is presented. ;
+	! already comes with value 1;
+!	DBTRI;
+!	DBTSC:TAB=AXEPARS,SETNAME=HRSLAC,NAME=IDPRESENTED, VALUE=1; 
+!	DBTRE:COM;      
+
+! this one came with 0 so we need to change...;
+	DBTSp:TAB=AXEPARS,setname=HRSLAS,name=ACTIVESUBSHLRFE;
+	DBTRI;
+	DBTSC:TAB=AXEPARS,setname=HRSLAS,name=ACTIVESUBSHLRFE,value=1;
+	DBTRE:COM;   
+
+        dbtsp:tab=axepars,setname=hrslaf,name=HLRNF0215; 
+        DBTRI;                                              
+        DBTSC:TAB=AXEPARS,SETNAME=hrslaf,NAME=HLRNF0215,VALUE=0;
+        DBTRE:COM;
+
+        dbtsp:tab=axepars,setname=GSMHRSF,name=HLRNF0159; 
+        DBTRI;                                              
+        DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,NAME=HLRNF0159,VALUE=0;
+        DBTRE:COM;
+
+        dbtsp:tab=axepars,setname=GSMHRSC,name=M2MCOMACT; 
+        DBTRI;                                              
+        DBTSC:TAB=AXEPARS,SETNAME=GSMHRSC,NAME=M2MCOMACT,VALUE=0;
+        DBTRE:COM;  
+
+	SYPAC:ACCESS=DISABLED;
+

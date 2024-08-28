@@ -1,0 +1,4 @@
+
+IOTXP:** IP Transport, SCTP on CP Layer Parameters, Change  *************;
+
+IHLPC:RTOMI=100 ,RTOMA=400 ,RTOI=200 ,PMR=4 ,RBS=32768 ,BUF=1024 ,MSS=1416 ,TSACK=40 ,IMR=8 ,MIS=17 ,USER=SUA;

@@ -1,0 +1,46 @@
+******************************************************************
+**  Regional Software Unit for AUC in a Monolitic Arquitecture  **
+******************************************************************
+
+GSM AGEN :CNT 304 0099 R1; for R12.0, R12.1, R12.2 , R13, R13.2 , R14.1 and MSS12B
+==============================================================================
+AGENR  RPG2 _ CAA 165 0153   R1A01     
+AGENR  RPG3 _ CAA 204 102    R1A01  
+AGENR  GARP _ CAA 204 105    R1A01     
+ 
+
+WCDMA AGEN2 :CNT 304 0098 R1; for R12.0, R12.1 and R12.2 
+======================================================================
+AGEN2R RPG2 _  CAA 165 0152   R1A02    
+AGEN2R RPG3 _  CAA 204 101    R1A02   
+AGEN2R GARP _  CAA 204 106    R1A02    
+  
+
+WCDMA AGEN2 :CNT CNT 304 0136 R1; for R13.0  
+======================================================================
+AGEN2R RPG2 _  CAA 165 0173   R1A01
+AGEN2R RPG3 _  CAA 204 147    R1A01
+AGEN2R GARP _  CAA 204 148    R1A01
+
+
+WCDMA AGEN2 :CNT CNT ; for R13.2  
+======================================================================
+
+AGEN2R RPG2 _  CAA 165 0190   R1A01
+AGEN2R RPG3 _  CAA 204 188    R1A01
+AGEN2R GARP _  CAA 204 189    R1A01
+
+
+WCDMA AGEN2 :CNT 304 0170 R3; for R14.1 and MSS12B
+======================================================================
+AGEN2R RPG2 _  CAA 165 0200    R1A01     
+AGEN2R RPG3 _  CAA 204 243     R1A01     
+AGEN2R GARP _  CAA 204 244     R1A01    
+
+
+
+
+RP    => Regional Processor 
+RPG   => Regional Processor with Group Switch interface
+GARP  => Generic Application Resource Processor
+RSU   => Regional Software Unit

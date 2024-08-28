@@ -1,0 +1,24 @@
+!Check SUIDs, compare RSU source with command printouts!
+
+emu:set-iog-directory /proj/hlr_tcm/cf_db/AUC/Classic/R13.2;
+LAEUL:SUNAME=ALL;
+
+LAEIP:SUNAME=AGENR;
+
+! REGIONAL SOFTWARE UNIT IDENTIFICATIONS                                 !
+!                                                                        !
+! BLOCK   BN    SUNAME   SUID                             SUTYPE CNO PRIO!
+! AGEN    H'770 AGENR    CAA 204 105            R1A01     RPD     19     !
+! AGEN    H'770 AGENR    CAA 204 102            R1A01     RPD     20     !
+! AGEN    H'770 AGENR    CAA 165 0153           R1B01     RPD     18     !
+! END                                                                    !
+
+LAEIP:SUNAME=AGEN2R;
+
+! REGIONAL SOFTWARE UNIT IDENTIFICATIONS                                 !
+!                                                                        !
+! BLOCK   BN    SUNAME   SUID                             SUTYPE CNO PRIO!
+! AGEN2   H'896 AGEN2R   CAA 204 188            R1A01     RPD     20     ! 
+! AGEN2   H'896 AGEN2R   CAA 204 189            R1A01     RPD     19     ! 
+! AGEN2   H'896 AGEN2R   CAA 165 0190           R1B01     RPD     18     ! 
+! END                                                                    !

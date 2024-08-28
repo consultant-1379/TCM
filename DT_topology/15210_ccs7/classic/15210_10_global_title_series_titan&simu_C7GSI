@@ -1,0 +1,242 @@
+
+IOTXP:** CCITT7, Global Title Series, Initiate **************************;
+
+IOTXP:** HLR incoming traffic *******************************************;
+
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   49101901111  ,  GTRC=  1, STATUS=OLD;
+
+
+IOTXP:** AUC incoming traffic *******************************************;
+
+    C7GSI:TT=  1, NP=  6,  NA=  4,  NS=   26201        ,  GTRC=  1;
+    C7GSI:TT=  1, NP=  6,  NA=  4,  NS=   26216        ,  GTRC=  1;
+    C7GSI:TT=  1, NP=  6,  NA=  4,  NS=   26217        ,  GTRC=  1;
+
+
+IOTXP:** HLR incoming traffic from FNR/NPH (default route) **************;
+
+    C7GSI:TT=249, NP=  1,  NA=  4,  NS=   49101901111  ,  GTRC=  1;
+    C7GSI:TT=249, NP=  1,  NA=  4,  NS=   49174010     ,  GTRC=  1;
+!TM4 START;
+!HOME SUBSCRIBERS!
+    C7GSI:TT=249, NP=  1,  NA=  4,  NS=   496601       ,  GTRC=251;
+!IMPORTED SUBSCRIBERS!
+    C7GSI:TT=249, NP=  1,  NA=  4,  NS=   49661        ,  GTRC=251; 
+!TM4 END;
+	
+	
+IOTXP:** VLR incoming traffic from SIMU - Traffic Mix 1 *****************;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4950201      ,  GTRC=251;	
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4950202      ,  GTRC=252;
+
+
+IOTXP:** FNR incoming traffic for MAP analysis (Ericsson ATI) ***********;
+
+    C7GSI:TT= 99, NP=  1,  NA=  4,  NS=   491740       ,  GTRC=  3;
+
+
+IOTXP:** FNR relay from SCCP to MAP level  ******************************;
+
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   49101901111  ,  GTRC=  3;
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   49101905555  ,  GTRC=  3;
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   491740       ,  GTRC=  3;
+    C7GSI:TT=247, NP=  1,  NA=114,  NS=   1740         ,  GTRC=  3;
+!TM4 START;
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   4966         ,  GTRC=  3;
+!TM4 END;
+
+	
+IOTXP:** FNR relay from SCCP to MAP level when CgPA is not own GMSC *****;
+
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   49175802     ,  GTRC=  3;
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   49175803     ,  GTRC=  3;
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   49178002     ,  GTRC=  3;
+    C7GSI:TT=247, NP=  1,  NA=  4,  NS=   49178003     ,  GTRC=  3;
+
+
+IOTXP:** FNR relay from SCCP to MAP level with NPREFIX preventing *******;
+IOTXP:** from second CUDB search  ***************************************;
+
+    C7GSI:TT=250, NP=  1,  NA=  4,  NS=   492604174000 ,  GTRC=  3;
+    C7GSI:TT=250, NP=  1,  NA=  4,  NS=   493692174010 ,  GTRC=  3;
+    C7GSI:TT=250, NP=  1,  NA=  4,  NS=   496116174020 ,  GTRC=  3;
+!TM4 START;
+!EXPORTED SUBSCRIBERS!
+    C7GSI:TT=250, NP=  1,  NA=  4,  NS=   49260466     ,  GTRC=  3;
+!IMPORTED SUBSCRIBERS!
+    C7GSI:TT=250, NP=  1,  NA=  4,  NS=   49369266     ,  GTRC=  3; 
+!TM4 END;
+
+
+IOTXP:** FNR incoming traffic for SCCP analysis  ***********************;
+
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   49101905555  ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4901         ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4917         ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4927         ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4937         ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  6,  NA=  4,  NS=   26201        ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  6,  NA=  4,  NS=   26217        ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  7,  NA=  4,  NS=   4901         ,  GTRC=  4;
+    C7GSI:TT=  0, NP=  7,  NA=  4,  NS=   4917         ,  GTRC=  4;
+    C7GSI:TT= 17, NP=  1,  NA=  4,  NS=   4917         ,  GTRC=  4;
+    C7GSI:TT=128, NP=  1,  NA=  4,  NS=   4917         ,  GTRC=  4;
+    C7GSI:TT=128, NP=  1,  NA=  4,  NS=   4927         ,  GTRC=  4;
+    C7GSI:TT=128, NP=  1,  NA=  4,  NS=   4937         ,  GTRC=  4;
+!TM4 START;
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4966         ,  GTRC=  4;
+!TM4 END;
+
+
+IOTXP:** FNR incoming traffic with second query indication  ************;
+
+    C7GSI:TT=  0, NP=  1,  NA=114,  NS=   36921740      ,  GTRC=  4;
+
+
+IOTXP:** FNR incoming traffic for IDP relay ****************************;
+
+    C7GSI:TT=  0, NP=  1,  NA=  4,  NS=   4910190310    ,  GTRC=  8;
+
+
+IOTXP:** FNR incoming traffic for INNP  ********************************;
+
+    C7GSI:TT= 88, NP=  1,  NA=  4,  NS=   49172522      ,  GTRC=  8;
+
+
+IOTXP:** FNR outgoing traffic with second query indication *************;
+
+    C7GSI:TT=  0, NP=   1, NA= 114, NS=   2604174000   ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA= 114, NS=   6116174020   ,  GTRC=  31;
+    C7GSI:TT= 17, NP=   1, NA= 114, NS=   2604174000   ,  GTRC=  31;
+    C7GSI:TT= 17, NP=   1, NA= 114, NS=   6116174020   ,  GTRC=  31;
+    C7GSI:TT=128, NP=   1, NA= 114, NS=   2604174000   ,  GTRC=  31;
+    C7GSI:TT=128, NP=   1, NA= 114, NS=   6116174020   ,  GTRC=  31;
+!TM4 START;
+!EXPORTED SUBSCRIBERS!
+    C7GSI:TT=  0, NP=  1,  NA= 114,  NS=   2604660     ,  GTRC= 251;
+!TM4 END;
+
+
+IOTXP:** FNR outgoing traffic for IDP relay ****************************;
+
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903101  ,  GTRC=  31;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903102  ,  GTRC=  32;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903103  ,  GTRC=  33;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903104  ,  GTRC=  34;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903105  ,  GTRC=  35;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903106  ,  GTRC=  36;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903107  ,  GTRC=  37;
+    C7GSI:TT= 21, NP=   1, NA=   4, NS=   49101903108  ,  GTRC=  38;
+
+
+IOTXP:** NPH outgoing traffic for relay to SMS-IP-GW *******************;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904301  ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904302  ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904303  ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904304  ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904305  ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904306  ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904307  ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904308  ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101904309  ,  GTRC=  41;
+
+
+IOTXP:** FNR outgoing traffic to IWSMC *********************************;
+
+    C7GSI:TT=249, NP=   1, NA=   4, NS=   49101905555  ,  GTRC=  35;
+
+
+IOTXP:** FNR outgoing traffic for INNP *********************************;
+
+    C7GSI:TT=11,  NP=   1, NA=   4,NS=    4930105      ,  GTRC=  35;
+
+
+IOTXP:** HLR outgoing traffic for simulated entities *******************;
+    
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630101      ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930101      ,  GTRC=  31;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923101  ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923201  ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924101  ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924201  ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926101  ,  GTRC=  31;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926201  ,  GTRC=  31;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630102      ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930102      ,  GTRC=  32;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923102  ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923202  ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924102  ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924202  ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926102  ,  GTRC=  32;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926202  ,  GTRC=  32;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630103      ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930103      ,  GTRC=  33;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923103  ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923203  ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924103  ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924203  ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926103  ,  GTRC=  33;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926203  ,  GTRC=  33;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630104      ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930104      ,  GTRC=  34;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923104  ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923204  ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924104  ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924204  ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926104  ,  GTRC=  34;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926204  ,  GTRC=  34;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630105      ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930105      ,  GTRC=  35;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923105  ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923205  ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924105  ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924205  ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926105  ,  GTRC=  35;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926205  ,  GTRC=  35;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630106      ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930106      ,  GTRC=  36;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923106  ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923206  ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924106  ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924206  ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926106  ,  GTRC=  36;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926206  ,  GTRC=  36;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630107      ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930107      ,  GTRC=  37;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923107  ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923207  ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924107  ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924207  ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926107  ,  GTRC=  37;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926207  ,  GTRC=  37;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4630108      ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   4930108      ,  GTRC=  38;
+
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923108  ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101923208  ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924108  ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101924208  ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926108  ,  GTRC=  38;
+    C7GSI:TT=  0, NP=   1, NA=   4, NS=   49101926208  ,  GTRC=  38;
+
+    C7TAI;
+    C7TLI;
+    C7TCI;
+
+IOTXP:** End of File ***************************************************;

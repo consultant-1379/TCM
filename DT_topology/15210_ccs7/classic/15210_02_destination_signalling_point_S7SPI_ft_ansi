@@ -1,0 +1,20 @@
+
+     IOTXP:** CCITT7, Signalling Point, Initiate *****************************;   
+
+    !---------------------------------------!
+	! CCITT7, SIGNALLING POINT, INITIATE    !
+	!---------------------------------------!
+
+    s7dei:dest=7-9-40;    
+	s7dei:dest=7-9-42;    
+	s7dei:dest=7-9-41;  
+
+	!---------------------------------------!
+	! CCITT7, SIGNALLING POINT NAME, CHANGE !
+	!---------------------------------------!
+
+	s7deC:dest=7-9-40,   DI=TTSNNODE410;
+	s7deC:dest=7-9-42,   DI=TTSNNODE420;
+	s7deC:dest=7-9-41,   DI=TTSNNODE411;  
+
+	s7dep:dest=all;

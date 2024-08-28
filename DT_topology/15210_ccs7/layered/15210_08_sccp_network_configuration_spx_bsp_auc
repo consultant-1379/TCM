@@ -1,0 +1,9 @@
+
+     IOTXP:** CCITT7, SCCP Network Signalling Point, Initiate ****************;
+
+
+     C7NPI:SP=2-5201    ,MTC=1    ,MSG=1      ;
+     C7NPI:SP=2-5202    ,MTC=1    ,MSG=1      ;
+	 
+	 C7NPI:SP=2-300	    ,MTC=1    ,MSG=1      ;
+

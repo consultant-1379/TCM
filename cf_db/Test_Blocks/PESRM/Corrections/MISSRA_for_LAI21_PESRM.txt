@@ -1,0 +1,9 @@
+!                                                                                               !
+!    MISSRA correction for use with test block LAI21/PESRM                                      !
+!                                                                                               !
+! MISSRA 7PAA/CAA 107 7256/M08AC R8A01                                                          !
+PCORL:BLOCK=MISSRA,IA =H'8E5,SUID="7PAA/CAA1077256/M08ACR8A01",CI=SRTRACE;
+WHC H'B3-1;
+END;
+PCORI:BLOCK=MISSRA,IA =H'8E5;
+PCORS:BLOCK=MISSRA,IA =H'8E5;

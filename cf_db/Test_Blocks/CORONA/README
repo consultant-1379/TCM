@@ -1,0 +1,35 @@
+http://info.eed.ericsson.se/article/corona
+
+-----------------------------------------------------
+
+CORONA is an AXE block which can be used to scan for potential hanging software individuals.
+It does this by comparing variable contents in the AXE against predefined allowed values which has been loaded with the TOBJL command.
+If the memory contents are not one of the allowed values and the pointer of the found variable is not one of the excluded ones, 
+it is reported as a possible hanging individual. 
+By default the block can check for hangings in upto 2000 different variables (objects) and can exclude upto 1000 pointers
+and can report upto 2000 hanging variables. But these can be increased by doing a size alteration of SAE 500 for number of objects,
+SAE 501 for number of exclude pointers and SAE 502 for number of hangings. 
+The datafile which contains TOBJL-data can be automatically updated with changed variable numbers using the checktobjl tool. 
+
+
+SOFTWARE 
+**********************************
+ CORONA (CAA 107 9999 R5A02): 
+**********************************
+
+CP block in IOG/APG format => 
+
+    *  /proj/hlr_tcm/cf_db/Test_Blocks/CORONA/CP_block/LO 
+
+
+Program Correction Files  =>
+
+ONLY applicable for APZ 212 60 system 
+	  
+*  /proj/hlr_tcm/cf_db/Test_Blocks/CORONA/CP_block/Corrections/APZ21260_COR.txt
+    ( Patch to make it possible to use Corona commands on APZ 212 60 )	   
+
+ONLY applicable for APZ 214 xx system 
+
+*  /proj/hlr_tcm/cf_db/Test_Blocks/CORONA/CP_block/Corrections/APZ214XX_COR.txt
+    ( Patch to make it possible to use Corona commands on APZ 214 xx )				 

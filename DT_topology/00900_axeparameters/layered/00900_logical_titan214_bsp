@@ -1,0 +1,28 @@
+
+IOTXP:** 00900.layered ** AXE PARAMETER ADMINISTRATION ***************;
+
+!*** ONLY FOR APZ 21410 BSP ***!
+
+
+        !***   CUSTOMER PARAMETER CLASS   ***************************************!
+
+
+        !************************************************************************!
+        !***   PARAMETER SETTINGS IN SDASE  *************************************!
+        !************************************************************************!
+
+        SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+
+        
+        !***   DSCP SOCKET PARAMETER VALUE FOR LDAP TRAFFIC   *******************!
+        !***   Parameter Owner SDA   ********************************************!
+        DBTRI;
+        DBTSC:TAB=AXEPARS ,SETNAME=SDAC       ,NAME=LDAPDSCP         ,VALUE=   40;
+        DBTRE:COM;
+        ! DEFAULT VALUE = 40 , min=0 ,max=63                                     !
+        !------------------------------------------------------------------------!
+
+
+        SYPAC:ACCESS=DISABLED;
+
+IOTXP:** EOF 00900.layered ** AXE PARAMETER ADMINISTRATION **************;

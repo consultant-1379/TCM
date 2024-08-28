@@ -1,0 +1,7 @@
+
+IOTXP:** IP Transport, Route Handling, Change  **************************;
+
+IHRHP;
+IHRHC:ADD ,NVIF=BC-LDAP ,DEFGW=xx.xx.xx.xx;! DEFGW: ISER VIP !
+IHRHP;
+

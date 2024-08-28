@@ -1,0 +1,8 @@
+test system;
+print var VMIPADM 144(2);
+set var VMIPADM 144(2)=H'1;
+print var VMIPADM 144(2);
+end test;
+
+PCORE:block=vmipadm,ia=h'25DB;
+PCORR:block=vmipadm,ia=h'25DB;

@@ -1,0 +1,1059 @@
+
+     !************************************************************************!
+     !***   FEATURE ACTIVATION IN HLR/AUC/FNR   ******************************!
+     !************************************************************************!  
+
+
+
+     !***   FEATURE PARAMETER CLASS   ****************************************! 
+    
+     SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+
+
+     IOTXP:** GSM AKA ********************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=FEATGSM,          VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** UMTS AKA *******************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=FEATUMTS,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** ALTERNATIVE A4 ALGORITHM ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=FEATAGKDC,        VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP: ****** WCDMA TWO AKA ALGORITHM FRAMEWORK *************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=FEATAKAALG,       VALUE=    0;
+     DBTRE:COM;                               
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=FEATFI,           VALUE=    1;
+     DBTRE:COM;   
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=FEATFO,           VALUE=    1;
+     DBTRE:COM;                 
+
+     IOTXP:** MOBILE APPLICATION PART POLICING IN AUC ************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=POLICING,         VALUE=    0;
+     DBTRE:COM;
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSF,   NAME=SQNMULTDOMAIN,    VALUE=    1;
+     DBTRE:COM;                                                                         
+
+
+
+     IOTXP:** HLR MULTIPLE REDUNDANCY FUNCTION (N+1) ACTIVATION  *************;
+     DBTRI;                                                                  
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0019,        VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** MULTIHOME PLM SUPPORT  *****************************************;
+     DBTRI;                                                                  
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0148,        VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:** SPAM SMS CONTROL  **********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0153,        VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:** USSD-TO-GSMSFC SUPPORT  ****************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0154,        VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** HPLMN CONTROL OPTIMAL ROUTING AT LATE CALL FORWARDING (HORLCF) *;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0155,        VALUE=    1;
+     DBTRE:COM;  
+     
+     IOTXP:** MACHINE TO MACHINE SUBSCRIPTION ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0159,        VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:** SAE MOBILITY ***************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0160,        VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:** CONTROL AND INTERROGATION OF SUBSCRIPTION DATA, ATM-ATSI-NSDM **;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0165,        VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:** IMS CENTRALIZED SERVICES  ************************************* ;     
+     DBTRI;                                                                  
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF0210,        VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:**  LOCATION SERVICES FOR PACKET SWITCHED,POSITIONING *************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF023,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  ACCCESS TO MTSMS CAMEL PHASE 4 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF024,         VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:**  M-CSI, MOBILITY MANAGEMENT CAMEL PH3 **************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF025,         VALUE=    1;
+     DBTRE:COM;                  
+
+     IOTXP:**  EXPLICIT CALL TRANSFER (ECT)  *********************************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF073,         VALUE=    1;
+     DBTRE:COM;       
+
+     IOTXP:**  ROAMING SERVICE RESTRICTIONS  *********************************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF074,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  OPTIMAL ROUTING FOR LATE CALL FORWARDING  *********************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF075,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  GLOBAL EQUAL ACCESS  ******************************************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF080,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** COLLECT CALL DIALING AUTOMATIC *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF086,         VALUE=    1;
+     DBTRE:COM; 
+                           
+     IOTXP:** FILE OUTPUT ****************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF104,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** LOCATION SERVICES FOR CS ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF1053,        VALUE=   1;
+     DBTRE:COM; 
+
+     IOTXP:**  GPRS-CSI, GPRS INTERWORKING CAMEL PH3 *************************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF1058,        VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** MS-CSI, MOBILE ORIGINATING SHORT MESSAGE SERVICES CAMEL PH3 ****; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF1059,        VALUE=    1;
+     DBTRE:COM;   
+
+     IOTXP:** DUAL NUMBERING *************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF115,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  CAMEL PH4 SUPPORT FOR GSMSCF INITIATED CALLS  *****************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF215,         VALUE=    1;
+     DBTRE:COM;  
+     
+     IOTXP:**  IST FUNCTIONALITY IN HLR  *************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF255,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  HLR REDUNDANCY FUNCTION (1+1) ACTIVATION **********************;
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF386,         VALUE=    0;
+!     DBTRE:COM;
+
+     IOTXP:**  SPATIAL TRIGGER FUNCTIONALITY  ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF471,         VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:**  PRBT FUNCTIONALITY IN HLR *************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF473,         VALUE=    1;
+     DBTRE:COM;     
+
+     IOTXP:** ACCOUNT CODES **************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF483,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** HIGH SPEED CIRCUIT SWITCHED DATA (HSCSD) ***********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF484,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** MOBILITY MANAGEMENT IN TRIGGERING SUBSCRIPTION DATA ************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF487,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** SUPPLEMENTARY SERVICE PROCEDURES FROM AN EXTERNAL NODE *********;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF488,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** HIGH PENETRATION NOTIFICATION **********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF490,         VALUE=    0;
+     DBTRE:COM;
+
+     IOTXP:** ATI - ANY TIME INTERROGATION GSMSCF ****************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF497,         VALUE=    1;
+     DBTRE:COM;
+                
+     IOTXP:**  ANONYMOUS CALL REJECTION  *************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF503,         VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:**   REAL TIME CHARGING FOR ALL ***********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF507,         VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:**  HIGH SPEED DOWNLINK PACKET DATA ACCESS (HSDPA) ****************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF508,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** MULTIPLE SIM ***************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF510,         VALUE=    1;
+     DBTRE:COM; 
+     
+     IOTXP:**SPAM CONTROL FOR MOBILE TERMINATING SMS  ************************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF512,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** OPERATOR DETERMINED BARRING OF INTER-ZONAL CALLS ***************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF528,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** OPERATOR DETERMINED BARRING OF REG. OF FORWARDED-TO NUMBERS ****;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF530,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** BASIC SERVICES *************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF553,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** MISSED CALL ALERT **********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF563,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** GPRS ***********************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF633,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** 14.4 KBPS CHANNEL CODING ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF635,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** SMS, MOBILE TERMINATED INTERWORKING WITH GPRS ******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF636,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** ENHANCED MULTI-LEVEL PRECEDENCE AND PRE-EMPTION SERVICE ********;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF637,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** SUBSCRIBER TRACING *********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF655,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** FILE INPUT *****************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF656,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** 2G/3G ROAMING RESTRICTION IN HLR *******************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF685,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** MOBILE POSITIONING *********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF687,         VALUE=    0;
+     DBTRE:COM;
+
+     IOTXP:** CAMEL PHASE 2 **************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF746,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** EXTENDED ROAMING SERVICE CONTROL IN HLR ************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF841,         VALUE=    1;
+     DBTRE:COM;   
+     
+     IOTXP:** PREFERRED ROAMING PARTNER IN HLR *******************************; 
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF842,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** DATA COMPRESSION ***********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF857,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** BIT TRANSPARENT SERVICES ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF981,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  3G.324M MULTIMEDIA SUPPORT ************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF982,         VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:** DATA TRANSMISSION RATES HIGHER THAN 9.6K ***********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF983,         VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:**  AUTOMATIC DEVICE DETECTION ************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF998,         VALUE=    1;
+     DBTRE:COM;
+          
+     IOTXP:** HIGH SPEED UPLINK PACKET ACCESS  *******************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HRSF0172,         VALUE=    1;
+     DBTRE:COM;                                                              
+
+     IOTXP:**  CAMEL CONDITIONAL TRIGGERING CRITERIA  ************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSF,     NAME=HLRNF026,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  GPRS ODB FOR PACKET ORIENTED SERVICE **************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF065,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  WIRELESS PRIORITY SERVICE IN HLR ******************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF097,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  ACCCESS TO D-CSI CAMEL PHASE 3 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF099,         VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:** CHARGING CHARACTERISTICS ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF1055,        VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** EXTENDED CAMEL *************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSF,    NAME=HLRNF498,         VALUE=    1;
+     DBTRE:COM;
+
+
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFFAIF,        VALUE=    1;
+     DBTRE:COM;
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFFAMF,        VALUE=    1;
+     DBTRE:COM;
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFNP,          VALUE=    1;
+     DBTRE:COM;
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFNPIN,        VALUE=    1;
+     DBTRE:COM;
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFNPIDPREL,    VALUE=    1;
+     DBTRE:COM;
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFDATACC,      VALUE=    1;
+     DBTRE:COM; 
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFFO,          VALUE=    1;
+     DBTRE:COM; 
+
+     DBTRI;      
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSF,    NAME=FNRNFFI,          VALUE=    1;
+     DBTRE:COM;
+  
+                                                                                        
+     SYPAC:ACCESS=DISABLED; 
+
+
+
+     !***   CUSTOMER PARAMETER CLASS   ***************************************!
+
+     SYPAC:ACCESS=ENABLED,PSW=PSW2PAR;
+     
+     IOTXP:**  AUC FILE INPUT    *********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSC,    NAME=FIACT,    VALUE=    1;
+     DBTRE:COM;   
+     
+     IOTXP:**  AUC FILE OUTPUT    *********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSC,    NAME=FOACT,    VALUE=    1;
+     DBTRE:COM;   
+     
+
+     IOTXP:**  HGSUI Improvement , HMAPTC    *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=AUCCOLLOCATED,    VALUE=    1;
+     DBTRE:COM;   
+
+     IOTXP:** FILE INPUT PROCESS HANDLING ************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=AUTHDATAFILEINP,  VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** HIGH PRIORITY QUEUE MAXIMUM SIZE *******************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=AUTHTRQMAXSIZE,   VALUE= 2000;
+     DBTRE:COM;   
+
+     IOTXP:** COLLECT CALL DIALING AUTOMATIC *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=CCDASSCODE,       VALUE=  249; 
+     DBTRE:COM;
+   
+     IOTXP:**  SMS HOME ROUTING **********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=CGPACHECKSPAM,    VALUE=    0;
+     DBTRE:COM;
+
+     IOTXP:**  SCCP segmentation used for ATSI, ATM, NSDM response messages  *;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=CISDSEG,          VALUE=    0;
+     DBTRE:COM;
+
+     IOTXP:**  Controls activation of CSI activation state  ******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=CSISTACT,         VALUE=    2;
+     DBTRE:COM;
+
+     IOTXP:** SUBSCRIPTION TYPE WHEN TTC SIGNALLING **************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=DEFMINTARIFF,     VALUE=  127;
+     DBTRE:COM;
+
+     IOTXP:**  MACHINE TO MACHINE ********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=FEATCODEM2M,      VALUE=   24; 
+     DBTRE:COM; 
+
+     IOTXP:**  HIGH SPEED DOWNLINK PACKET DATA ACCESS SWLM *******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=HSDPAACT,         VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:**  HIGH SPEED UPLINK PACKET DATA ACCESS SWLM *********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=HSUPAACT,         VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:**  IMS CENTRALIZED SERVICES SWLM *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=ICSINDACT,        VALUE=    1;
+     DBTRE:COM;  
+     
+     IOTXP:**  MSISDN OF THE MASTER SUBSCRIPTION PRESENT *********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IDPRESENTED,      VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** SUBSCRIPTION TYPE WHEN TTC SIGNALLING **************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=INTERTARIFF,      VALUE=  126;
+     DBTRE:COM;
+
+     IOTXP:** SMS,TIMER FOR ARRIVAL OF THE REPORT SM DELIVERY STATUS  ********;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=INTERTIMS,        VALUE=   60;
+     DBTRE:COM;
+
+     IOTXP:** INTERNATIONAL  TRUNK PREFIX SIZE AND DIGITS ********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=INTLENPREFIX,     VALUE=  200;
+     DBTRE:COM;   
+
+     IOTXP:**  CALL TERMINATION AT IST ALERT RECEPTION  **********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=ISTALLCALLSTERM,  VALUE=    0;
+     DBTRE:COM;
+     
+     IOTXP:**  CAMEL PH4 SUPPORT FOR GSMSCF INITIATED CALLS  *****************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=ISTLOGGING,       VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** TC U-ABORT OF THE SRI FOR SMS OPERATION ************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVSRISMABORT,     VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:** TC END OF THE SRI FOR SMS OPERATION ****************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVSRISMEND,       VALUE=    6;
+     DBTRE:COM; 
+    
+     IOTXP:** TC U-ABORT MESSAGE FOR UPDATE LOCATION OPERATION ***************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVUPLOCABORT,     VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:** TC CONTINUE MESSAGE FOR UPDATE LOCATION OPERATION **************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVUPLOCCONT1,     VALUE=    4;
+     DBTRE:COM;
+     
+     IOTXP:** TC CONTINUE MESSAGE FOR UPDATE LOCATION OPERATION **************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVUPLOCCONT2,     VALUE=    5;
+     DBTRE:COM;
+     
+     IOTXP:** TC CONTINUE MESSAGE FOR UPDATE LOCATION OPERATION **************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVUPLOCCONT3,     VALUE=    6;
+     DBTRE:COM;
+     
+     IOTXP:** TC END MESSAGE WITH RESULT/INVOKE FOR UPDATE LOCATION **********;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVUPLOCSUCCEND,   VALUE=    4;
+     DBTRE:COM;
+
+     IOTXP:** TC END MESSAGE WITH REJECT/ERROR FOR UPDATE LOCATION OPERATION *;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=IVUPLOCUNSEND,    VALUE=    1;
+     DBTRE:COM;     
+
+     IOTXP:**  MACHINE TO MACHINE SWLM ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=M2MCOMACT,        VALUE=    1; 
+     DBTRE:COM;  
+
+     IOTXP:**  ROAMING DISTRIBUTION IN HLR  **********************************;
+     IOTXP:**  Max num of consecutive GPRS UL MAP V3 operations received  ****;
+     IOTXP:**  from SGSN that can be rejected for a subscriber in HLR        *;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=MAXGLOCUPDATREJ,  VALUE=    4;
+     DBTRE:COM;
+
+     IOTXP:**  ROAMING DISTRIBUTION IN HLR  **********************************;
+     IOTXP:**  Max num of consecutive UL MAP V1/V2/V3 operations received  ***;
+     IOTXP:**  from VLR that can be rejected for a subscriber in HLR  ********;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=MAXLOCUPDATREJ,   VALUE=    4;
+     DBTRE:COM;
+
+     IOTXP:** MAXIMUN UDCD IN DCR PER SECOND   *******************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS,SETNAME=GSMHRSC,     NAME=MAXUDCDPERSEC,    VALUE=  150;
+     DBTRE:COM; 
+    
+     IOTXP:** SMS,MOBILE MEMORY CAPACITY EXCEEDED FLAG VALIDITY TIMER ********;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=MCEFVALTIMS,      VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:**  MULTI-HOME PLMN SWLM ******************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=MHPLMNACT,        VALUE=    1; 
+     DBTRE:COM; 
+     
+     IOTXP:**  MULTIPLE SUBSCIPTION SWLM *************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=MSIMACT,          VALUE=    1; 
+     DBTRE:COM;
+
+     IOTXP:** CONTROL THE REPLACEMENT OF NON-SUPPORTED ODBS ******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=ODBMAPPING,       VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:NOT SUPPORTED ODB OF PACKET SERVICES MAPPED TO NOT SUSCRIBED PDP CONTEXT;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=ODBPSMAPPING,     VALUE=    1;
+     DBTRE:COM;      
+
+     IOTXP:** REDUNDANCY - VLR/SGSN INFORMATION ON SUBSCRIBER DATA CHANGE ****;
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=REDINFOSEPARATE,  VALUE=    1; !0=VLR/SGSN NOT INFORMED, 1=VLR/SGSN INFORMED!
+!     DBTRE:COM;
+
+     IOTXP:** REDUNDANCY - TYPE OF SERIES (IMSI OR MSISDN) TO BE USED WHEN ***;
+     IOTXP:** ASSIGNING THE PRIMARY HLR NODE BY MEANS NUMBER SERIES ANALYSIS *;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=REDSERIES,        VALUE=    0; !0=IMSI, 1=MSISDN!
+     DBTRE:COM;
+
+     IOTXP:** REDUNDANCY - SS DATA SENT TO MATED NODE ************************;
+!     DBTRI;
+!     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=REDTRANSFERSS,    VALUE=    1; !0=NOT ALL SS WILL SEND, 1=ALL SS WILL SEND!
+!     DBTRE:COM;
+     
+     IOTXP:** REDUNDANCY - UPDATE SUBSCRIBER DATA MESSAGE MAXIMUM LENGTH *****;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=REDUSDMAXLENGTH,  VALUE=    1; !0=255 OCTETS, 1=2013 OCTETS!
+     DBTRE:COM;     
+     
+     IOTXP:**  SAE MOBILITY MANAGEMENT SWLM **********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=SAEMOBACT,        VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** SCCP SEGMENTATION **********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=SCCPSEGMENT,      VALUE=    1;
+     DBTRE:COM; 
+ 
+     IOTXP:**  SMS HOME ROUTING SWLM *****************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=SMSHRACT,         VALUE=    1;
+     DBTRE:COM; 
+
+     IOTXP:** SC ADDRESS SERIES LIST ATTRIBUTE (BARRED OR ALLOWED) FOR SPAM CONTROL *;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,   NAME=SPAMSCALLOWED,     VALUE=    0;
+     DBTRE:COM;
+     
+     IOTXP:** SMS,TIMER FOR A SERVICE CENTRE STORED IN THE MESSAGE WAITING DATA LIST *******;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=STORSCTIMS,       VALUE=    1;
+     DBTRE:COM;
+   
+     IOTXP:** TIME SUPERVISION FOR RECEIVING A RESPONSE **********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=TIMSAISEGMRESP,   VALUE=   30;
+     DBTRE:COM;
+              
+     IOTXP:**************** HIGHEST PRIORITY PIC IS SENT ********************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=TRANSFPIC,        VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:**  UNSTRUCTURED USSD TRANSFERED TO GSMSCF *******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSC,    NAME=USSDTTSCFACT,     VALUE=    1;
+     DBTRE:COM;
+
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=CALLINGADDIND,    VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=CGPACHECK,        VALUE=    1;
+     DBTRE:COM;   
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=CONNECTOPTIMER,   VALUE=    2;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=COUNTCODE,        VALUE=   49;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=DBMISERRORCAUSE,  VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=DEFDBMIND,        VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=GTCONVERTNOA,     VALUE=    4; 
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=GTCONVERTNP,      VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=IDPRESULTMSSG,    VALUE=    1;
+     DBTRE:COM;  
+
+    !DBTRI;
+    !DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=MAXREATIDPREL,    VALUE=    1;
+    !DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=MCOUNTCODE,       VALUE=  262;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=MISMATCHV1,       VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=MISMATCHV2,       VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=MISMATCHV3,       VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=NAPIOUT1,         VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=NOAROUTINGNUM,    VALUE=    4;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=NPNOA,            VALUE=  114;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=NPREFIXLENGTH,    VALUE=    4;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=OUTGOINGNOA,      VALUE=    4;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=OUTGOINGNOA1,     VALUE=    4;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=RELAYMESS,        VALUE=    0;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SRIACKADDR,       VALUE=    0;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SRIMNGNTFOREXP,   VALUE=    0;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNCAPIDPREL,     VALUE=  146;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNINAPIDPREL,    VALUE=  251;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNOUTADD,        VALUE=    6;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNT1,            VALUE=    6;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNT2,            VALUE=  128;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNT3,            VALUE=   11;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNT4,            VALUE=    5;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=SSNT5,            VALUE=    6;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TIMEGAPIDPREL,    VALUE=    5;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTATI,            VALUE=   99;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTIDPREL,         VALUE=   21;    
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTIN1,            VALUE=    0; 
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTIN2,            VALUE=   11;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTIN3,            VALUE=   17;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTIN4,            VALUE=  253;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTIN5,            VALUE=  242;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTINT,            VALUE=  247;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTINT2,           VALUE=  246;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTINT3,           VALUE=  244;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTOUT1,           VALUE=  249;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTOUT2,           VALUE=   77;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTOUT3,           VALUE=  248;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTOUT4,           VALUE=    1;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTOUT5,           VALUE=  245;
+     DBTRE:COM;  
+
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSC,    NAME=TTOUTADD,         VALUE=  255;
+     DBTRE:COM;         
+                                       
+     SYPAC:ACCESS=DISABLED;  
+
+
+  
+     !***   SUPPLIER PARAMETER CLASS   ***************************************!
+
+     SYPAC:ACCESS=ENABLED,PSW=PSW2PAR; 
+
+     IOTXP:***** G-MILENAGE (COMP128-4 A3A8) ALGORITHM SUPPORTED ************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A3A8ALGMASK,      VALUE=  63;
+     DBTRE:COM;
+
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 0 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG0,           VALUE=   64;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 1 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG1,           VALUE=  128;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 2 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG2,           VALUE=  128;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 3 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG3,           VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 4 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG4,           VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 5 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG5,           VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 6 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG6,           VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** GSM ALTERNATIVE A4 ALGORITHM 7 *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=A4ALG7,           VALUE=   63;
+     DBTRE:COM; 
+
+     IOTXP:***** FSET SUPPORTING THE WCDMA TWO AKA ALGORITHM FRAMEWORK *******;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=AKAALGFSET,       VALUE=    1;
+     DBTRE:COM;
+                       
+     IOTXP:** MAXIMUM NUMBER OF SUBSCRIPTIONS ALLOWED ************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=CAPBLOCKAUC,      VALUE= 4000;
+     DBTRE:COM;
+     
+     IOTXP:** MAXIMUM NUMBER OF WCDMA SUBSCRIPTIONS ALLOWED ******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=CAPBLOCKWCDMA,    VALUE= 4000;
+     DBTRE:COM;                                                                 
+     
+     IOTXP:** EXTERNAL HLR MESSAGES IN THE AUC *******************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=EXTERNALMSG,      VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** FSET VERSIONS 0 - 15 SUPPORTED *********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=FSETALGMASK,      VALUE=65535;
+     DBTRE:COM; 
+     
+     IOTXP:** LOAD REGULATION ************************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=LOADREGAUC,       VALUE=    1;
+     DBTRE:COM;
+     
+     IOTXP:** SIGNALLING SYSTEM **********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=SIGNSYS,          VALUE=    0;
+     DBTRE:COM;                                                                  
+     
+
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 0 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG0,          VALUE=   64;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 1 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG1,          VALUE=  128;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 2 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG2,          VALUE=  128;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 3 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG3,          VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 4 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG4,          VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 5 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG5,          VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 6 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG6,          VALUE=   63;
+     DBTRE:COM;
+     
+     IOTXP:** UMTS ALTERNATIVE A4 ALGORITHM 7 ********************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMAUCSS,   NAME=UA4ALG7,          VALUE=   63;
+     DBTRE:COM;
+
+
+     IOTXP:** SMS, TIMER ALERT CONTROL ***************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=ALERTTIMS,        VALUE=  120;
+     DBTRE:COM;
+
+     IOTXP:** MAXIMUM NUMBER OF SUBSCRIBERS ALLOWED IN HLR *******************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=CAPSUBSHLR,       VALUE= 4000;
+     DBTRE:COM;
+
+     IOTXP:** MAXIMUM NUMBER OF GPRS SUBSCRIBERS ALLOWED IN HLR **************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=CAPGPRSSUBSHLR,   VALUE=  400;
+     DBTRE:COM;  
+
+     IOTXP:** MAXIMUM NUMBER OF M2M SUBSCRIBERS ALLOWED IN HLR ***************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=CAPSUBSM2M,       VALUE=   40;
+     DBTRE:COM;                                                                
+
+     IOTXP:** GLOBAL EQUAL ACCESS, SUPPORT OF MULTIPLES PICS *****************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=MULTPICHANDL,     VALUE=    1;
+     DBTRE:COM;
+
+     IOTXP:** NUMBER OF HLRs PRIMARY IN MULTIPLE HLR NODE REDUNDANCY (N+1) ***;
+    !DBTRI;
+    !DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=NUMPRIMARY,       VALUE=    3;
+    !DBTRE:COM;
+
+     IOTXP:** SIGNALLING SYSTEM **********************************************;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=SIGNSYS,          VALUE=    0;
+     DBTRE:COM; 
+
+     IOTXP:** SET HLR NODE AS SB NODE IN MULTIPLE HLR NODE REDUNDANCY (N+1) **;
+     DBTRI;
+     DBTSC:TAB=AXEPARS, SETNAME=GSMHRSS,    NAME=STANDBYNODE,      VALUE=    2;!1= HLR works as a primary node - 2=HLR works as a SB node!
+     DBTRE:COM;
+
+
+     DBTRI; 
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSS,    NAME=CAPBLOCKIND1,     VALUE= 2680;
+     DBTRE:COM; 
+
+     DBTRI; 
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSS,    NAME=IMSISLENGTH,      VALUE=    5;
+     DBTRE:COM; 
+
+     DBTRI; 
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSS,    NAME=MGTSLENGTH,       VALUE=    5;
+     DBTRE:COM; 
+
+     DBTRI; 
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSS,    NAME=SEGMENTATION,     VALUE=  272;
+     DBTRE:COM; 
+
+     DBTRI; 
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSS,    NAME=SCCPPROTOCOL1,    VALUE=    2;  
+     DBTRE:COM; 
+
+     DBTRI; 
+     DBTSC:TAB=AXEPARS, SETNAME=GSMFNSS,    NAME=SPCLENGTH,        VALUE=    0;
+     DBTRE:COM; 
+
+     SYPAC:ACCESS=DISABLED;

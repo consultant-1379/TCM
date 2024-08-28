@@ -1,0 +1,31 @@
+
+	IOTXP:** Sigtran User Adaptation Layer, SUA Network Signalling Point, Initiate  ****;
+
+	UANPI:SP=2-5202, ASSP=2-310;  
+	UANPI:SP=2-5203, ASSP=2-310;  
+	UANPI:SP=2-5204, ASSP=2-310;  
+	
+  UANPI:SP=2-1300, ASSP=2-310;
+  UANPI:SP=2-1400, ASSP=2-310;
+  UANPI:SP=2-1500, ASSP=2-310;
+
+	IOTXP:** Sigtran User Adaptation Layer, SUA Network Signalling Point, Change  ******;
+
+  UANPC:SP=2-5202, SPIDNT=5202;
+  UANPC:SP=2-5203, SPIDNT=5203;
+  UANPC:SP=2-5204, SPIDNT=5204;
+  
+  UANPC:SP=2-1300, SPIDNT=HSS1300;
+  UANPC:SP=2-1400, SPIDNT=HSS1400;
+  UANPC:SP=2-1500, SPIDNT=HSS1500;
+
+	IOTXP:** Sigtran User Adaptation Layer, SUA Network Subsystem Number, Initiate  ****;
+
+  UANSI:SP=2-5202, SSN=6&7&8&10&128&145&149&224&252&253;
+  UANSI:SP=2-5203, SSN=6&7&8&10&128&145&149&224&252&253;
+  UANSI:SP=2-5204, SSN=6&7&8&10&128&145&149&224&252&253;
+  
+  UANSI:SP=2-1300, SSN=7&147;
+  UANSI:SP=2-1400, SSN=7&147;
+  UANSI:SP=2-1500, SSN=7&147;
+

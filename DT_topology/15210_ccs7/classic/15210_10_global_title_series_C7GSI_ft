@@ -1,0 +1,85 @@
+         
+IOTXP:** CCITT7, Global Title Series, Initiate **************************;
+!---------------------------------------!
+! NP=1 -> E.164 (MSISDN) !
+! NP=6 -> E.212 (IMSI)   !
+! NP=7 -> E.214 (MGT)    !
+!---------------------------------------!
+
+C7GSI:TT=0,   NP=1, NA=4, NS=4917240,      GTRC=16 ,STATUS=OLD;     	! SE MANTEINE 4917240 (OWN DIR) GTRC=3 -->16 OWSP Term. !
+C7GSI:TT=0,   NP=1, NA=3, NS=17140,        GTRC=16;     		! GTRC=3 -->16 OWSP Term. !
+C7GSI:TT=0,   NP=1, NA=3, NS=17141,        GTRC=19;     		! GTRC=5 -->19      ! 
+C7GSI:TT=0,   NP=1, NA=4, NS=4917741,      GTRC=1;      		! R-VLR !
+C7GSI:TT=0,   NP=1, NA=3, NS=17741,        GTRC=1;
+C7GSI:TT=0,   NP=1, NA=4, NS=4610142,      GTRC=2;      		! F-VLR, GMSC !
+C7GSI:TT=0,   NP=7, NA=4, NS=4610142,      GTRC=2;
+C7GSI:TT=0,   NP=1, NA=3, NS=17149,        GTRC=1;
+C7GSI:TT=0,   NP=1, NA=4, NS=5917141,      GTRC=1;      		! Interzonal_VLR !
+C7GSI:TT=0,   NP=1, NA=3, NS=17150,        GTRC=19;
+C7GSI:TT=0,   NP=1, NA=4, NS=4610145,      GTRC=2;      		! SGSN2 !
+C7GSI:TT=0,   NP=1, NA=4, NS=4610150,      GTRC=2;      		! GSMCF !
+C7GSI:TT=0,   NP=1, NA=4, NS=4910150,      GTRC=1;      		! GSMCF !
+C7GSI:TT=0,   NP=1, NA=3, NS=10150,        GTRC=1;
+C7GSI:TT=0,   NP=1, NA=4, NS=4910145,      GTRC=19;     		! GSMCF !
+C7GSI:TT=0,   NP=1, NA=3, NS=10145,        GTRC=19;
+C7GSI:TT=0,   NP=1, NA=4, NS=4910142,      GTRC=1;      		! HLR !
+C7GSI:TT=0,   NP=1, NA=3, NS=10142,        GTRC=1;
+
+!--   AUC  -------------------------------!
+C7GSI:TT=1,   NP=6, NA=4, NS=26202,        GTRC=16;     		! Collocated AUC GTRC=4 -> GTRC=16 !
+C7GSI:TT=2,   NP=6, NA=4, NS=26202,        GTRC=1;      		! External AUC   !
+C7GSI:TT=1,   NP=6, NA=4, NS=2624,         GTRC=16;     		! AUC !
+C7GSI:TT=0,   NP=1, NA=4, NS=43173413333,  GTRC=1;      		! VLR ! 
+C7GSI:TT=0,   NP=1, NA=4, NS=4917341,      GTRC=1;      		! VLR ! 
+C7GSI:TT=0,   NP=1, NA=3, NS=17341,        GTRC=1;     		 	! VLR ! 
+C7GSI:TT=0,   NP=1, NA=4, NS=49203413333,  GTRC=1;      		! VLR in HPLMN !
+
+!------ FT  491714x & 491715x & 491716x    -------------!
+C7GSI:TT=0,   NP=1, NA=4, NS=491711,       GTRC=16;   
+C7GSI:TT=0,   NP=1, NA=4, NS=491712,       GTRC=16;   
+C7GSI:TT=0,   NP=1, NA=4, NS=491713,       GTRC=16;   
+C7GSI:TT=0,   NP=1, NA=4, NS=491717,       GTRC=16;   
+C7GSI:TT=0,   NP=1, NA=4, NS=491718,       GTRC=16;   
+C7GSI:TT=0,   NP=1, NA=4, NS=491719,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=4917141,      GTRC=19;   			! GTRC=5 -->19  VLR !
+C7GSI:TT=0,   NP=1, NA=4, NS=4917149,      GTRC=1;    			! S-GMSC !     
+C7GSI:TT=0,   NP=1, NA=4, NS=4917150,      GTRC=19;   			! SGSN1 !
+C7GSI:TT=0,   NP=1, NA=4, NS=4917160,      GTRC=2;
+C7GSI:TT=0,   NP=7, NA=4, NS=4917141,      GTRC=1;
+C7GSI:TT=187, NP=1, NA=4, NS=49171,        GTRC=16;   			! HLR-B > HLR-A ! 
+C7GSI:TT=170, NP=1, NA=4, NS=49171,        GTRC=16;   			! HLR-B > HLR-A !
+  
+!-----  se usa la serie 491774x	---------------------!
+C7GSI:TT=0,   NP=1, NA=4, NS=491770,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491771,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491772,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491773,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491775,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491776,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491777,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491778,       GTRC=16; 
+C7GSI:TT=0,   NP=1, NA=4, NS=491779,       GTRC=16; 
+C7GSI:TT=187, NP=1, NA=4, NS=49177,        GTRC=16;     		! HLR-B > HLR-A   ** !
+C7GSI:TT=170, NP=1, NA=4, NS=49177,        GTRC=16;     		! HLR-B > HLR-A   ** !
+
+!-------------------------------------------------------!
+C7GSI:TT=2,   NP=1, NA=3, NS=13252000000,  GTRC=2;   			!SCP! 
+C7GSI:TT=0,   NP=1, NA=4, NS=49177490000,  GTRC=1;   			!SMS-GMSC!
+C7GSI:TT=0,   NP=1, NA=4, NS=46101924444,  GTRC=2;  			!GMSC/gsmSCF! 
+C7GSI:TT=0,   NP=1, NA=4, NS=46101922222,  GTRC=1;  			!External node! 
+C7GSI:TT=0,   NP=1, NA=4, NS=46101926666,  GTRC=2;   			!HLR! 
+C7GSI:TT=0,   NP=7, NA=4, NS=461019,       GTRC=2;   			!HLR-from-FNR!
+C7GSI:TT=0,   NP=1, NA=4, NS=39172,        GTRC=16;  			!  FNR   ! 
+C7GSI:TT=0,   NP=1, NA=4, NS=46101910000,  GTRC=1;   			!Restricted VLR! 
+C7GSI:TT=0,   NP=1, NA=4, NS=46101902222,  GTRC=2;   			!VLR Intrazone!
+C7GSI:TT=0,   NP=1, NA=4, NS=55172410000,  GTRC=1;   			!VLR Interzone! 
+C7GSI:TT=187, NP=1, NA=4, NS=461019 ,      GTRC=2;   			! HLR-A > HLR-B !
+C7GSI:TT=170, NP=1, NA=4, NS=461019 ,      GTRC=2;   			! HLR-A > HLR-B !
+C7GSI:TT=11,  NP=1, NA=4, NS=4610150,      GTRC=2;   			! GSMCF INT !
+C7GSI:TT=11,  NP=1, NA=3, NS=4610150,      GTRC=2;   			! GSMCF NAT !
+C7GSI:TT=11,  NP=1, NA=4, NS=4917240,      GTRC=17;  			! HLR  INT  !
+C7GSI:TT=11,  NP=1, NA=3, NS=4917240,      GTRC=17;  			! HLR  NAT  !                
+
+C7TAI;
+C7TLI;
+C7TCI;
